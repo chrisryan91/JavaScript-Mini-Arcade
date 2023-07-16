@@ -4,7 +4,6 @@ body {
 }
 
 .games {
-        color: #fff;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
@@ -13,4 +12,9 @@ body {
 .games div {
       height: 50vh;
       width: 50%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
 }

@@ -46,3 +46,13 @@ a {
     width: 70px;
     border: 2px solid;
   }
+
+.playerone {
+  background-color: rgb(227, 24, 24);
+  border-radius: 10px;
+}
+
+.playertwo {
+  background-color: rgb(104, 68, 205);
+  border-radius: 10px;
+}

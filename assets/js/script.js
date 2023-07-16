@@ -124,19 +124,33 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
 
-      function generateComputerChoice() {
+    const computerChoiceDisplay = document.getElementById('computer-chooses')
+    const userChoiceDisplay = document.getElementById('you-choose')
+    const resultDisplay = document.getElementById('result2')
+    const possibleChoices = document.querySelectorAll('button')
+    let userChoice
+    let result2
+
+    possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
+        userChoice = e.target.id
+        userChoiceDisplay.innerHTML = userChoice
+    
+    }))
+
+    function generateComputerChoice() {
         const randomNumber = Math.floor(Math.random()*possibleChoices.length) + 1
     
         if (randomNumber === 1) {
-            computerChoose = 'rock'
+            computerChoice = 'rock'
         }
         if (randomNumber === 2) {
-            computerChoose = 'scissors'
+            computerChoice = 'scissors'
         }
         if (randomNumber === 3) {
-            computerChoose = 'paper'
+            computerChoice = 'paper'
         }
         
-        computerChoiceDisplay.innerHTML = computerChoose
+        computerChoiceDisplay.innerHTML = computerChoice
     }
-  })
+
+    })

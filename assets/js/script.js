@@ -123,4 +123,20 @@ document.addEventListener('DOMContentLoaded', () => {
           checkBoard()
         }
       }
+
+      function generateComputerChoice() {
+        const randomNumber = Math.floor(Math.random()*possibleChoices.length) + 1
+    
+        if (randomNumber === 1) {
+            computerChoose = 'rock'
+        }
+        if (randomNumber === 2) {
+            computerChoose = 'scissors'
+        }
+        if (randomNumber === 3) {
+            computerChoose = 'paper'
+        }
+        
+        computerChoiceDisplay.innerHTML = computerChoose
+    }
   })

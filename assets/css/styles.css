@@ -1,0 +1,16 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.games {
+        color: #fff;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+}
+
+.games div {
+      height: 50vh;
+      width: 50%;
+}

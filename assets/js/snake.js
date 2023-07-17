@@ -10,6 +10,8 @@ var snakeY = blockSize * 5;
 var velocityX = 0;
 var velocityY = 0;
 
+var snakeBody = [];
+
 var foodX;
 var foodY;
 
@@ -39,6 +41,9 @@ function update() {
     snakeX += velocityX * blockSize;
     snakeY += velocityY * blockSize;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
+    for (let i = 0; i < snakeBody.length; i++) {
+        context.fillRect(snakeX[i][0], snakeY[i][1], blockSize, blockSize)
+    }
 }
 
 function changeDirection(e) {

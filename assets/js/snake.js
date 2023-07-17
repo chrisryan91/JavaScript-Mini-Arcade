@@ -38,8 +38,12 @@ function update() {
         placeFood();
     }
 
-    for (let i = snakeBody.lenght-1; i> 0; i--) {
+    for (let i = snakeBody.lenght-1; i > 0; i--) {
         snakeBody[i] = snakeBody[i-1];
+    }
+
+    if (snakeBody.lenght) {
+        snakeBody[0] = [snakeX, snakeY];
     }
 
     context.fillStyle="red";

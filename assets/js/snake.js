@@ -16,17 +16,18 @@ window.onload = function() {
     board.width = cols * blockSize;
     context = board.getContext("2d");
 
-    update() 
+    placeFood();
+    update();
 }
 
 function update() {
     context.fillStyle="black";
     context.fillRect(0, 0, board.width, board.height);
 
-    context.fillStyle = "red";
-    context.fillRect(snakeX, snakey, blockSize, blockSize);
+    context.fillStyle="red";
+    context.fillRect(snakeX, snakeY, blockSize, blockSize);
 
-    context.fillStyle = "green";
+    context.fillStyle="green";
     context.fillRect(foodX, foodY, blockSize, blockSize);
 }
 

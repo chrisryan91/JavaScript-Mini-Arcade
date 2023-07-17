@@ -36,8 +36,8 @@ function update() {
     }
 
     context.fillStyle="red";
-    snakeX += velocityX;
-    snakeY += velocityY;
+    snakeX += velocityX * blockSize;
+    snakeY += velocityY * blockSize;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
 }
 

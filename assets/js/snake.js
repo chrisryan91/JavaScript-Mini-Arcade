@@ -28,13 +28,17 @@ function update() {
     context.fillStyle="black";
     context.fillRect(0, 0, board.width, board.height);
 
+    context.fillStyle="green";
+    context.fillRect(foodX, foodY, blockSize, blockSize);
+
+    if (snakeX == foodX && snakeY == foodY){
+        placeFood();
+    }
+
     context.fillStyle="red";
     snakeX += velocityX;
     snakeY += velocityY;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
-
-    context.fillStyle="green";
-    context.fillRect(foodX, foodY, blockSize, blockSize);
 }
 
 function changeDirection(e) {

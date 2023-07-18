@@ -60,7 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         result2Display.innerHTML = result2
-
     }
 
+
+    document.getElementById("reset").onclick = function() {
+        document.getElementById("computer-chooses").innerHTML = "";
+        document.getElementById("you-choose").innerHTML = "";
+        document.getElementById("result2").innerHTML = "";
+        };
     })

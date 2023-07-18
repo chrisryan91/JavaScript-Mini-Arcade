@@ -2,11 +2,18 @@
 
 body {
     text-align: center;
+    margin: 0;
+    background-color: aliceblue;
 }
 
 header {
+    text-align: left;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 900;
+    background-color: #ffffba;
 }
 
 .games {
@@ -29,13 +36,14 @@ h2, h3 {
 }
 
 p {
-  font-size: 200%;
-  padding: 5px;
+  font-size: 175%;
+  padding: 25px;
 }
 
 .games div {
-      height: 50vh;
+      height: 42vh;
       width: 50%;
+      background-color: aliceblue;
 }
 
 a {
@@ -46,25 +54,27 @@ a {
 .grid {
     margin: auto;
     border: 1px solid;
-    height: 240px;
-    width: 280px;
+    height: 360px;
+    width: 420px;
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
   }
   
   .grid div {
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
+    border: 1px;
   }
   
   .player-one {
     background-color: red;
-    border-radius: 10px;
+    border-radius: 50%;
   }
   
   .player-two {
     background-color: blue;
-    border-radius: 10px;
+    border-radius: 50%;
   }
 
   .grid2 {
@@ -73,6 +83,7 @@ a {
     height: 456px;
     display: flex;
     flex-wrap: wrap;
+    background-color: white;
   }
 
     

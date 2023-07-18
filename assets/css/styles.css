@@ -10,13 +10,24 @@ header {
 }
 
 .games {
-        font-family: 'Josefin Sans', sans-serif;
-        font-weight: 400;
-        font-size: 75%;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    font-size: 75%;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 200%;
+}
+
+h2, h3 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 150%;
+}
+
 p {
   font-size: 200%;
   padding: 5px;
@@ -63,7 +74,8 @@ a {
     display: flex;
     flex-wrap: wrap;
   }
-  
+
+    
   .square {
     height: 200px;
     width: 200px;

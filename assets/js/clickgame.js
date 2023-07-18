@@ -4,7 +4,7 @@ const timeLeft = document.querySelector('#remaining-time');
 const score = document.querySelector('#score');
 
 let result = 0;
-let hitPosition
+let hitPosition;
 
 function randomSquare() {
     squares.forEach(square => {
@@ -13,6 +13,8 @@ function randomSquare() {
 
     let randomSquare = squares[Math.floor(Math.random() * 9)]
     randomSquare.classList.add('click')
+    
+    hitPosition = randomSquare.id
 
 }
 

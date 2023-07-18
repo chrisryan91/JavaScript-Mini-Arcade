@@ -83,6 +83,6 @@ a {
   }
   
   .click {
-    background-image: url("click.jpg");
+    background-image: url("../../assets/images/click.jpg");
     background-size: cover;
   }

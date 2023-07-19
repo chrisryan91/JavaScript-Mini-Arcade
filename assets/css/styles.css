@@ -40,12 +40,24 @@ p {
   padding: 25px;
 }
 
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
 .rock {
+  height: 300px;
+  width: 300px;
   background-image: url("../../assets/images/rock.png");
   background-size: cover;
 }
 
 .paper {
+  height: 300px;
+  width: 300px;
   background-image: url("../../assets/images/paper.png");
   background-size: cover;
 }

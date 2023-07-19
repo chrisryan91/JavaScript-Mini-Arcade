@@ -109,4 +109,8 @@ document.querySelector('.restart-btn').addEventListener('click', function(){
     return false;
   })
 
+var canvas = document.getElementById('responsive-canvas');
+var heightRatio = 1.0;
+canvas.height = canvas.width * heightRatio;
+
 })

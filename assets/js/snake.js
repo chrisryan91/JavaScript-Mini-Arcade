@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+    
 var blockSize = 25;
 var rows = 20;
 var cols = 20;
@@ -102,3 +104,9 @@ function placeFood() {
     foodY = Math.floor(Math.random() * rows) * blockSize;
 }
 
+document.querySelector('.restart-btn').addEventListener('click', function(){
+    window.location.reload();
+    return false;
+  })
+
+})

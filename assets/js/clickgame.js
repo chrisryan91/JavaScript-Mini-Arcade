@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const squares = document.querySelectorAll('.square');
 const click = document.querySelector('.click');
 const timeLeft = document.querySelector('#remaining-time');
@@ -54,3 +56,5 @@ document.querySelector('.restart-btn').addEventListener('click', function(){
     window.location.reload();
     return false;
   });
+
+})

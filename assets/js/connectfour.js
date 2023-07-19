@@ -123,4 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
           checkBoard()
         }
       }
+
+      document.querySelector('.restart-btn').addEventListener('click', function(){
+        window.location.reload();
+        return false;
+      })
+
     })

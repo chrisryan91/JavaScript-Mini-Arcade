@@ -138,6 +138,20 @@ a {
       background-color: #ffffba;
     }
 
+    #rckpprscssr {
+      display: flex;
+      margin: 50px 0;
+      text-align: center;
+    }
+
+    #option {
+      width: 32vw;
+    }
+
+    #option img {
+      width: 20vw;
+    }
+
     footer {
       padding-top: 5px;
     }
@@ -189,5 +203,17 @@ a {
 
       canvas {
         width: 100%;
+      }
+
+      @media only screen and (max-width: 400px) {
+
+        #rckpprscssr {
+          display: flex;
+          display: inline;
+        }
+
+        #option {
+          margin-left: 35%;
+        }
       }
     }

@@ -3,17 +3,20 @@ document.addEventListener('DOMContentLoaded', () => {
     let userScore = 0;
     let computerScore = 0;
     
-    const computerChoiceDisplay = document.getElementById('computer-result')
-    const userChoiceDisplay = document.getElementById('you-choose')
-    const result2Display = document.getElementById('result2')
-    const possibleChoices = document.querySelectorAll('button')
+    const scoreBoard_div = document.querySelector(".score-board");
+    const winner_div = document.querySelector(".winner > p");
+    const result2Display = document.getElementById('result2');
+    const possibleChoices = document.querySelectorAll('button');
 
-    possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
-        userChoice = e.target.id
-        userChoiceDisplay.innerHTML = userChoice
-        generateComputerChoice()
-        getResult2()
-    }))
+    const rck_div = document.getElementById("r");
+    const ppr_div = document.getElementById("p");
+    const scssr_div = document.getElementById("s");
+
+    function getComputerChoice() {
+        const choices = ['r', 'p', 's'];
+        const randomNumber = Math.floor(Math.random()*3);
+        return choices[randomNumber];
+    }
 
     function getComputerChoice() {
         const randomNumber = Math.floor(Math.random()*possibleChoices.length) + 1

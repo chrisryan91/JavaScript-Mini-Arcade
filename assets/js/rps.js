@@ -1,10 +1,8 @@
-let userScore = 0;
-let computerScore = 0;
+
 const userScoreSpan = document.getElementById("user-result");
 const computerScoreSpan = document.getElementById("computer-result");
 
-const scoreBoard_div = document.querySelector(".score-board");
-const winner_div = document.querySelector(".winner > p");
+
 
 const rck_div = document.getElementById("r");
 const ppr_div = document.getElementById("p");

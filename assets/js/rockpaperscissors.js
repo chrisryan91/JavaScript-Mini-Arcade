@@ -62,9 +62,18 @@ document.addEventListener('DOMContentLoaded', () => {
         result2Display.innerHTML = result2
     }
 
-    document.querySelector('.restart-btn').addEventListener('click', function(){
-        window.location.reload();
-        return false;
-      })
-
+    function main() {
+        ppr_div.addEventListener('click', function() {
+            game("p");
+        })
+        
+        rck_div.addEventListener('click', function() {
+            game("r");
+        })
+        
+        scssr_div.addEventListener('click', function() {
+            game("s");
+        })
+        
+        }
     })

@@ -164,7 +164,7 @@ a {
       }
     }
 
-    @media only screen and (max-width: 450px) {
+    @media only screen and (max-width: 500px) {
 
       .games div { 
         font-size: 125%}
@@ -185,5 +185,9 @@ a {
 
       .grid div {
         width: 14.285vw;
+      }
+
+      canvas {
+        width: 100%;
       }
     }

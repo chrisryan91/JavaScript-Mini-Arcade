@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const userChoiceDisplay = document.getElementById('you-choose')
     const result2Display = document.getElementById('result2')
     const possibleChoices = document.querySelectorAll('button')
-    let userChoice
-    let result2
 
     possibleChoices.forEach(possibleChoice => possibleChoice.addEventListener('click', (e) => {
         userChoice = e.target.id

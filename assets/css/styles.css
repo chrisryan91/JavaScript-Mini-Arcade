@@ -25,6 +25,10 @@ header {
     flex-wrap: wrap;
 }
 
+#title {
+    text-decoration: underline;
+}
+
 h1 {
     font-family: 'Josefin Sans', sans-serif;
     font-size: 200%;
@@ -137,4 +141,44 @@ a {
     footer {
       padding-top: 5px;
     }
-    
+
+
+    @media only screen and (max-width: 900px) {
+      .games div { font-size: 80%;}
+    }
+
+    @media only screen and (max-width: 750px) {
+      header{
+        text-align: center;
+      }
+
+      .games {
+        display: flex;
+        display: inline;
+      }
+
+      .games div {
+        width: 100%;
+        height: 75vh;
+        font-size: 150%;
+      }
+    }
+
+    @media only screen and (max-width: 450px) {
+      header {
+        width: 100%;
+      }
+
+      .games div { 
+        font-size: 125%}
+
+      
+      .grid2 {
+        margin: auto;
+        width: 100%;
+      }
+
+      .square {
+        width: 32%;
+      }
+    }

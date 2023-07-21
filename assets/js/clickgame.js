@@ -9,6 +9,8 @@ let result = 0;
 let hitPosition;
 let currentTime = 60;
 
+let highScore = document.getElementById("highscorecg");
+
 function randomSquare() {
     squares.forEach(square => {
         square.classList.remove('click')
@@ -57,4 +59,19 @@ document.querySelector('.restart-btn').addEventListener('click', function(){
     return false;
   });
 
+
+localStorage.setItem("topScore", result);
+
+let top = localStorage.getItem("topScore");
+
+highScore.innerHTML = top;
+
+function changeScore() {
+    if (result > top) {
+    top = result;
+    highScore.innerHTML = top;
+}
+}
+
 })
+

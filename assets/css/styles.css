@@ -45,8 +45,16 @@ h2, h3 {
 
 .score-board span {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 150%;
   font-weight: 600;
+}
+
+#scores_winners {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#scores_winners div {
+  width: 50%;
 }
 
 p {
@@ -218,15 +226,27 @@ a {
         width: 100%;
       }
 
+      #scores_winners {
+        display: flex;
+        display: inline;
+      }
+      
+      #scores_winners div {
+        width: 100%;
+      }
+
+      #rckpprscssr {
+        display: flex;
+        display: inline;
+        height: 100%;
+      }
+
+      #option {
+        margin-left: 35%;
+      }
+    }
+
       @media only screen and (max-width: 400px) {
 
-        #rckpprscssr {
-          display: flex;
-          display: inline;
-        }
 
-        #option {
-          margin-left: 35%;
-        }
-      }
     }

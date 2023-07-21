@@ -18,52 +18,45 @@ document.addEventListener('DOMContentLoaded', () => {
         return choices[randomNumber];
     }
 
-    function getComputerChoice() {
-        const randomNumber = Math.floor(Math.random()*possibleChoices.length) + 1
+    function win(userChoice, computerChoice) {
+        userScore++;
+        userScoreSpan.innerHTML = userScore;
+        computerScoreSpan.innerHTML = computerScore;
+        winner_div.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + "!";
+        }
     
-        if (randomNumber === 1) {
-            computerChoice = 'rock'
-        }
-        if (randomNumber === 2) {
-            computerChoice = 'scissors'
-        }
-        if (randomNumber === 3) {
-            computerChoice = 'paper'
-        }
-        
-        computerChoiceDisplay.innerHTML = computerChoice
+    function lose(userChoice, computerChoice) {
+        computerScore++;
+        computerScoreSpan.innerHTML = computerScore;
+        userScoreSpan.innerHTML = userScore;
+        winner_div.innerHTML = convertToWord(computerChoice) + " beats " + convertToWord(userChoice) + "!";
+    }
+    
+    function draw(userChoice, computerChoice) {
+        computerScoreSpan.innerHTML = computerScore;
+        userScoreSpan.innerHTML = userScore;
+        winner_div.textContent = "Draw!";
     }
 
-    function getResult2() {
-        if (computerChoice === userChoice) {
-            result2 = 'Draw!'
+    function game(userChoice) {
+        const computerChoice = getComputerChoice();
+        switch (userChoice + computerChoice){
+            case "rs":
+            case "pr":
+            case "sp":
+                    win(userChoice, computerChoice);
+                    break;
+            case "rp":
+            case "ps":
+            case "sr": 
+                    lose(userChoice, computerChoice);
+                    break;
+            case "rr":
+            case "pp":
+            case "ss":
+                    draw(userChoice, computerChoice);
+                    break;
         }
-    
-        if (computerChoice === 'rock' && userChoice === "paper") {
-            result2 = 'You win!'
-        }
-    
-        if (computerChoice === 'scissors' && userChoice === "paper") {
-            result2 = 'You lose!'
-        }
-    
-        if (computerChoice === 'paper' && userChoice === "rock"){
-            result2 = 'You lose!'
-        }
-    
-        if (computerChoice === 'rock' && userChoice === "scissors") {
-            result2 = 'You lose!'
-        }
-    
-        if (computerChoice === 'paper' && userChoice === "scissors"){
-            result2 = 'You win!'
-        }
-    
-        if (computerChoice === 'scissors' && userChoice === "rock"){
-            result2 = 'You win!'
-        }
-
-        winner_div.innerHTML = result2
     }
 
     function main() {

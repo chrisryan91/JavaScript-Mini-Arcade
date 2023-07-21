@@ -1,6 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-    const computerChoiceDisplay = document.getElementById('computer-chooses')
+    let userScore = 0;
+    let computerScore = 0;
+    
+    const computerChoiceDisplay = document.getElementById('computer-result')
     const userChoiceDisplay = document.getElementById('you-choose')
     const result2Display = document.getElementById('result2')
     const possibleChoices = document.querySelectorAll('button')
@@ -14,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         getResult2()
     }))
 
-    function generateComputerChoice() {
+    function getComputerChoice() {
         const randomNumber = Math.floor(Math.random()*possibleChoices.length) + 1
     
         if (randomNumber === 1) {
@@ -59,7 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
             result2 = 'You win!'
         }
 
-        result2Display.innerHTML = result2
+        winner_div.innerHTML = result2
     }
 
     function main() {

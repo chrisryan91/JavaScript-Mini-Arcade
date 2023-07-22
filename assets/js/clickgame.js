@@ -8,8 +8,12 @@ const score = document.querySelector('#score');
 let result = 0;
 let hitPosition;
 let currentTime = 60;
+let top = localStorage.getItem("topScore");
+
 
 let highScore = document.getElementById("highscorecg");
+
+highScore.innerHTML = top;
 
 function randomSquare() {
     squares.forEach(square => {
@@ -40,11 +44,6 @@ function moveMole() {
 
 moveMole();
 
-
-localStorage.setItem("topScore", result);
-
-let top = localStorage.getItem("topScore");
-
 function countDown () {
     currentTime--
     timeLeft.textContent = currentTime;
@@ -52,14 +51,17 @@ function countDown () {
     if (currentTime === 0) {
        clearInterval(countDownTimerId)
        alert('Game over! Your score is' + result)
-       if (result > top) top = result;
-       highScore.textContent = top;
-       localStorage.setItem("topScore", result);
-       console.log(top);
+       if (result > top) {
+        localStorage.setItem("topScore", result);
+        highScore.textContent = top;
+        if (result >= topScore) {
+            alert("new high score" + result)
+        }
+       }
     }
 }
 
-let countDownTimerId = setInterval(countDown, 1000)
+let countDownTimerId = setInterval(countDown, 1000);
 
 var restart = document.getElementById('restart');
 
@@ -69,5 +71,3 @@ document.querySelector('.restart-btn').addEventListener('click', function(){
   });
 
 })
-
-console.log(localStorage)

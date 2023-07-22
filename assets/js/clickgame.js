@@ -40,6 +40,11 @@ function moveMole() {
 
 moveMole();
 
+
+localStorage.setItem("topScore", result);
+
+let top = localStorage.getItem("topScore");
+
 function countDown () {
     currentTime--
     timeLeft.textContent = currentTime;
@@ -47,6 +52,10 @@ function countDown () {
     if (currentTime === 0) {
        clearInterval(countDownTimerId)
        alert('Game over! Your score is' + result)
+       if (result > top) top = result;
+       highScore.textContent = top;
+       localStorage.setItem("topScore", result);
+       console.log(top);
     }
 }
 
@@ -59,19 +68,6 @@ document.querySelector('.restart-btn').addEventListener('click', function(){
     return false;
   });
 
-
-localStorage.setItem("topScore", result);
-
-let top = localStorage.getItem("topScore");
-
-highScore.innerHTML = top;
-
-function changeScore() {
-    if (result > top) {
-    top = result;
-    highScore.innerHTML = top;
-}
-}
-
 })
 
+console.log(localStorage)

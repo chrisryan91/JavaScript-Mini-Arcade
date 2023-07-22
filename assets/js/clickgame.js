@@ -24,7 +24,6 @@ function randomSquare() {
     randomSquare.classList.add('click')
     
     hitPosition = randomSquare.id
-
 }
 
 squares.forEach(square => {
@@ -34,15 +33,16 @@ squares.forEach(square => {
             score.textContent = result
             hitPosition = null
         }
+
     })
 })
 
 function moveMole() {
-    let timerId = null
-    timerId = setInterval(randomSquare, 750)
+    let timerId;
+    timerId = setInterval(randomSquare, 750);
 }
 
-moveMole();
+moveMole()
 
 function countDown () {
     currentTime--
@@ -50,14 +50,10 @@ function countDown () {
 
     if (currentTime === 0) {
        clearInterval(countDownTimerId)
-       alert('Game over! Your score is' + result)
        if (result > top) {
         localStorage.setItem("topScore", result);
         highScore.textContent = top;
-        if (result >= topScore) {
-            alert("new high score" + result)
         }
-       }
     }
 }
 

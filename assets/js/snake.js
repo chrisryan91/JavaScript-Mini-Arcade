@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     
-var blockSize = 25;
+var blockSize = 20;
 var rows = 20;
 var cols = 20;
 var board;
@@ -18,6 +18,15 @@ var foodX;
 var foodY;
 
 var gameOver = false;
+
+let score = 0;
+
+let newScoreSpan = document.getElementById("new_score");
+let highScoreSpan = document.getElementById("high_score");
+
+let highest = localStorage.getItem("highScore");
+
+highScoreSpan.innerHTML = highest;
 
 window.onload = function() {
     board = document.getElementById("board");
@@ -46,6 +55,8 @@ function update() {
     if (snakeX == foodX && snakeY == foodY){
         snakeBody.push([foodX, foodY])
         placeFood();
+        score++;
+        newScoreSpan.textContent = score;
     }
 
     for (let i = snakeBody.length-1; i > 0; i--) {
@@ -67,7 +78,11 @@ function update() {
     if (snakeX < 0 || snakeX > cols*blockSize || snakeY < 0 || snakeY > rows*blockSize) {
         gameOver = true;
         alert("Game Over! :(")
-    }
+        if (score > highest) {
+            localStorage.setItem("highScore", score);
+            highScoreSpan.innerHTML = highest;
+        }
+        }
 
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]){
@@ -104,13 +119,23 @@ function placeFood() {
     foodY = Math.floor(Math.random() * rows) * blockSize;
 }
 
+
 document.querySelector('.restart-btn').addEventListener('click', function(){
     window.location.reload();
     return false;
   })
 
-var canvas = document.getElementById('responsive-canvas');
-var heightRatio = 1.0;
-canvas.height = canvas.width * heightRatio;
+
+// var canvas = document.getElementById('responsive-canvas');
+// var heightRatio = 1.0;
+// canvas.height = canvas.width*heightRatio;
+
+// let score = snakeBody.length;
+//let highScore = 0;
+//localStorage.setItem("highscore", highScore);
+//let storage = localStorage.getItem("highscore");
+//highScoreSpan.textContent = highScore;
+//if (score > highScore) {
+//highScore = score; 
 
 })

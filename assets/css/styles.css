@@ -103,7 +103,7 @@ a {
 
 .grid {
     margin: auto;
-    border: 1px solid;
+    border: 2px solid;
     height: 360px;
     width: 420px;
     display: flex;
@@ -112,11 +112,13 @@ a {
   }
   
   .grid div {
-    height: 60px;
-    width: 60px;
-    border: 1px;
+    height: 58.41px;
+    width: 58.41px;
   }
   
+  .grid .nottaken {
+    border: 1px solid black;
+  }
   .player-one {
     background-color: red;
     border-radius: 50%;

@@ -5,6 +5,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const displayCurrentPlayer = document.querySelector('#current-player')
     let currentPlayer = 1
 
+    let playerOneScore = 0;
+    let playerTwoScore = 0;
+
     const winningArrays = [
         [0, 1, 2, 3],
         [41, 40, 39, 38],
@@ -92,6 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
           )
           {
             result.innerHTML = 'Player One Wins!'
+            playerOneScore++
           }
           if (
             square1.classList.contains('player-two') &&
@@ -101,6 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
           )
           {
             result.innerHTML = 'Player Two Wins!'
+            playerTwoScore++
           }
         }
       }

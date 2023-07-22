@@ -8,6 +8,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let playerOneScore = 0;
     let playerTwoScore = 0;
 
+    let playerOneSpan = document.getElementById("playeronespan");
+    let playerTwoSpan = document.getElementById("playertwospan");
+
+    let playerOneTop = localStorage.getItem("playeronehighscore");
+    let playerTwoTop = localStorage.getItem("playertwohighscore");
+
+    playerOneSpan.innerHTML = playerOneTop;
+    playerTwoSpan.innerHTML = playerTwoTop;
+
     const winningArrays = [
         [0, 1, 2, 3],
         [41, 40, 39, 38],
@@ -94,8 +103,10 @@ document.addEventListener('DOMContentLoaded', () => {
             square4.classList.contains('player-one')
           )
           {
-            result.innerHTML = 'Player One Wins!'
+            displayCurrentPlayer.innerHTML = 'Player One Wins!'
             playerOneScore++
+            playerOneSpan.innerHTML = playerOneScore;
+            localStorage.setItem("playeronehighscore", playerOneScore)
           }
           if (
             square1.classList.contains('player-two') &&
@@ -104,8 +115,10 @@ document.addEventListener('DOMContentLoaded', () => {
             square4.classList.contains('player-two')
           )
           {
-            result.innerHTML = 'Player Two Wins!'
+            displayCurrentPlayer.innerHTML = 'Player Two Wins!'
             playerTwoScore++
+            playerTwoSpan.innerHTML = playerTwoScore;
+            localStorage.setItem("playertwohighscore", playerTwoScore);
           }
         }
       }
@@ -117,12 +130,12 @@ document.addEventListener('DOMContentLoaded', () => {
               squares[i].classList.add('taken')
               squares[i].classList.add('player-one')
               currentPlayer = 2
-              displayCurrentPlayer.innerHTML = currentPlayer
+              displayCurrentPlayer.innerHTML = "Player " + currentPlayer + " turn!"
             } else if (currentPlayer == 2){
               squares[i].classList.add('taken')
               squares[i].classList.add('player-two')
               currentPlayer = 1
-              displayCurrentPlayer.innerHTML = currentPlayer        
+              displayCurrentPlayer.innerHTML = "Player " + currentPlayer + " turn!"
             } 
           } else alert('cant go here')
           checkBoard()

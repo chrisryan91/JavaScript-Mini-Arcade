@@ -125,17 +125,4 @@ document.querySelector('.restart-btn').addEventListener('click', function(){
     return false;
   })
 
-
-// var canvas = document.getElementById('responsive-canvas');
-// var heightRatio = 1.0;
-// canvas.height = canvas.width*heightRatio;
-
-// let score = snakeBody.length;
-//let highScore = 0;
-//localStorage.setItem("highscore", highScore);
-//let storage = localStorage.getItem("highscore");
-//highScoreSpan.textContent = highScore;
-//if (score > highScore) {
-//highScore = score; 
-
 })

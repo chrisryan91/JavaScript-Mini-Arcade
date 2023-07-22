@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,600&display=swap');
 
-/* CSS code for the body and header which will remain consistent through the website */
+/* Global Styles */
 
 body {
   text-align: center;
@@ -48,7 +48,7 @@ footer {
   padding-top: 10px;
 }
 
-.restart-btn {
+.restart-btn, .start-btn {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 900;
   border-radius: 8px;
@@ -57,7 +57,7 @@ footer {
   background-color: #ffffba;
 }
 
-/* Code specifically for the Index.html page - the menu page */
+/* Menu page with an option of four games to choose from */
 
 .games {
   font-family: 'Josefin Sans', sans-serif;
@@ -78,7 +78,7 @@ footer {
 text-decoration: underline;
 }
 
-/* Code for the body of the first game - Clicking Speed Test - which creates nine divs wrapped into one parent div */
+/* Clicking Speed Test Game: styles 9 divs contained within a parent div */
 
 .grid2 {
   margin: auto;
@@ -101,7 +101,7 @@ text-decoration: underline;
   background-size: cover;
 }
 
-/* Code for second game - Rock, Paper, Scissors */
+/* Rock, Paper, Scissors: styles three divs each containing an image with a small scoreboard above it */
 
 .choices {
   display: flex;
@@ -158,7 +158,7 @@ text-decoration: underline;
   background-color: white;
 }
 
-/* Code for final game - Connect Four. Including  */
+/* Connect Four section: 49 divs with the first 42 wrapped into one larger parent div. The final 7 divs overflow the parents div.  */
 
 .grid {
   margin: auto;

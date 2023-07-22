@@ -59,8 +59,6 @@ function countDown () {
 
 let countDownTimerId = setInterval(countDown, 1000);
 
-var restart = document.getElementById('restart');
-
 document.querySelector('.restart-btn').addEventListener('click', function(){
     window.location.reload();
     return false;

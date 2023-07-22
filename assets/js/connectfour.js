@@ -105,8 +105,9 @@ document.addEventListener('DOMContentLoaded', () => {
           {
             displayCurrentPlayer.innerHTML = 'Player One Wins!'
             playerOneScore++
-            playerOneSpan.innerHTML = playerOneScore;
             localStorage.setItem("playeronehighscore", playerOneScore)
+            playerOneSpan.innerHTML = playerOneScore;
+
           }
           if (
             square1.classList.contains('player-two') &&
@@ -117,8 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
           {
             displayCurrentPlayer.innerHTML = 'Player Two Wins!'
             playerTwoScore++
-            playerTwoSpan.innerHTML = playerTwoScore;
             localStorage.setItem("playertwohighscore", playerTwoScore);
+            playerTwoSpan.innerHTML = playerTwoScore;
           }
         }
       }

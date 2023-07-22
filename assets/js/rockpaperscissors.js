@@ -77,4 +77,9 @@ scssr_div.addEventListener('click', function() {
 
 main();
 
+document.querySelector('.restart-btn').addEventListener('click', function(){
+    window.location.reload();
+    return false;
+  })
+
 })

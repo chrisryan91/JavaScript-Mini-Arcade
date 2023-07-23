@@ -110,16 +110,28 @@ text-decoration: underline;
   justify-content: center;
 }
 
+#scores_winners {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#scores_winners div {
+  width: 33%;
+}
+
 .rock {
   height: 300px;
   width: 300px;
-  background-image: url("../../assets/images/rock.png");
+  background-color: white;
   background-size: cover;
+  background-image: url("../../assets/images/rock.png");
 }
 
 .paper {
   height: 300px;
   width: 300px;
+  background-color: white;
+  background-size: cover;
   background-image: url("../../assets/images/paper.png");
 }
 
@@ -128,13 +140,19 @@ text-decoration: underline;
   background-size: cover;
 }
 
-#scores_winners {
-  display: flex;
-  flex-wrap: wrap;
+.option {
+  width: 32vw;
 }
 
-#scores_winners div {
-  width: 33%;
+.option img {
+  width: 12vw;
+  border-radius: 10%;
+  border: 2px black dotted;
+  background-color: white;
+}
+
+.option img:hover {
+  background:	#bae1ff;
 }
 
 .score-board span {
@@ -146,16 +164,6 @@ text-decoration: underline;
   display: flex;
   margin: 50px 0;
   text-align: center;
-}
-
-.option {
-  width: 32vw;
-}
-
-.option img {
-  width: 12vw;
-  border: 2px black solid;
-  background-color: white;
 }
 
 /* Connect Four section: 49 divs with the first 42 wrapped into one larger parent div. The final 7 divs overflow the parents div.  */

@@ -6,6 +6,7 @@ const rck_div = document.getElementById("Rock");
 const ppr_div = document.getElementById("Paper");
 const scssr_div = document.getElementById("Scissor");
 const winner_div = document.querySelector(".winner > p");
+const computerChoiceDiv = document.getElementById("computer_choice");
 let userScore = 0;
 let computerScore = 0;
 
@@ -14,6 +15,7 @@ let computerScore = 0;
 function getComputerChoice() {
     const choices = ['Rock', 'Paper', 'Scissor'];
     const randomNumber = Math.floor(Math.random()*3);
+    computerChoiceDiv.innerHTML = choices[randomNumber];
     return choices[randomNumber];
 }
 

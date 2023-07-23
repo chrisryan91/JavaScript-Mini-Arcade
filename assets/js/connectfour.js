@@ -1,9 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-const squares = document.querySelectorAll('.grid div')
-const result = document.querySelector('#result')
-const displayCurrentPlayer = document.querySelector('#current-player')
-let currentPlayer = 1
+const squares = document.querySelectorAll('.grid div');
+const displayCurrentPlayer = document.querySelector('#current-player');
+let currentPlayer = 1;
 
 let playerOneScore = 0;
 let playerTwoScore = 0;
@@ -90,16 +89,16 @@ const winningArrays = [
     [11, 18, 25, 32],
     [12, 19, 26, 33],
     [13, 20, 27, 34],
-]
+];
 
 // Function to check if that winning arrays are identical to the closen arrays for both player one and player two.
 
 function checkBoard() {
         for (let y = 0; y < winningArrays.length; y++) {
-        const square1 = squares[winningArrays[y][0]]
-        const square2 = squares[winningArrays[y][1]]
-        const square3 = squares[winningArrays[y][2]]
-        const square4 = squares[winningArrays[y][3]]
+        const square1 = squares[winningArrays[y][0]];
+        const square2 = squares[winningArrays[y][1]];
+        const square3 = squares[winningArrays[y][2]];
+        const square4 = squares[winningArrays[y][3]];
 
         if (
         square1.classList.contains('player-one') &&
@@ -108,10 +107,10 @@ function checkBoard() {
         square4.classList.contains('player-one')
         )
         {
-        displayCurrentPlayer.innerHTML = 'Player One Wins!'
-        playerOneScore++
-        localStorage.setItem("playeronehighscore", playerOneScore)
-        playerOneSpan.innerHTML = playerOneScore;
+        displayCurrentPlayer.innerHTML = 'Player One Wins!';
+        playerOneScore++;
+        localStorage.setItem("playeronehighscore", playerOneScore);
+        playerOneSpan.innerHTML = playerOneTop;
         }
         if (
         square1.classList.contains('player-two') &&
@@ -120,12 +119,12 @@ function checkBoard() {
         square4.classList.contains('player-two')
         )
         {
-        displayCurrentPlayer.innerHTML = 'Player Two Wins!'
-        playerTwoScore++
+        displayCurrentPlayer.innerHTML = 'Player Two Wins!';
+        playerTwoScore++;
         localStorage.setItem("playertwohighscore", playerTwoScore);
-        playerTwoSpan.innerHTML = playerTwoScore;
-       }
-  }
+        playerTwoSpan.innerHTML = playerTwoTop;
+        }
+    }
 }
 
 // Function that will loop through the 42 and listen for click - then add an image to the div if it meets the right criteria. 
@@ -135,22 +134,22 @@ for (let i = 0; i < squares.length; i++) {
         squares[i].onclick = () => {
             if (squares[i + 7].classList.contains('taken') &&!squares[i].classList.contains('taken')) {
                 if (currentPlayer == 1) {
-                    squares[i].classList.add('taken')
-                    squares[i].classList.add('player-one')
-                    currentPlayer = 2
-                    displayCurrentPlayer.innerHTML = "Player " + currentPlayer + " turn!"
+                    squares[i].classList.add('taken');
+                    squares[i].classList.add('player-one');
+                    currentPlayer = 2;
+                    displayCurrentPlayer.innerHTML = "Player " + currentPlayer + " turn!";
                 } else if (currentPlayer == 2){
-                    squares[i].classList.add('taken')
-                    squares[i].classList.add('player-two')
-                    currentPlayer = 1
-                    displayCurrentPlayer.innerHTML = "Player " + currentPlayer + " turn!"
+                    squares[i].classList.add('taken');
+                    squares[i].classList.add('player-two');
+                    currentPlayer = 1;
+                    displayCurrentPlayer.innerHTML = "Player " + currentPlayer + " turn!";
                 } 
-        } else alert('cant go here')
+        } else alert('cant go here');
 
     // Calls the checkBoard function to check for a winning array after each click!
 
-    checkBoard()
-    }
+    checkBoard();
+    };
 } 
 
 // Function that listens out for the button to be clicked where it will reload the page
@@ -158,6 +157,6 @@ for (let i = 0; i < squares.length; i++) {
 document.querySelector('.restart-btn').addEventListener('click', function(){
     window.location.reload();
     return false;
-})
+});
 
-})
+});

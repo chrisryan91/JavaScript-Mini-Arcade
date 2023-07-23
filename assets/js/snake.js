@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    
+
 
 // Variables for the canvas element we will create
 
@@ -42,7 +42,7 @@ window.onload = function() {
     // Run the update function with an interval
 
     setInterval(update, 1000/10);
-}
+};
 
 // Update the DOM high score from the loca storage
 
@@ -68,7 +68,7 @@ function update() {
     // Functions to check if the snake and the food are on the same square. It will add the food to the snake array to serve as his body.
 
     if (snakeX == foodX && snakeY == foodY){
-        snakeBody.push([foodX, foodY])
+        snakeBody.push([foodX, foodY]);
         placeFood();
         score++;
         newScoreSpan.textContent = score;
@@ -89,14 +89,14 @@ function update() {
     snakeY += velocityY * blockSize;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);
     for (let i=0; i < snakeBody.length; i++) {
-        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize)
+        context.fillRect(snakeBody[i][0], snakeBody[i][1], blockSize, blockSize);
     }
 
     // Functions to determine Game Over conditions - if the snake goes out of bounds or collides with himself
 
     if (snakeX < 0 || snakeX > cols*blockSize || snakeY < 0 || snakeY > rows*blockSize) {
         gameOver = true;
-        alert("Game Over! :(")
+        alert("Game Over! :(");
         if (score > highest) {
             localStorage.setItem("highScore", score);
             highScoreSpan.innerHTML = highest;
@@ -106,7 +106,7 @@ function update() {
     for (let i = 0; i < snakeBody.length; i++) {
         if (snakeX == snakeBody[i][0] && snakeY == snakeBody[i][1]){
         gameOver = true;
-        alert("Game Over! :(")
+        alert("Game Over! :(");
         }
     }
 }
@@ -148,6 +148,6 @@ function placeFood() {
 document.querySelector('.restart-btn').addEventListener('click', function(){
     window.location.reload();
     return false;
-    })
+    });
 
-})
+});

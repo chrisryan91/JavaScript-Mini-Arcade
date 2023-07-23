@@ -5,7 +5,6 @@ const computerScoreSpan = document.getElementById("computer-result");
 const rck_div = document.getElementById("Rock");
 const ppr_div = document.getElementById("Paper");
 const scssr_div = document.getElementById("Scissor");
-const scoreBoard_div = document.querySelector(".score-board");
 const winner_div = document.querySelector(".winner > p");
 let userScore = 0;
 let computerScore = 0;
@@ -23,15 +22,15 @@ function getComputerChoice() {
 function main() {
     ppr_div.addEventListener('click', function() {
         game("Paper");
-    })
+    });
 
     rck_div.addEventListener('click', function() {
         game("Rock");
-    })
+    });
 
     scssr_div.addEventListener('click', function() {
         game("Scissor");
-    })
+    });
 
 }
 
@@ -93,6 +92,7 @@ main();
 document.querySelector('.restart-btn').addEventListener('click', function(){
     window.location.reload();
     return false;
-  })
+    });
 
-})
+});
+    

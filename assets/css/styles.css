@@ -229,15 +229,17 @@ header{
 }
 
 .square {
-  width: 32%;
+  width: 32.8%;
 }
 
 .grid {
   width: 100%;
 }
 
-.grid div {
-  width: 14.285vw;
+.grid .nottaken {
+  border: none;
+  width: 13.85vw;
+  border: .1vw solid black;
 }
 
 canvas {
@@ -268,6 +270,10 @@ canvas {
 /* media queries for smallest size screens */
 
 @media only screen and (max-width: 400px) {
-
+  .grid .nottaken {
+    border: none;
+    width: 13.75vw;
+    border: .1vw solid black;
+  }
 
 }

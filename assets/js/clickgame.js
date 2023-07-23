@@ -25,6 +25,11 @@ function randomSquare() {
     randomSquare.classList.add('click')
     
     hitPosition = randomSquare.id
+
+    if (currentTime === 0 ) {
+        return;
+    }
+
 }
 
 // Function that adds an event listener on each of the square divs which checks if the clicked div is equal to the randomly chosen div with the Click.png image
@@ -60,11 +65,11 @@ function countDown () {
 
     // if statement which will determine the score of the game, save it in localStorage and update the DOM
     if (currentTime === 0) {
-       clearInterval(countDownTimerId)
-       if (result > top) {
-        localStorage.setItem("topScore", result);
-        highScore.textContent = top;
-        }
+        clearInterval(countDownTimerId)
+        if (result > top) {
+            localStorage.setItem("topScore", result);
+            highScore.textContent = top;
+            }
     }
 }
 

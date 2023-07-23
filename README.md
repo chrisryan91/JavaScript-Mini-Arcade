@@ -44,10 +44,20 @@ There are four games to choose from which could be either well-known, simple gam
   - Resources Used
 - Acknowledgements 
 
-### Designers Goals
+## Designers Goals
 - I wanted to to design and deploy a neat, simple and unfussy website which would be navigable for any user of any demographic.
 - I wanted to provide a small collection of simple games to users who want to challenge themselves once, twice or a few times. These games should be familiar to most people in one form or another. I wanted there to be little to no learning curve. 
 - I wanted to utilize code I have written from teaching myself and from tutorials that I have learned from since I began my coding journey.
 - I wanted to colour and styling to be appealing and subtle with design to be unobtrusive. 
 - I wanted to give the user the option about what type of game and challenge they would like - against someone else, against the computer, or against themselves by trying to beat their previous score. 
 
+## Design
+### Colour Scheme
+
+ - Colour palette from [Pastel Colour Palette](https://www.color-hex.com/color-palette/5361)
+
+![Pastel Colour Palette](assets/images/readme_images/colourpalette.png)
+
+ - The colour scheme was always going to be a pastel palette. For me, pastel colours are calming. They have less contrast and brightness so what they lack in vibrance they make up for in playfulness. They are versatile and visually appealing. 
+ - Pastel colours have a retro aesthetic that was common in arcades in the middle of last century. I used them here to try to recreate that arcade vibe. Pastel colours have also become trendy again in the recent decade so they are current and modern. 
+ - The pastel palette is generally soothing on the eyes - and this should be effective for a website like JavaScript Mini-Arcade where the games are fairly rudimentary in design. The colour scheme needed to be unobtrusive to allow for a greater emphasis of the content. 

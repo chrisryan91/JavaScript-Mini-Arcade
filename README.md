@@ -82,17 +82,17 @@ All designed with Balsamiq.
 
 <details>
 <summary>Homepage Wireframe</summary>
-<img src="assets/readme_images/../images/readme_images/wireframes/Homepage%20Wireframe.png" alt="Website Homepage displayed on a desktop">
+<img src="assets/readme_images/../images/readme_images/wireframes/Homepage%20Wireframe.png" alt="Website Homepage wireframe displayed on a desktop">
 </details>
 
 <details>
 <summary>Game Page Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Game%20Page%20Wireframe.png" alt="Game Page displayed on a desktop">
+<img src="assets/images/readme_images/wireframes/Game%20Page%20Wireframe.png" alt="Game Page wireframe displayed on a desktop">
 </details>
 
 <details>
 <summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page wireframe displayed on a mobile device" >
 </details>
 
 ## Features and Functionality
@@ -100,61 +100,61 @@ All designed with Balsamiq.
 ### Home Page
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Desktop Home Page Screenshot</summary>
+<img src="assets/images/readme_images/Desktop_Screenshots/Homepage_Screenshot.png" alt="Hope Page displayed on a desktop" >
 </details>
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Mobile Home Page Screenshot</summary>
+<img src="assets/images/readme_images/Mobile_Screenshots/Homepage_Mobile_Screenshot.png" alt="Home Page displayed on a mobile device" >
 </details>
 
 ### Speed Clicking Game Page
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Desktop Speed Clicking Game Screenshot</summary>
+<img src="assets/images/readme_images/Desktop_Screenshots/Speed_Clicking_Game_Screenshot.png" alt="Speed Clicking Game displayed on a desktop" >
 </details>
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Mobile Speed Clicking Game Screenshot</summary>
+<img src="assets/images/readme_images/Mobile_Screenshots/Speed_Clicking_Game-Screenshot.png" alt="Speed Clicking Game displayed on a mobile device" >
 </details>
 
 ### Rock, Paper, Scissor Page
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Rock, Paper, Scissors Desktop Screenshot</summary>
+<img src="assets/images/readme_images/Desktop_Screenshots/Rock_Paper_Scissors_Screenshot.png" alt="Rock, Paper, Scissors displayed on a desktop" >
 </details>
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary> Rock, Paper, Scissors Mobile Screenshot</summary>
+<img src="assets/images/readme_images/Mobile_Screenshots/Rock_Paper_Scissors_Mobile_Screenshot.png" alt="Rock, Paper, Scissors displayed on a mobile device" >
 </details>
 
 ### Snake Page
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Snake Desktop Screenshot</summary>
+<img src="assets/images/readme_images/Desktop_Screenshots/Snake_Screenshot.png" alt="Snake displayed on a desktop" >
 </details>
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Snake Mobile Desktop</summary>
+<img src="assets/images/readme_images/Mobile_Screenshots/Snake_Mobile_Screenshot.png" alt="Snake displayed on a mobile device" >
 </details>
 
 ### Connect Four Page
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Connect Four Desktop Screenshot</summary>
+<img src="assets/images/readme_images/Desktop_Screenshots/Connect_Four_Screenshot.png" alt="Connect Four displayed on a desktop" >
 </details>
 
 <details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+<summary>Connect Four Mobile Screenshot</summary>
+<img src="assets/images/readme_images/Mobile_Screenshots/Connect_Four_Mobile_Screenshot.png" alt="Connect Four displayed on a mobile device" >
 </details>
 
 ### Features Left to Implement 

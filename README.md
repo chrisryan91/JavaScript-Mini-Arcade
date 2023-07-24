@@ -78,8 +78,13 @@ The website has a homepage and four other pages each containing a game.
 
 ### Wireframes
 
-![Homepage Wireframe](assets/readme_images/../images/readme_images/wireframes/Homepage%20Wireframe.png)
+![Homepage Wireframe]()
 
 ![Game Page Wireframe](assets/images/readme_images/wireframes/Game%20Page%20Wireframe.png)
 
 ![Mobile Wireframe](assets/images/readme_images/wireframes/Mobile%20Wireframe.png)
+
+<details>
+<summary>Title</summary>
+<img src="assets/readme_images/../images/readme_images/wireframes/Homepage%20Wireframe.png">
+</details>

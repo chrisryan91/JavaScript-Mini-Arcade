@@ -61,3 +61,25 @@ There are four games to choose from which could be either well-known, simple gam
  - The colour scheme was always going to be a pastel palette. For me, pastel colours are calming. They have less contrast and brightness so what they lack in vibrance they make up for in playfulness. They are versatile and visually appealing. 
  - Pastel colours have a retro aesthetic that was common in arcades in the middle of last century. I used them here to try to recreate that arcade vibe. Pastel colours have also become trendy again in the recent decade so they are current and modern. 
  - The pastel palette is generally soothing on the eyes - and this should be effective for a website like JavaScript Mini-Arcade where the games are fairly rudimentary in design. The colour scheme needed to be unobtrusive to allow for a greater emphasis of the content. 
+
+### Fonts
+
+- Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. 
+- I found Josefin Sans to be elegant and versatile so it suited this project. It is easy to read so it makes a smooth reading experience. It is distinctive without being cartoonish.
+- Sans Serif serves as a back-up if there is no access to [Google Fonts](https://fonts.google.com/).
+
+### Layout 
+
+The website has a homepage and four other pages each containing a game. 
+
+- A homepage with a header and body element containing four divs with four links.
+- Each link takes you to a separate html page dedicated to each game. 
+- Like the homepage, the game pages contain the same header and body element containing the games. 
+
+### Wireframes
+
+![Homepage Wireframe](assets/readme_images/../images/readme_images/wireframes/Homepage%20Wireframe.png)
+
+![Game Page Wireframe](assets/images/readme_images/wireframes/Game%20Page%20Wireframe.png)
+
+![Mobile Wireframe](assets/images/readme_images/wireframes/Mobile%20Wireframe.png)

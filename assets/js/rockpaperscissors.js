@@ -4,7 +4,7 @@ const userScoreSpan = document.getElementById("user-result");
 const computerScoreSpan = document.getElementById("computer-result");
 const rck_div = document.getElementById("Rock");
 const ppr_div = document.getElementById("Paper");
-const scssr_div = document.getElementById("Scissor");
+const scssr_div = document.getElementById("Scissors");
 const winner_div = document.querySelector(".winner > p");
 const computerChoiceDiv = document.getElementById("computer_choice");
 let userScore = 0;
@@ -13,7 +13,7 @@ let computerScore = 0;
 // Function to generate a random choice from Rock, Paper or Scissors 
 
 function getComputerChoice() {
-    const choices = ['Rock', 'Paper', 'Scissor'];
+    const choices = ['Rock', 'Paper', 'Scissors'];
     const randomNumber = Math.floor(Math.random()*3);
     computerChoiceDiv.innerHTML = choices[randomNumber];
     return choices[randomNumber];
@@ -31,7 +31,7 @@ function main() {
     });
 
     scssr_div.addEventListener('click', function() {
-        game("Scissor");
+        game("Scissors");
     });
 
 }
@@ -41,19 +41,19 @@ function main() {
 function game(userChoice) {
     const computerChoice = getComputerChoice();
         switch (userChoice + computerChoice){
-            case "RockScissor":
+            case "RockScissors":
             case "PaperRock":
-            case "ScissorPaper":
+            case "ScissorsPaper":
                     win(userChoice, computerChoice);
                     break;
             case "RockPaper":
-            case "PaperScissor":
-            case "ScissorRock": 
+            case "PaperScissors":
+            case "ScissorsRock": 
                     lose(userChoice, computerChoice);
                     break;
             case "RockRock":
             case "PaperPaper":
-            case "ScissorScissor":
+            case "ScissorsScissors":
                     draw(userChoice, computerChoice);
                     break;
         }

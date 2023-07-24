@@ -96,3 +96,144 @@ All designed with Balsamiq.
 </details>
 
 ## Features and Functionality
+
+### Home Page
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+### Speed Clicking Game Page
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+### Rock, Paper, Scissor Page
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+### Snake Page
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+### Connect Four Page
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+### Features Left to Implement 
+
+## Testing
+
+### Validator Testing
+
+- HTML
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+- CSS 
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+- JavaScript 
+
+<details>
+<summary>Mobile Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
+</details>
+
+### Accessibility
+
+- Desktop Lighthouse Score 
+
+- Mobile Lighthouse Score
+
+### Game Testing 
+
+### Browser Testing
+
+### Device Testing 
+
+### Bugs
+
+Fixed Bugs
+
+Unfixed Bugs
+
+## Technologies Used
+ 
+### Languages
+
+- HTML
+- CSS
+- JavaScript
+  
+### Frameworks, Libraries and Programs
+
+- Am I responsive? was used to verify responsiveness of website of different devices.
+- Balsamiq was used to generate Wireframe images.
+- Chrome Developer Tools was used in the entire development process equally for HTML, CSS and JavaScript
+- FontAwesome was used for icons in information bar
+- GitHub was used for version control and hosting. 
+- Google Fonts was used to import and alter fonts on the website. 
+- W3C was used for HTML and CSS validation.
+- JSHint was used for Javascript validation.
+- Color-hex.com was used to get a colour palette
+  
+## Deployment 
+
+## Cloning
+
+## Credits
+
+### Content
+
+### Media 
+
+### Other resources
+
+## Acknowledgements
+
+I would like to thank God, my Mother and the academy. 

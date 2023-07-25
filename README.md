@@ -264,12 +264,16 @@ The four game HTML pages each have a separate JavaScript file. Here are screensh
 ### Bugs
 
 - The snake game contains two bugs. Firstly, when the Snake crashes into the wall, it should be game over as soon as the snake hits the wall. Sometimes, it takes for part of the body - i.e the snake array - to go into the wall for the game to be over. Secondly, in the testing phase, the game would abruptly end for no discernible reason. More testing needs to be done to figure out the reason the game would abruptly produce a "game over" alert.
+
+- Once I deployed my project, the Connect Four body div element did not run properly. Locally, the 42 div elements sat neatly into the main parent div element. Once I ran it from Github pages, the div elements began to overflow the parent div. I fixed this by reducing the size of each of the square div elements. This however leaves a small gap on the right hand side of the grid between the smaller square elements and the main parent div.
   
 ### Fixed bugs
 
 - The Click Game contained a bug where the game will end but the "Click" image would continue to pop up on random div elements. Despite the timer counting down and score tallied, the "Click" image would not stop until the restart button is set. The problem was resolved with the correct placement of a clearInterval timer within the randomSquare function. This did not fix the problem until I also called the timerId as a global variable rather than within the moveMole function. 
 
 - Connect Four had a bug with the scoring and localStorage property I only noticed during testing. When the DOM loaded, the values in local storage will be added to span where the scores for player one and player two should be i.e update high score. Also, when the game finishes, the point is added to the local storage. The bug is that the current score did not increase incrementally for either player one or player two. This means the high score is updated from local storage however the previous score is replaced rather that been added to. The solution to fix this was using a parseInt function. When calling the variable, rather than valuing at 0 and expecting it to update, value it with parseInt and the local storage. 
+  
+- When I deployed my project, another bug was determined. The canvas element in the snake.html did not load. For this to be fixed, I needed to place the script tag into the head element.
 
 ## Technologies Used
  

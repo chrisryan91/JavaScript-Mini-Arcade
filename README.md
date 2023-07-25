@@ -82,17 +82,17 @@ All designed with Balsamiq.
 
 <details>
 <summary>Homepage Wireframe</summary>
-<img src="assets/readme_images/../images/readme_images/wireframes/Homepage%20Wireframe.png" alt="Website Homepage wireframe displayed on a desktop">
+<img src="assets/readme_images/../images/readme_images/wireframes/Homepage%20Wireframe.png">
 </details>
 
 <details>
 <summary>Game Page Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Game%20Page%20Wireframe.png" alt="Game Page wireframe displayed on a desktop">
+<img src="assets/images/readme_images/wireframes/Game%20Page%20Wireframe.png">
 </details>
 
 <details>
 <summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page wireframe displayed on a mobile device" >
+<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png">
 </details>
 
 ## Features and Functionality
@@ -103,12 +103,12 @@ The home page of this website is fairly simple. It contains a header and body wi
 
 <details>
 <summary>Desktop Home Page Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Homepage_Screenshot.png" alt="Hope Page displayed on a desktop" >
+<img src="assets/images/readme_images/Desktop_Screenshots/Homepage_Screenshot.png">
 </details>
 
 <details>
 <summary>Mobile Home Page Screenshot</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Homepage_Mobile_Screenshot.png" alt="Home Page displayed on a mobile device" >
+<img src="assets/images/readme_images/Mobile_Screenshots/Homepage_Mobile_Screenshot.png">
 </details>
 
 ### Speed Clicking Game Page
@@ -117,12 +117,12 @@ The first html page is the speed clicking game. The header element remains consi
 
 <details>
 <summary>Desktop Speed Clicking Game Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Speed_Clicking_Game_Screenshot.png" alt="Speed Clicking Game displayed on a desktop" >
+<img src="assets/images/readme_images/Desktop_Screenshots/Speed_Clicking_Game_Screenshot.png">
 </details>
 
 <details>
 <summary>Mobile Speed Clicking Game Screenshot</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Speed_Clicking_Game-Screenshot.png" alt="Speed Clicking Game displayed on a mobile device" >
+<img src="assets/images/readme_images/Mobile_Screenshots/Speed_Clicking_Game-Screenshot.png">
 </details>
 
 ### Rock, Paper, Scissor Page
@@ -131,12 +131,12 @@ The second html page is the second game - rock, paper, scissors. The header carr
 
 <details>
 <summary>Rock, Paper, Scissors Desktop Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Rock_Paper_Scissors_Screenshot.png" alt="Rock, Paper, Scissors displayed on a desktop" >
+<img src="assets/images/readme_images/Desktop_Screenshots/Rock_Paper_Scissors_Screenshot.png">
 </details>
 
 <details>
 <summary> Rock, Paper, Scissors Mobile Screenshot</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Rock_Paper_Scissors_Mobile_Screenshot.png" alt="Rock, Paper, Scissors displayed on a mobile device" >
+<img src="assets/images/readme_images/Mobile_Screenshots/Rock_Paper_Scissors_Mobile_Screenshot.png">
 </details>
 
 ### Snake Page
@@ -145,12 +145,12 @@ The third html page is the game Snake. While the header remains the same, the bo
 
 <details>
 <summary>Snake Desktop Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Snake_Screenshot.png" alt="Snake displayed on a desktop" >
+<img src="assets/images/readme_images/Desktop_Screenshots/Snake_Screenshot.png">
 </details>
 
 <details>
 <summary>Snake Mobile Desktop</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Snake_Mobile_Screenshot.png" alt="Snake displayed on a mobile device" >
+<img src="assets/images/readme_images/Mobile_Screenshots/Snake_Mobile_Screenshot.png">
 </details>
 
 ### Connect Four Page
@@ -159,12 +159,12 @@ The connect four page is the fourth and final html page. It contains a header el
 
 <details>
 <summary>Connect Four Desktop Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Connect_Four_Screenshot.png" alt="Connect Four displayed on a desktop" >
+<img src="assets/images/readme_images/Desktop_Screenshots/Connect_Four_Screenshot.png">
 </details>
 
 <details>
 <summary>Connect Four Mobile Screenshot</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Connect_Four_Mobile_Screenshot.png" alt="Connect Four displayed on a mobile device" >
+<img src="assets/images/readme_images/Mobile_Screenshots/Connect_Four_Mobile_Screenshot.png">
 </details>
 
 ### Features Left to Implement 
@@ -180,8 +180,12 @@ There are many things which come to mind when considering what I would like to a
 - The click game should have a start button. When the DOM loads the game begins immediately. This is frustrating causing a negative user experience.
 
 - After learning how to use the canvas element for the Snake game, I believe both the Click Game and Connect Four would be better if they were developed using the canvas element. 
+  
+- Rock, Paper, Scissors should have a pause between you picking and the computers choice revealed. As in real-life, there should be a three second countdown of one, two, three.
 
 - I would like to make the game more immersive by adding sounds and music to some of the games. I would like to add more to the styling the make the game generally more appealing and interactive. I would like to add more simple animations and utilize the :hover CSS selector more often.
+
+- For mobile viewing, file types other than jpeg or png should be used as they greatly reduce the performace of the webpage according to lighthouse.
 
 ## Testing
 
@@ -193,27 +197,27 @@ Here are four image links providing screenshots of the HTML validation for each 
 
 <details>
 <summary>Home Page HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\html_index_val.png" alt="Document Checking Completed. No errors or warnings to show." >
+<img src="assets\images\readme_images\html_validation\html_index_val.png">
 </details>
 
 <details>
 <summary>Click Game HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\clickgame_html_val.png" alt="Document Checking Completed. No errors or warnings to show." >
+<img src="assets\images\readme_images\html_validation\clickgame_html_val.png">
 </details>
 
 <details>
 <summary>Rock, Paper, Scissor HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\html_val_rockpaperscissor.png" alt="Document Checking Completed. No errors or warnings to show." >
+<img src="assets\images\readme_images\html_validation\html_val_rockpaperscissor.png">
 </details>
 
 <details>
 <summary>Snake HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\html_snake_val.png" alt="Document Checking Completed. No errors or warnings to show." >
+<img src="assets\images\readme_images\html_validation\html_snake_val.png">
 </details>
 
 <details>
 <summary>Connect Four HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\connect4_html_val.png" alt="Connect Four displayed on a desktop" >
+<img src="assets\images\readme_images\html_validation\connect4_html_val.png">
 </details>
 
 #### CSS 
@@ -222,7 +226,7 @@ Here is a screenshot of the CSS Validation:
 
 <details>
 <summary>CSS Validation</summary>
-<img src="assets\images\readme_images\css_val.png" alt="W3C CSS Validation results for Text Area (CSS Level 3 + SVG) - Congratulations! No errors found." >
+<img src="assets\images\readme_images\css_val.png">
 </details>
 
 #### JavaScript 
@@ -231,30 +235,83 @@ The four game HTML pages each have a separate JavaScript file. Here are screensh
 
 <details>
 <summary>Click Game JavaScript Validation</summary>
-<img src="assets\images\readme_images\js_validation\clickgame_js_val.png" alt="Metrics: There are 8 functions in this file. Function with the largest signature takes 1 argument, while the median is 0. Largest function has 16 statements in it, while the median is 3. The most complex function has cyclomatic complexity value of 3 while the median is 1." >
+<img src="assets\images\readme_images\js_validation\clickgame_js_val.png">
 </details>
 
 <details>
 <summary>Rock, Paper, Scissors JavaScript Validation</summary>
-<img src="assets\images\readme_images\js_validation\js_rockpaperscissor_val.png" alt="Metrics: There are 11 functions in this file. Function with the largest signature takes 2 argument, while the median is 0. Largest function has 16 statements in it, while the median is 3. The most complex function has cyclomatic complexity value of 3 while the median is 1." >
+<img src="assets\images\readme_images\js_validation\js_rockpaperscissor_val.png">
 </details>
 
 <details>
 <summary>Snake JavaScript Validation</summary>
-<img src="assets\images\readme_images\js_validation\snake_js_val.png" alt="Metrics: There are 6 functions in this file. Function with the largest signature takes 1 argument, while the median is 0. Largest function has 31 statements in it, while the median is 8. The most complex function has cyclomatic complexity value of 15 while the median is 1." >
+<img src="assets\images\readme_images\js_validation\snake_js_val.png">
 </details>
 
 <details>
 <summary>Connect Four JavaScript Validation</summary>
-<img src="assets\images\readme_images\js_validation\connect4_js_val.png" alt="Metrics: There are 4 functions in this file. Function with the largest signature takes 0 argument, while the median is 0. Largest function has 16 statements in it, while the median is 13. The most complex function has cyclomatic complexity value of 10 while the median is 3.5." >
+<img src="assets\images\readme_images\js_validation\connect4_js_val.png">
 </details>
 
 ### Accessibility
 
-- Desktop Lighthouse Score 
+#### Desktop Lighthouse Score 
+  
+Here are screenshots of the performance of the desktop versions of the project:
+  
+<details>
+<summary>Home Page Desktop Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\home page lighthouse.png">
+</details>
 
-- Mobile Lighthouse Score
+<details>
+<summary>Click Game Desktop Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\Click Game Lighthouse.png">
+</details>
 
+<details>
+<summary>Rock, Paper, Scissors Desktop Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\RockPaperScissor Lighthouse.png">
+</details>
+
+<details>
+<summary>Snake Desktop Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\snake performance.png">
+</details>
+
+<details>
+<summary>Connect Four Desktop Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\Connect Four lighthouse.png">
+</details>
+
+#### Mobile Lighthouse Score
+
+The performance scores are greatly reduced when viewed on a mobile. The .png images that sufficed for desktop viewing do not work for mobile viewing. 
+
+<details>
+<summary>Home Page Mobile Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\home page mobile lighthouse.png">
+</details>
+
+<details>
+<summary>Click Game Mobile Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\Click Game Mobile performance.png">
+</details>
+
+<details>
+<summary>Rock, Paper, Scissors Mobile Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\Rockpaperscissor mobile lighthouse.png">
+</details>
+
+<details>
+<summary>Snake Mobile Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\snake mobile performance.png"" >
+</details>
+
+<details>
+<summary>Connect Four Mobile Lighthouse Performance</summary>
+<img src="assets\images\readme_images\lighthouse images\snake mobile performance.png">
+</details>
 ### Game Testing 
 
 ### Browser Testing

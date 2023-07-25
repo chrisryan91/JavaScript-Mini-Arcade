@@ -244,8 +244,14 @@ The brainstorming process that began in the lead up to starting my project, I wa
 ### Media 
 
 - W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
-- Stack Overflow 
-- The Snake game was taken from this tutorial which thought me how to use the canvas element. I integrated it into my own website: [How to code snake game in JavaScript](https://www.youtube.com/watch?v=baBq5GAL0_U)
+- Stack Overflow.
+- The Snake game was taken from this tutorial which thought me how to use the canvas element. I integrated it into my own website: [How to code snake game in JavaScript](https://www.youtube.com/watch?v=baBq5GAL0_U).
+- I had written a very basic rock, paper, scissor game but because I wanted to use images and the onClick function to determine the user choice, the localStorage function to to getItem and setItem to update the scores in the DOM, I used code from freeCodeCamp.com that used a Switch statement to determine the winner and calls three separate new functions - win(), lose(), draw() - which made it easier to update the local storage and the DOM with .innerHTML. At the end of rockpaperscissors.js I left my own code commented out. I used this tutorial: [JavaScript, HTML, CSS - Rock Paper Scissors Game](https://www.youtube.com/watch?v=jaVNP3nIAv0).
+- For the Connect Four and Click Game, I used the methods from this video in developing the games: [Learn JavaScript by Building 7 Games ](https://www.youtube.com/watch?v=ec8vSKJuZTk&t=5246s).
+- For the Connect Four, I copied the list of winning arrays and used it's method of looping through the squares listening for a click so I could add a circular background image to small div. I also used the tutorials method of looping through the winning arrays to see if they equal to one chosen by either player one or player two. 
+- For the Click Game, I used the setInterval function from the tutorial on Whack-A-Mole for my own code to make the image appear on a random div every minute  or so. 
+- I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
+- For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/). 
 - 
 
 ### Other resources

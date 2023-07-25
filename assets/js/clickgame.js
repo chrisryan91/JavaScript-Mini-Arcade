@@ -5,7 +5,7 @@ const click = document.querySelector('.click');
 const timeLeft = document.querySelector('#remaining-time');
 const score = document.querySelector('#score');
 let result = 0;
-let hitPosition;
+let clickedSquare;
 let currentTime = 60;
 let top = localStorage.getItem("topScore");
 let highScore = document.getElementById("highscorecg");
@@ -24,7 +24,7 @@ function randomSquare() {
     let randomSquare = squares[Math.floor(Math.random() * 9)]
     randomSquare.classList.add('click')
     
-    hitPosition = randomSquare.id
+    clickedSquare = randomSquare.id
 
     if (currentTime === 0 ) {
         return;
@@ -36,10 +36,10 @@ function randomSquare() {
 
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
-        if (square.id == hitPosition) {
+        if (square.id == clickedSquare) {
             result++
             score.textContent = result
-            hitPosition = null
+            clickedSquare = null
         }
 
     })

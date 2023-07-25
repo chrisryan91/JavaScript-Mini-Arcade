@@ -221,9 +221,9 @@ Unfixed Bugs
   
 ### Frameworks, Libraries and Programs
 
-- Am I responsive? was used to verify responsiveness of website of different devices.
-- Balsamiq was used to generate Wireframe images.
-- Chrome Developer Tools was used in the entire development process equally for HTML, CSS and JavaScript
+- [Am I responsive?](https://ui.dev/amiresponsive) was used to verify responsiveness of website of different devices.
+- [Balsamiq](https://balsamiq.com/) was used to generate Wireframe images.
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used in the entire development process equally for HTML, CSS and JavaScript
 - FontAwesome was used for icons in information bar
 - GitHub was used for version control and hosting. 
 - Google Fonts was used to import and alter fonts on the website. 

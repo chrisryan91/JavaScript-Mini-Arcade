@@ -223,13 +223,13 @@ Unfixed Bugs
 
 - [Am I responsive?](https://ui.dev/amiresponsive) was used to verify responsiveness of website of different devices.
 - [Balsamiq](https://balsamiq.com/) was used to generate Wireframe images.
-- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used in the entire development process equally for HTML, CSS and JavaScript
-- [FontAwesome](https://fontawesome.com/) was used for icons in information bar
-- GitHub was used for version control and hosting. 
-- Google Fonts was used to import and alter fonts on the website. 
-- W3C was used for HTML and CSS validation.
-- JSHint was used for Javascript validation.
-- Color-hex.com was used to get a colour palette
+- [Chrome Developer Tools](https://developer.chrome.com/docs/devtools/) was used in the entire development process equally for HTML, CSS and JavaScript.
+- [FontAwesome](https://fontawesome.com/) was used for icons in information bar.
+- [GitHub](https://github.com) was used for version control and hosting. 
+- [Google Fonts](https://fonts.google.com/) was used to import and alter fonts on the website. 
+- [W3C](https://www.w3.org) was used for HTML and CSS validation.
+- [JSHint](https://jshint.com/) was used for JavaScript validation.
+- [Colour-Hex](https://www.color-hex.com/) was used to get a colour palette.
   
 ## Deployment 
 
@@ -239,10 +239,15 @@ Unfixed Bugs
 
 ### Content
 
+The brainstorming process that began in the lead up to starting my project, I was spending time watching tutorials on how to make quizzes and games with JavaScript. I was considering somehow utilizing Google Charts for my project. I generally understood the process involved in some of the tutorials - like Connect Four. While in other tutorials - like a Pong game - I was left confused. Despite this, I learned quite a lot watching these tutorials especially regarding canvas elements, JavaScript switch elements, the setInterval and clearInterval functions, localStorage functions and more. I decided to integrate some of the code I had written while watching tutorials into a website that offered multiple games. This way code I had written would not go to waste and I could present it alongside my own code.
+
 ### Media 
+
+- W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
+- Stack Overflow 
+- The Snake game was taken from this tutorial which thought me how to use the canvas element. I integrated it into my own website: [How to code snake game in JavaScript](https://www.youtube.com/watch?v=baBq5GAL0_U)
+- 
 
 ### Other resources
 
 ## Acknowledgements
-
-I would like to thank God, my Mother and the academy. 

@@ -97,4 +97,28 @@ document.querySelector('.restart-btn').addEventListener('click', function(){
     });
 
 });
+
+/* My own code looked like this:
+
+if (user-result === computer-result) {
+
+result = "It's a tie!";
+
+} else if (
+
+(user-result === 'rock' && computer-result === 'scissors') ||
+
+(user-result === 'paper' && computer-result === 'rock') ||
+
+(user-result === 'scissors' && computer-result === 'paper')
+
+) {
+
+result = "You win!";
+
+} else {
+
+result = "You lose!";
+
+} */
     

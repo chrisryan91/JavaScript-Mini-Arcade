@@ -207,6 +207,7 @@ text-decoration: underline;
 /* media queries for tablet screens */
 
 @media only screen and (max-width: 750px) {
+  
 header{
   text-align: center;
 }

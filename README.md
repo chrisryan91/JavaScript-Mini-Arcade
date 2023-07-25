@@ -4,7 +4,7 @@ This JavaScript mini-arcade is a simple website that contains four games for the
 
 There are four games to choose from which could be either well-known, simple games like rock, paper, scissors, or classic computer games like Snake. For two players, there is a version of Connect Four where a users can take turns to try beat each other before starting a new game. Finally, there is an electronic version of the arcade game whack-a-mole which is turned into a hand-eye co-ordination game called Speed Click Test.
 
-![Responsiveness Image](responsiveness.jpg)
+![Am I Responsiveness Image](assets\images\amiresponsive.png)
 
 ## Table of Contents
 - Designer Goals
@@ -141,7 +141,7 @@ The third html page is *Rock, Paper, Scissors*. The header carries over while th
 
 ### Snake Page
 
-The third html page is the *Snake*. The body element is simply a h1 element containing the title of the game with a div and canvas element beneath it. The div element contains a high score and current score updated with a span element. The canvas tag has an id of board and is filled in with JavaScript. The script will fill it black and place the games parts. Beneath the canvas element is a button to reload the game and the page. For media queries, the canvas will fill to 100% of the width for mobile viewing and the text will align centrally. 
+The third html page is the *Snake*. The body element is simply a h1 element containing the title of the game with a div and canvas element beneath it. The div element contains a high score and current score updated with a span element. The canvas tag has an id of board and is filled in with JavaScript. The script will fill it black and place the games parts. Beneath the canvas element is a button to reload the game and the page. For media queries, the canvas will fill to 100% of the width for mobile viewing and the text will align centrally. Despite it's responsiveness, the Snake game is currently redundant on mobile devices because it requires a keyboard to function.
 
 <details>
 <summary>Snake Desktop Screenshot</summary>
@@ -170,6 +170,8 @@ The third html page is the *Snake*. The body element is simply a h1 element cont
 ### Features Left to Implement 
 
 There are many things which come to mind when considering what I would like to add to this project:
+
+- The *Snake* game will not function on tablets or mobile devices. The game requires a keyboard to function as the up, down, left and right keys on the keyboard are needed to start the game and control the snake towards it's food. The game will in future need on-screen up, down, left and right buttons - or else be calibrated to direct the snake with movement of the phone itself.
 
 - A fifth html page containing scoreboards. Rather than having the high score presented in a header element or a div element on the game page, I would like to have a sixth html page with score boards neatly arranged for each game.
 

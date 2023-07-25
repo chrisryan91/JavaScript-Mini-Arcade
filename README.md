@@ -2,7 +2,7 @@
 
 This JavaScript mini-arcade is a simple website that contains four games for the user to choose from to play. It is aimed at at an individual or individuals of any age. It contains games where the user plays by himself, plays against the computer, and a game to test two players against each other. It aims to get users to return by storing the scores and data. 
 
-There are four games to choose from which could be either well-known, simple games like rock, paper, scissors, or classic computer games like Snake. For two players, there is a version of Connect Four where a users can take turns to try beat each other before starting a new game. Finally, there is an electronic version of the arcade game whack-a-mole which is turned into a hand-eye co-ordination game called Speed Click Test.
+There are four games to choose from which could be either well-known, simple games like *Rock, Paper, Scissors*, or classic computer games like *Snake*. For two players, there is a version of *Connect Four* where a users can take turns to try beat each other before starting a new game. Finally, there is an electronic version of the arcade game whack-a-mole which is turned into a hand-eye co-ordination game called Speed Click Test.
 
 ![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
@@ -82,7 +82,7 @@ All designed with Balsamiq.
 
 <details>
 <summary>Homepage Wireframe</summary>
-<img src="assets/readme_images/../images/readme_images/wireframes/Homepage%20Wireframe.png">
+<img src="assets/images/readme_images/wireframes/Homepage%20Wireframe.png">
 </details>
 
 <details>
@@ -141,7 +141,7 @@ The third html page is *Rock, Paper, Scissors*. The header carries over while th
 
 ### Snake Page
 
-The third html page is the *Snake*. The body element is simply a h1 element containing the title of the game with a div and canvas element beneath it. The div element contains a high score and current score updated with a span element. The canvas tag has an id of board and is filled in with JavaScript. The script will fill it black and place the games parts. Beneath the canvas element is a button to reload the game and the page. For media queries, the canvas will fill to 100% of the width for mobile viewing and the text will align centrally. Despite it's responsiveness, the Snake game is currently redundant on mobile devices because it requires a keyboard to function.
+The third html page is the *Snake*. The body element is simply a h1 element containing the title of the game with a div and canvas element beneath it. The div element contains a high score and current score updated with a span element. The canvas tag has an id of board and is filled in with JavaScript. The script will fill it black and place the games parts. Beneath the canvas element is a button to reload the game and the page. For media queries, the canvas will fill to 100% of the width for mobile viewing and the text will align centrally. Despite it's responsiveness, the *Snake* game is currently redundant on mobile devices because it requires a keyboard to function.
 
 <details>
 <summary>Snake Desktop Screenshot</summary>
@@ -175,13 +175,13 @@ There are many things which come to mind when considering what I would like to a
 
 - A fifth html page containing scoreboards. Rather than having the high score presented in a header element or a div element on the game page, I would like to have a sixth html page with score boards neatly arranged for each game.
 
-- The *Snake* game needs to be modified to increase the Snakes speed incrementally to increase difficulty. 
+- The *Snake* game needs to be modified to increase the snakes speed incrementally to increase difficulty. 
   
 - The restart game button should solely reload the game and the not entire DOM.
 
-- The *Click Game* should have a start button. When the DOM loads the game begins immediately. This is frustrating causing a negative user experience.
+- The *Speed Click Game* should have a start button. When the DOM loads the game begins immediately. This is frustrating causing a negative user experience.
 
-- After learning how to use the canvas element for the Snake game, I believe both the *Click Game* and *Connect Four* would be better if they were developed using the canvas element. 
+- After learning how to use the canvas element for the *Snake* game, I believe both the *Speed Click Game* and *Connect Four* would be better if they were developed using the canvas element. 
   
 - *Rock, Paper, Scissors* should have a pause between you picking and the computers choice revealed. As in real-life, there should be a three second countdown of "one, two, three" before the winner is revealed.
 
@@ -330,15 +330,15 @@ The website was consistently tested for responsiveness using Chrome Developer to
 
 ### Bugs
 
-- The snake game contains two bugs. Firstly, when the Snake crashes into the wall, it should be game over as soon as the snake hits the wall. Sometimes, it takes for part of the body - i.e the snake array - to go into the wall for the game to be over. Secondly, in the testing phase, the game would abruptly end for no discernible reason. More testing needs to be done to figure out the reason the game would abruptly produce a "game over" alert.
+- The *Snake* game contains two bugs. Firstly, when the snake crashes into the wall, it should be game over as soon as the snake hits the wall. Sometimes, it takes for part of the body - i.e the snake array - to go into the wall for the game to be over. Secondly, in the testing phase, the game would abruptly end for no discernible reason. More testing needs to be done to figure out the reason the game would abruptly produce a "game over" alert.
 
-- Once I deployed my project, the Connect Four body div element did not run properly. Locally, the 42 div elements sat neatly into the main parent div element. Once I ran it from GitHub pages, the div elements began to overflow the parent div. I fixed this by reducing the size of each of the square div elements. This however leaves a small gap on the right hand side of the grid between the smaller square elements and the main parent div.
+- Once I deployed my project, the *Connect Four* body div element did not run properly. Locally, the 42 div elements sat neatly into the main parent div element. Once I ran it from GitHub pages, the div elements began to overflow the parent div. I fixed this by reducing the size of each of the square div elements. This however leaves a small gap on the right hand side of the grid between the smaller square elements and the main parent div.
   
 ### Fixed bugs
 
-- The Click Game contained a bug where the game will end but the "Click" image would continue to pop up on random div elements. Despite the timer counting down and score tallied, the "Click" image would not stop until the restart button is set. The problem was resolved with the correct placement of a clearInterval timer within the randomSquare function. This did not fix the problem until I also called the timerId as a global variable rather than within the moveMole function. 
+- The *Speed Click Game* contained a bug where the game will end but the "Click" image would continue to pop up on random div elements. Despite the timer counting down and score tallied, the "Click" image would not stop until the restart button is set. The problem was resolved with the correct placement of a clearInterval timer within the randomSquare function. This did not fix the problem until I also called the timerId as a global variable rather than within the moveMole function. 
 
-- Connect Four had a bug with the scoring and localStorage property I only noticed during testing. When the DOM loaded, the values in local storage will be added to span where the scores for player one and player two should be i.e update high score. Also, when the game finishes, the point is added to the local storage. The bug is that the current score did not increase incrementally for either player one or player two. This means the high score is updated from local storage however the previous score is replaced rather that been added to. The solution to fix this was using a parseInt function. When calling the variable, rather than valuing at 0 and expecting it to update, value it with parseInt and the local storage. 
+- *Connect Four* had a bug with the scoring and localStorage property I only noticed during testing. When the DOM loaded, the values in local storage will be added to span where the scores for player one and player two should be i.e update high score. Also, when the game finishes, the point is added to the local storage. The bug is that the current score did not increase incrementally for either player one or player two. This means the high score is updated from local storage however the previous score is replaced rather that been added to. The solution to fix this was using a parseInt function. When calling the variable, rather than valuing at 0 and expecting it to update, value it with parseInt and the local storage. 
   
 - When I deployed my project, another bug was determined. The canvas element in the snake.html did not load. For this to be fixed, I needed to place the script tag into the head element.
 
@@ -361,7 +361,7 @@ The website was consistently tested for responsiveness using Chrome Developer to
 - [W3C](https://www.w3.org) was used for HTML and CSS validation.
 - [JSHint](https://jshint.com/) was used for JavaScript validation.
 - [Colour-Hex](https://www.color-hex.com/) was used to get a colour palette.
-- [Creazilla](https://creazilla.com/) for PNG Clip Art used for Rock, Paper, Scissor game. 
+- [Creazilla](https://creazilla.com/) for PNG Clip Art used for *Rock, Paper, Scissor* game. 
   
 ## Deployment 
 
@@ -389,20 +389,20 @@ The repository to this website is here: https://github.com/chrisryan91/JavaScrip
 
 ### Content
 
-The brainstorming process that began in the lead up to starting my project, I was spending time watching tutorials on how to make quizzes and games with JavaScript. I was considering somehow utilizing Google Charts for my project. I generally understood the process involved in some of the tutorials - like Connect Four. While in other tutorials - like a Pong game - I was left confused. Despite this, I learned quite a lot watching these tutorials especially regarding canvas elements, JavaScript switch elements, the setInterval and clearInterval functions, localStorage functions and more. I decided to integrate some of the code I had written while watching tutorials into a website that offered multiple games. This way code I had written would not go to waste and I could present it alongside my own code.
+The brainstorming process that began in the lead up to starting my project, I was spending time watching tutorials on how to make quizzes and games with JavaScript. I was considering somehow utilizing Google Charts for my project. I generally understood the process involved in some of the tutorials - like *Connect Four*. While in other tutorials - like a Pong game - I was left confused. Despite this, I learned quite a lot watching these tutorials especially regarding canvas elements, JavaScript switch elements, the setInterval and clearInterval functions, localStorage functions and more. I decided to integrate some of the code I had written while watching tutorials into a website that offered multiple games. This way code I had written would not go to waste and I could present it alongside my own code.
 
 ### Resourced Content and Media
 
 - W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
 - Stack Overflow.
-- The Snake game was taken from this tutorial which thought me how to use the canvas element. I integrated it into my own website: [How to code snake game in JavaScript](https://www.youtube.com/watch?v=baBq5GAL0_U).
-- I had written a very basic rock, paper, scissor game but because I wanted to use images and the onClick function to determine the user choice, the localStorage function to to getItem and setItem to update the scores in the DOM, I used code from freeCodeCamp.com that used a Switch statement to determine the winner and calls three separate new functions - win(), lose(), draw() - which made it easier to update the local storage and the DOM with .innerHTML. At the end of rockpaperscissors.js I left my own code commented out. I used this tutorial: [JavaScript, HTML, CSS - Rock Paper Scissors Game](https://www.youtube.com/watch?v=jaVNP3nIAv0).
-- For the Connect Four and Click Game, I used the methods from this video in developing the games: [Learn JavaScript by Building 7 Games ](https://www.youtube.com/watch?v=ec8vSKJuZTk&t=5246s).
-- For the Connect Four, I copied the list of winning arrays and used it's method of looping through the squares listening for a click so I could add a circular background image to small div. I also used the tutorials method of looping through the winning arrays to see if they equal to one chosen by either player one or player two. 
-- For the Click Game, I used the setInterval function from the tutorial on Whack-A-Mole for my own code to make the image appear on a random div every minute  or so. 
+- The *Snake* game was taken from this tutorial which thought me how to use the canvas element. I integrated it into my own website: [How to code snake game in JavaScript](https://www.youtube.com/watch?v=baBq5GAL0_U).
+- I had written a very basic *Rock, Paper, Scissors* game but because I wanted to use images and the onClick function to determine the user choice, the localStorage function to to getItem and setItem to update the scores in the DOM, I used code from freeCodeCamp.com that used a Switch statement to determine the winner and calls three separate new functions - win(), lose(), draw() - which made it easier to update the local storage and the DOM with .innerHTML. At the end of rockpaperscissors.js I left my own code commented out. I used this tutorial: [JavaScript, HTML, CSS - Rock Paper Scissors Game](https://www.youtube.com/watch?v=jaVNP3nIAv0).
+- For the *Connect Four* and *Speed Click Game*, I used the methods from this video in developing the games: [Learn JavaScript by Building 7 Games ](https://www.youtube.com/watch?v=ec8vSKJuZTk&t=5246s).
+- For the *Connect Four*, I copied the list of winning arrays and used it's method of looping through the squares listening for a click so I could add a circular background image to small div. I also used the tutorials method of looping through the winning arrays to see if they equal to one chosen by either player one or player two. 
+- For the *Speed Click Game*, I used the setInterval function from the tutorial on Whack-A-Mole for my own code to make the image appear on a random div every minute  or so. 
 - I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
 - For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/). 
-- I used Creazilla to find PNG images for the Rock, Paper, Scissor game: [Creazilla](https://creazilla.com/nodes/36999-hands-are-showing-rock-paper-scissors-icons-clipart).
+- I used Creazilla to find PNG images for the *Rock, Paper, Scissors* game: [Creazilla](https://creazilla.com/nodes/36999-hands-are-showing-rock-paper-scissors-icons-clipart).
 - <a href="https://www.freepik.com/free-vector/flower-background-desktop-wallpaper-cute-vector_18247662.htm#query=pastel%20pattern&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik
 
 ## Acknowledgements

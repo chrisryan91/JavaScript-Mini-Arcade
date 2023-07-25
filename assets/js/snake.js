@@ -61,7 +61,7 @@ function update() {
     context.fillStyle="black";
     context.fillRect(0, 0, board.width, board.height);
 
-    context.fillStyle="white";
+    context.fillStyle="#ffffba";
     context.fillRect(foodX, foodY, blockSize, blockSize);
 
 
@@ -84,7 +84,7 @@ function update() {
 
     // This will fill in the end of the snakes body with the food he has eaten
 
-    context.fillStyle="	#ffb3ba";
+    context.fillStyle="#bae1ff";
     snakeX += velocityX * blockSize;
     snakeY += velocityY * blockSize;
     context.fillRect(snakeX, snakeY, blockSize, blockSize);

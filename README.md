@@ -263,9 +263,11 @@ The four game HTML pages each have a separate JavaScript file. Here are screensh
 
 ### Bugs
 
-Fixed Bugs
+- The snake game contains two bugs. Firstly, when the Snake crashes into the wall, it should be game over as soon as the snake hits the wall. Sometimes, it takes for part of the body - i.e the snake array - to go into the wall for the game to be over. Secondly, in the testing phase, the game would abruptly end for no discernible reason. More testing needs to be done to figure out the reason the game would abruptly produce a "game over" alert.
+  
+- The Click Game contains a bug where the game will end but the "Click" image will continue to pop up on random div elements. Despite the timer counting down and score tallied, the "Click" image will not stop until the restart button is set. I know I have to use clear interval but the problem persists. 
 
-Unfixed Bugs
+- Connect Four has a bug with the scoring and localStorage property I only noticed during testing. When the DOM loads, the values in local storage will be added to span where the scores for player one and player two should be i.e update high score. Also, when the game finishes, the point is added to the local storage. The bug is that the current score does not increase incrementally for either player one or player two. This means the high score is updated from local storage however the previous score is replaced rather that been added to. Also, when the game ends, rather than resetting, we can still add more div elements into the squares. This is okay, in my opinion, as in real life Connect Four more disks can be added despite the game having ended. The problem is that the score will increment then erratically when the game is reset. 
 
 ## Technologies Used
  
@@ -286,6 +288,7 @@ Unfixed Bugs
 - [W3C](https://www.w3.org) was used for HTML and CSS validation.
 - [JSHint](https://jshint.com/) was used for JavaScript validation.
 - [Colour-Hex](https://www.color-hex.com/) was used to get a colour palette.
+- [Creazilla](https://creazilla.com/) for PNG Clip Art used for Rock, Paper, Scissor game. 
   
 ## Deployment 
 
@@ -297,7 +300,7 @@ Unfixed Bugs
 
 The brainstorming process that began in the lead up to starting my project, I was spending time watching tutorials on how to make quizzes and games with JavaScript. I was considering somehow utilizing Google Charts for my project. I generally understood the process involved in some of the tutorials - like Connect Four. While in other tutorials - like a Pong game - I was left confused. Despite this, I learned quite a lot watching these tutorials especially regarding canvas elements, JavaScript switch elements, the setInterval and clearInterval functions, localStorage functions and more. I decided to integrate some of the code I had written while watching tutorials into a website that offered multiple games. This way code I had written would not go to waste and I could present it alongside my own code.
 
-### Media 
+### Resourced Content and Media
 
 - W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
 - Stack Overflow.
@@ -308,7 +311,9 @@ The brainstorming process that began in the lead up to starting my project, I wa
 - For the Click Game, I used the setInterval function from the tutorial on Whack-A-Mole for my own code to make the image appear on a random div every minute  or so. 
 - I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
 - For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/). 
-
-### Other resources
+- I used Creazilla to find PNG images for the Rock, Paper, Scissor game: [Creazilla](https://creazilla.com/nodes/36999-hands-are-showing-rock-paper-scissors-icons-clipart).
+- <a href="https://www.freepik.com/free-vector/flower-background-desktop-wallpaper-cute-vector_18247662.htm#query=pastel%20pattern&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik
 
 ## Acknowledgements
+
+I would like to thank Antonio, my mentor, for his support and also the entire Slack community especially the #peer-code-review channel. 

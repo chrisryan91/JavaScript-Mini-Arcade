@@ -185,7 +185,7 @@ There are many things which come to mind when considering what I would like to a
 
 - I would like to make the game more immersive by adding sounds and music to some of the games. I would like to add more to the styling the make the game generally more appealing and interactive. I would like to add more simple animations and utilize the :hover CSS selector more often.
 
-- For mobile viewing, file types other than jpeg or png should be used as they greatly reduce the performace of the webpage according to lighthouse.
+- For mobile viewing, file types other than .jpeg or .png should be used as they greatly reduce the performance of the webpage according to lighthouse.
 
 ## Testing
 
@@ -316,7 +316,11 @@ The performance scores are greatly reduced when viewed on a mobile. The .png ima
 
 ### Browser Testing
 
+The website was tested on Google Chrome, Microsoft Edge and Safari.
+
 ### Device Testing 
+
+The website was consistently tested for responsiveness using Chrome Developer tools. Once deployed, it was again tested as a Desktop, iPad, iPhone and a host of Samsung Galaxy varieties to test again. There were a few issues with responsiveness but it remains functioning above 300px width.
 
 ### Bugs
 

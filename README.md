@@ -155,7 +155,7 @@ The third html page is the game Snake. While the header remains the same, the bo
 
 ### Connect Four Page
 
-The connect four page is the fourth and final html page. It contains a header element with a title and another beneath it with a span to update who the current player is. The game itself contains 49 div elements contained within a parent div. The game is styled in such a way that the first 42 div elements fit neatly with a border into the parent div making a six by seven grid. These elements have a class of .taken. Nine div elements overflow the parent div. These elements have a class of .nottaken. Beneath the main game is a header element with two spans contained within to show the current scoreboard. Finally, there is a button to reload the game and the page. 
+The connect four page is the fourth and final html page. It contains a header element with a title and another beneath it with a span to update who the current player is. The game itself contains 49 div elements contained within a parent div. The game is styled in such a way that the first 42 div elements fit neatly with a border into the parent div making a six by seven grid. These elements have a class of .taken. Nine div elements overflow the parent div. Beneath the main game is a header element with two spans contained within to show the current scoreboard. Finally, there is a button to reload the game and the page. 
 
 <details>
 <summary>Connect Four Desktop Screenshot</summary>
@@ -286,7 +286,7 @@ Here are screenshots of the performance of the desktop versions of the project:
 
 #### Mobile Lighthouse Score
 
-The performance scores are greatly reduced when viewed on a mobile. The .png images that sufficed for desktop viewing do not work for mobile viewing. 
+The performance scores are greatly reduced when viewed on a mobile. The images that sufficed for desktop viewing do not work for mobile viewing. 
 
 <details>
 <summary>Home Page Mobile Lighthouse Performance</summary>
@@ -326,7 +326,7 @@ The website was consistently tested for responsiveness using Chrome Developer to
 
 - The snake game contains two bugs. Firstly, when the Snake crashes into the wall, it should be game over as soon as the snake hits the wall. Sometimes, it takes for part of the body - i.e the snake array - to go into the wall for the game to be over. Secondly, in the testing phase, the game would abruptly end for no discernible reason. More testing needs to be done to figure out the reason the game would abruptly produce a "game over" alert.
 
-- Once I deployed my project, the Connect Four body div element did not run properly. Locally, the 42 div elements sat neatly into the main parent div element. Once I ran it from Github pages, the div elements began to overflow the parent div. I fixed this by reducing the size of each of the square div elements. This however leaves a small gap on the right hand side of the grid between the smaller square elements and the main parent div.
+- Once I deployed my project, the Connect Four body div element did not run properly. Locally, the 42 div elements sat neatly into the main parent div element. Once I ran it from GitHub pages, the div elements began to overflow the parent div. I fixed this by reducing the size of each of the square div elements. This however leaves a small gap on the right hand side of the grid between the smaller square elements and the main parent div.
   
 ### Fixed bugs
 
@@ -359,8 +359,26 @@ The website was consistently tested for responsiveness using Chrome Developer to
   
 ## Deployment 
 
+The site was deployed using GitHub pages. The steps to deploy using GitHub are:
+
+- Go to the repository on GitHub.com
+- Select 'Settings' near the top of the page
+- Select 'Pages' from the menu bar on the left of the page
+- Under 'Source' select the 'Branch' dropdown menu and select the main branch.
+- Once selected, click 'Save'.
+- Deployment will then be confirmed by a message confirming this followed by a link
+
+The live link to my own project - JavaScript Mini-Arcade - is here: https://chrisryan91.github.io/JavaScript-Mini-Arcade/
+
 ## Cloning
 
+The repository to this website is here: https://github.com/chrisryan91/JavaScript-Mini-Arcade. To clone: 
+
+- Under 'Code', choose a preferred cloning option from HTTPS, SSH or GitHub CLI. 
+- Copy the link provided.
+- Open Terminal, and change the current working directory to the desired location of the cloned repository.
+- Type 'git clone' and then paste the URL copied from GitHub earlier. 
+- Type 'Enter' to create a local clone.
 ## Credits
 
 ### Content

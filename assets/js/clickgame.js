@@ -9,6 +9,7 @@ let clickedSquare;
 let currentTime = 60;
 let top = localStorage.getItem("topScore");
 let highScore = document.getElementById("highscorecg");
+let timerId;
 
 // set the highScore to the saved data in localStorage
 
@@ -27,7 +28,7 @@ function randomSquare() {
     clickedSquare = randomSquare.id
 
     if (currentTime === 0 ) {
-        clearInterval(randomSquare);
+        clearInterval(timerId);
         return;}
 }
 
@@ -47,7 +48,6 @@ squares.forEach(square => {
 // Function to set the randomSquare function in motion at an interval 
 
 function moveMole() {
-    let timerId;
     timerId = setInterval(randomSquare, 750);
 }
 

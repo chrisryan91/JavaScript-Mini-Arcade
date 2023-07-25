@@ -47,9 +47,9 @@ There are four games to choose from which could be either well-known, simple gam
 ## Designers Goals
 - I wanted to to design and deploy a neat, simple and unfussy website which would be navigable for any user of any demographic.
 - I wanted to provide a small collection of simple games to users who want to challenge themselves once, twice or a few times. These games should be familiar to most people in one form or another. I wanted there to be little to no learning curve. 
-- I wanted to utilize code I have written from teaching myself and from tutorials that I have learned from since I began my coding journey.
+- I wanted to utilize code I have written with the help of tutorials that I have been using since I began my coding journey.
 - I wanted to colour and styling to be appealing and subtle with design to be unobtrusive. 
-- I wanted to give the user the option about what type of game and challenge they would like - against someone else, against the computer, or against themselves by trying to beat their previous score. 
+- I wanted to give the user the option about what type of game and challenge they would like - against someone else, against the computer, or against themselves by trying to beat their previous score. I wanted variety.
 
 ## Design
 ### Colour Scheme
@@ -70,11 +70,11 @@ There are four games to choose from which could be either well-known, simple gam
 
 ### Layout 
 
-The website has a homepage and four other pages each containing a game. 
+The website has a Homepage and four other pages each containing a game. 
 
-- A homepage with a header and body element containing four div elements with four links.
+- A Homepage with a header and body element containing four div elements with four links.
 - Each link takes you to a separate html page dedicated to each game. 
-- Like the homepage, the game pages contain the same header and body element containing the games. 
+- Like the Homepage, the game pages contain the same header and body element containing the games. 
 
 ### Wireframes
 
@@ -113,7 +113,7 @@ The home page of this website is fairly simple. It contains a header and body wi
 
 ### Speed Clicking Game Page
 
-The first html page is the speed clicking game. The header element remains consistent throughout the website linking us directly to the home page. The body element has a header element that serves as a title. This is followed by two div elements. The first div contains two more div elements containing a current score and a high score updated with span elements. The game itself consists of nine div elements contained within a parent div each with a class of square and unique id of one to nine. Beneath the game, is a header with a timed countdown. Finally, a button will reset and game by reloading the page. For mobile devices, the text centres for the entire page - including the header - and the width of game takes up the entire screen. 
+The second html page is the *Speed Clicking Game*. The header element remains consistent throughout the website linking us directly to the Homepage. The body element has a h1 element that serves as a game title. This is followed by two div elements. The first div contains span elements containing a current score and a high score that updates itself. The game itself consists of nine div elements contained within a parent div each with a class of square and unique id of one to nine. Beneath the game, is a header with a timed countdown. Finally, a button will reset and game by reloading the page. For mobile devices, the text centres for the entire page - including the header - and the width of game takes up the entire screen. 
 
 <details>
 <summary>Desktop Speed Clicking Game Screenshot</summary>
@@ -127,7 +127,7 @@ The first html page is the speed clicking game. The header element remains consi
 
 ### Rock, Paper, Scissor Page
 
-The second html page is the second game - rock, paper, scissors. The header carries over while the body contains two div elements and a button beneath them. The first div contains three div elements horizontally aligned showing the computers choice, the winner and the scoreboard with span elements. The second div contains the main body of the div. Aligned vertically, three div elements contains clickable images to choose you choice of rock, paper or scissors. At the bottom again is a button to reload the page. The horizontal alignment of the div elements collapses vertically for media queries for mobile and tablet viewing. The size slightly reduces also. 
+The third html page is *Rock, Paper, Scissors*. The header carries over while the body contains two div elements and a button beneath them. The first div contains three div elements horizontally aligned showing the computers choice, the winner and the scoreboard with span elements. The second div contains the main body of the div. Aligned vertically, three div elements contains clickable images to choose you choice of rock, paper or scissors. At the bottom again is a button to reload the page. The horizontal alignment of the div elements collapses vertically for media queries for mobile and tablet viewing. The size of the elements slightly reduces also. 
 
 <details>
 <summary>Rock, Paper, Scissors Desktop Screenshot</summary>
@@ -141,7 +141,7 @@ The second html page is the second game - rock, paper, scissors. The header carr
 
 ### Snake Page
 
-The third html page is the game Snake. While the header remains the same, the body element is simply a header element containing the title of the game with a div and canvas element beneath it. The div element contains two more div elements with a high score and current score updated with a span element. The canvas tag has an id of board and is filled in with JavaScript. The script will fill it black and place the games parts. Beneath the canvas element is a button to reload the game and the page. For media queries, the canvas will fill to 100% of the width for mobile viewing and the text will align centrally. 
+The third html page is the *Snake*. The body element is simply a h1 element containing the title of the game with a div and canvas element beneath it. The div element contains a high score and current score updated with a span element. The canvas tag has an id of board and is filled in with JavaScript. The script will fill it black and place the games parts. Beneath the canvas element is a button to reload the game and the page. For media queries, the canvas will fill to 100% of the width for mobile viewing and the text will align centrally. 
 
 <details>
 <summary>Snake Desktop Screenshot</summary>
@@ -155,7 +155,7 @@ The third html page is the game Snake. While the header remains the same, the bo
 
 ### Connect Four Page
 
-The connect four page is the fourth and final html page. It contains a header element with a title and another beneath it with a span to update who the current player is. The game itself contains 49 div elements contained within a parent div. The game is styled in such a way that the first 42 div elements fit neatly with a border into the parent div making a six by seven grid. These elements have a class of .taken. Nine div elements overflow the parent div. Beneath the main game is a header element with two spans contained within to show the current scoreboard. Finally, there is a button to reload the game and the page. 
+*Connect Four* is the final html page. It contains a h1 element with a title and another beneath it with a span to update who the current player is. The game itself contains 49 div elements contained within a parent div. The game is styled in such a way that the first 42 div elements fit neatly with a border into the parent div making a six by seven grid. Nine div elements overflow the parent div element. Beneath the main game is a h1 element with two spans contained within to show the current scoreboard. Finally, there is a button to reload the game and the page. For smaller screen sizes, the text and content will align vertically.
 
 <details>
 <summary>Connect Four Desktop Screenshot</summary>
@@ -171,21 +171,23 @@ The connect four page is the fourth and final html page. It contains a header el
 
 There are many things which come to mind when considering what I would like to add to this project:
 
-- A fifth html page containing scoreboards. Rather than having the high score presented in a header element or a div element on the game page, I would like to have a fifth html page with score boards neatly arranged for each game.
+- A fifth html page containing scoreboards. Rather than having the high score presented in a header element or a div element on the game page, I would like to have a sixth html page with score boards neatly arranged for each game.
 
-- The Snake game needs to be modified to increase the Snakes speed incrementally to increase difficulty. 
+- The *Snake* game needs to be modified to increase the Snakes speed incrementally to increase difficulty. 
   
-- The restart game button should solely reload the game and the DOM.
+- The restart game button should solely reload the game and the not entire DOM.
 
-- The click game should have a start button. When the DOM loads the game begins immediately. This is frustrating causing a negative user experience.
+- The *Click Game* should have a start button. When the DOM loads the game begins immediately. This is frustrating causing a negative user experience.
 
-- After learning how to use the canvas element for the Snake game, I believe both the Click Game and Connect Four would be better if they were developed using the canvas element. 
+- After learning how to use the canvas element for the Snake game, I believe both the *Click Game* and *Connect Four* would be better if they were developed using the canvas element. 
   
-- Rock, Paper, Scissors should have a pause between you picking and the computers choice revealed. As in real-life, there should be a three second countdown of one, two, three.
+- *Rock, Paper, Scissors* should have a pause between you picking and the computers choice revealed. As in real-life, there should be a three second countdown of "one, two, three" before the winner is revealed.
 
 - I would like to make the game more immersive by adding sounds and music to some of the games. I would like to add more to the styling the make the game generally more appealing and interactive. I would like to add more simple animations and utilize the :hover CSS selector more often.
 
-- For mobile viewing, file types other than .jpeg or .png should be used as they greatly reduce the performance of the webpage according to lighthouse.
+- For mobile viewing, file types other than .jpeg or .png should be used as they greatly reduce the performance of the webpage.
+
+- Overall, the design of the website needs to be improved. 
 
 ## Testing
 
@@ -312,11 +314,13 @@ The performance scores are greatly reduced when viewed on a mobile. The images t
 <summary>Connect Four Mobile Lighthouse Performance</summary>
 <img src="assets\images\readme_images\lighthouse images\snake mobile performance.png">
 </details>
-### Game Testing 
 
+### Game Testing
+
+The games were tested by myself, friends and family. The bugs noticed were noticed by them. Also, the features left the implement section was contributed to by other people than myself. 
 ### Browser Testing
 
-The website was tested on Google Chrome, Microsoft Edge and Safari.
+The website was tested on Google Chrome, Microsoft Edge and Safari on desktop and mobile.
 
 ### Device Testing 
 

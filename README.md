@@ -72,7 +72,7 @@ There are four games to choose from which could be either well-known, simple gam
 
 The website has a homepage and four other pages each containing a game. 
 
-- A homepage with a header and body element containing four divs with four links.
+- A homepage with a header and body element containing four div elements with four links.
 - Each link takes you to a separate html page dedicated to each game. 
 - Like the homepage, the game pages contain the same header and body element containing the games. 
 
@@ -99,6 +99,8 @@ All designed with Balsamiq.
 
 ### Home Page
 
+The home page of this website is fairly simple. It contains a header and body with four div elements organised into one parent div. For tablet and mobile viewing, the CSS "display: flex" and "flex: flex-wrap" style property allows the four div elements to collapse vertically. Each of the four div elements is a link to a separate html page. The header element contains a link on the left-hand side that links back to the home page.
+
 <details>
 <summary>Desktop Home Page Screenshot</summary>
 <img src="assets/images/readme_images/Desktop_Screenshots/Homepage_Screenshot.png" alt="Hope Page displayed on a desktop" >
@@ -110,6 +112,8 @@ All designed with Balsamiq.
 </details>
 
 ### Speed Clicking Game Page
+
+The first html page is the speed clicking game. The header element remains consistent throughout the website linking us directly to the home page. The body element has a header element that serves as a title. This is followed by two div elements. The first div contains two more div elements containing a current score and a high score updated with span elements. The game itself consists of nine div elements contained within a parent div each with a class of square and unique id of one to nine. Beneath the game, is a header with a timed countdown. Finally, a button will reset and game by reloading the page. For mobile devices, the text centres for the entire page - including the header - and the width of game takes up the entire screen. 
 
 <details>
 <summary>Desktop Speed Clicking Game Screenshot</summary>
@@ -123,6 +127,8 @@ All designed with Balsamiq.
 
 ### Rock, Paper, Scissor Page
 
+The second html page is the second game - rock, paper, scissors. The header carries over while the body contains two div elements and a button beneath them. The first div contains three div elements horizontally aligned showing the computers choice, the winner and the scoreboard with span elements. The second div contains the main body of the div. Aligned vertically, three div elements contains clickable images to choose you choice of rock, paper or scissors. At the bottom again is a button to reload the page. The horizontal alignment of the div elements collapses vertically for media queries for mobile and tablet viewing. The size slightly reduces also. 
+
 <details>
 <summary>Rock, Paper, Scissors Desktop Screenshot</summary>
 <img src="assets/images/readme_images/Desktop_Screenshots/Rock_Paper_Scissors_Screenshot.png" alt="Rock, Paper, Scissors displayed on a desktop" >
@@ -134,6 +140,8 @@ All designed with Balsamiq.
 </details>
 
 ### Snake Page
+
+The third html page is the game Snake. While the header remains the same, the body element is simply a header element containing the title of the game with a div and canvas element beneath it. The div element contains two more div elements with a high score and current score updated with a span element. The canvas tag has an id of board and is filled in with JavaScript. The script will fill it black and place the games parts. Beneath the canvas element is a button to reload the game and the page. For media queries, the canvas will fill to 100% of the width for mobile viewing and the text will align centrally. 
 
 <details>
 <summary>Snake Desktop Screenshot</summary>
@@ -147,6 +155,8 @@ All designed with Balsamiq.
 
 ### Connect Four Page
 
+The connect four page is the fourth and final html page. It contains a header element with a title and another beneath it with a span to update who the current player is. The game itself contains 49 div elements contained within a parent div. The game is styled in such a way that the first 42 div elements fit neatly with a border into the parent div making a six by seven grid. These elements have a class of .taken. Nine div elements overflow the parent div. These elements have a class of .nottaken. Beneath the main game is a header element with two spans contained within to show the current scoreboard. Finally, there is a button to reload the game and the page. 
+
 <details>
 <summary>Connect Four Desktop Screenshot</summary>
 <img src="assets/images/readme_images/Desktop_Screenshots/Connect_Four_Screenshot.png" alt="Connect Four displayed on a desktop" >
@@ -159,30 +169,29 @@ All designed with Balsamiq.
 
 ### Features Left to Implement 
 
+There are many things which come to mind when considering what I would like to add to this project:
+
+- A fifth html page containing scoreboards. Rather than having the high score presented in a header element or a div element on the game page, I would like to have a fifth html page with score boards neatly arranged for each game.
+
+- The Snake game needs to be modified to increase the Snakes speed incrementally to increase difficulty. 
+  
+- The restart game button should solely reload the game and the DOM.
+
+- The click game should have a start button. When the DOM loads the game begins immediately. This is frustrating causing a negative user experience.
+
+- After learning how to use the canvas element for the Snake game, I believe both the Click Game and Connect Four would be better if they were developed using the canvas element. 
+
+- I would like to make the game more immersive by adding sounds and music to some of the games. I would like to add more to the styling the make the game generally more appealing and interactive. I would like to add more simple animations and utilize the :hover CSS selector more often.
+
 ## Testing
 
 ### Validator Testing
 
 - HTML
 
-<details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
-</details>
-
 - CSS 
 
-<details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
-</details>
-
 - JavaScript 
-
-<details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png" alt="Game Page displayed on a mobile device" >
-</details>
 
 ### Accessibility
 

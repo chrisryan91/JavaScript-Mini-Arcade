@@ -232,16 +232,6 @@ header{
   font-size: 125%
 }
 
-
-.grid2 {
-  margin: auto;
-  width: 100%;
-}
-
-.square {
-  width: 32.8%;
-}
-
 .grid {
   width: 100%;
 }
@@ -284,6 +274,15 @@ canvas {
     border: none;
     width: 13.75vw;
     border: .1vw solid black;
+  }
+
+  .grid2 {
+    margin: auto;
+    width: 100%;
+  }
+  
+  .square {
+    width: 32.8%;
   }
 
 }

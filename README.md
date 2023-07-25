@@ -189,9 +189,65 @@ There are many things which come to mind when considering what I would like to a
 
 - HTML
 
+Here are four image links providing screenshots of the HTML validation for each of the five html documents.
+
+<details>
+<summary>Home Page HTML Validation</summary>
+<img src="assets\images\readme_images\html_validation\html_index_val.png" alt="Document Checking Completed. No errors or warnings to show." >
+</details>
+
+<details>
+<summary>Click Game HTML Validation</summary>
+<img src="assets\images\readme_images\js_validation\clickgame_js_val.png" alt="Document Checking Completed. No errors or warnings to show." >
+</details>
+
+<details>
+<summary>Rock, Paper, Scissor HTML Validation</summary>
+<img src="assets\images\readme_images\html_validation\html_val_rockpaperscissor.png" alt="Document Checking Completed. No errors or warnings to show." >
+</details>
+
+<details>
+<summary>Snake HTML Validation</summary>
+<img src="assets\images\readme_images\html_validation\html_snake_val.png" alt="Document Checking Completed. No errors or warnings to show." >
+</details>
+
+<details>
+<summary>Connect Four HTML Validation</summary>
+<img src="assets\images\readme_images\html_validation\connect4_html_val.png" alt="Connect Four displayed on a desktop" >
+</details>
+
 - CSS 
 
+Here is a screenshot of the CSS Validation:
+
+<details>
+<summary>CSS Validation</summary>
+<img src="assets\images\readme_images\css_val.png" alt="W3C CSS Validation results for Text Area (CSS Level 3 + SVG) - Congratulations! No errors found." >
+</details>
+
 - JavaScript 
+
+The four game HTML pages each have a separate JavaScript file. Here are screenshots of the results from JS validation from JSHint:
+
+<details>
+<summary>Click Game JavaScript Validation</summary>
+<img src="assets\images\readme_images\js_validation\clickgame_js_val.png" alt="Metrics: There are 8 functions in this file. Function with the largest signature takes 1 argument, while the median is 0. Largest function has 16 statements in it, while the median is 3. The most complex function has cyclomatic complexity value of 3 while the median is 1." >
+</details>
+
+<details>
+<summary>Rock, Paper, Scissors JavaScript Validation</summary>
+<img src="assets\images\readme_images\js_validation\js_rockpaperscissor_val.png" alt="Metrics: There are 11 functions in this file. Function with the largest signature takes 2 argument, while the median is 0. Largest function has 16 statements in it, while the median is 3. The most complex function has cyclomatic complexity value of 3 while the median is 1." >
+</details>
+
+<details>
+<summary>Snake JavaScript Validation</summary>
+<img src="assets\images\readme_images\js_validation\snake_js_val.png" alt="Metrics: There are 6 functions in this file. Function with the largest signature takes 1 argument, while the median is 0. Largest function has 31 statements in it, while the median is 8. The most complex function has cyclomatic complexity value of 15 while the median is 1." >
+</details>
+
+<details>
+<summary>Connect Four JavaScript Validation</summary>
+<img src="assets\images\readme_images\js_validation\connect4_js_val.png" alt="Metrics: There are 4 functions in this file. Function with the largest signature takes 0 argument, while the median is 0. Largest function has 16 statements in it, while the median is 13. The most complex function has cyclomatic complexity value of 10 while the median is 3.5." >
+</details>
 
 ### Accessibility
 
@@ -252,7 +308,6 @@ The brainstorming process that began in the lead up to starting my project, I wa
 - For the Click Game, I used the setInterval function from the tutorial on Whack-A-Mole for my own code to make the image appear on a random div every minute  or so. 
 - I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
 - For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/). 
-- 
 
 ### Other resources
 

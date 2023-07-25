@@ -19,13 +19,13 @@ highScore.innerHTML = top;
 
 function randomSquare() {
     squares.forEach(square => {
-        square.classList.remove('click')
-    })
+        square.classList.remove('click');
+    });
 
-    let randomSquare = squares[Math.floor(Math.random() * 9)]
-    randomSquare.classList.add('click')
+    let randomSquare = squares[Math.floor(Math.random() * 9)];
+    randomSquare.classList.add('click');
     
-    clickedSquare = randomSquare.id
+    clickedSquare = randomSquare.id;
 
     if (currentTime === 0 ) {
         clearInterval(timerId);
@@ -37,13 +37,13 @@ function randomSquare() {
 squares.forEach(square => {
     square.addEventListener('mousedown', () => {
         if (square.id == clickedSquare) {
-            result++
-            score.textContent = result
-            clickedSquare = null
+            result++;
+            score.textContent = result;
+            clickedSquare = null;
         }
 
-    })
-})
+    });
+});
 
 // Function to set the randomSquare function in motion at an interval 
 
@@ -59,12 +59,12 @@ moveMole();
 // Function to count out one minute from 60 seconds to zero and display the countdown
 
 function countDown () {
-    currentTime--
+    currentTime--;
     timeLeft.textContent = currentTime;
 
     // if statement which will determine the score of the game, save it in localStorage and update the DOM
     if (currentTime === 0) {
-        clearInterval(countDownTimerId)
+        clearInterval(countDownTimerId);
         if (result > top) {
             localStorage.setItem("topScore", result);
             highScore.textContent = top;
@@ -81,6 +81,6 @@ let countDownTimerId = setInterval(countDown, 1000);
 document.querySelector('.restart-btn').addEventListener('click', function(){
     window.location.reload();
     return false;
-  });
+});
 
-})
+});

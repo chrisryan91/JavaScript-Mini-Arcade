@@ -27,9 +27,8 @@ function randomSquare() {
     clickedSquare = randomSquare.id
 
     if (currentTime === 0 ) {
-        return;
-    }
-
+        clearInterval(randomSquare);
+        return;}
 }
 
 // Function that adds an event listener on each of the square divs which checks if the clicked div is equal to the randomly chosen div with the Click.png image

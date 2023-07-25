@@ -180,8 +180,8 @@ text-decoration: underline;
 }
 
 .grid div {
-  height: 58px;
-  width: 58px;
+  height: 58.5px;
+  width: 58.5px;
 }
 
 .grid .nottaken {
@@ -270,6 +270,10 @@ canvas {
 /* media queries for smallest size screens */
 
 @media only screen and (max-width: 400px) {
+
+  .games div { 
+    font-size: 100%
+  }
   .grid .nottaken {
     border: none;
     width: 13.75vw;

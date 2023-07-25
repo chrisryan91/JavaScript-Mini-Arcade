@@ -4,7 +4,7 @@ This JavaScript mini-arcade is a simple website that contains four games for the
 
 There are four games to choose from which could be either well-known, simple games like rock, paper, scissors, or classic computer games like Snake. For two players, there is a version of Connect Four where a users can take turns to try beat each other before starting a new game. Finally, there is an electronic version of the arcade game whack-a-mole which is turned into a hand-eye co-ordination game called Speed Click Test.
 
-![Am I Responsiveness Image](assets\images\amiresponsive.png)
+![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
 ## Table of Contents
 - Designer Goals

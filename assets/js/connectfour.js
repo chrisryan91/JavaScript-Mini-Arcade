@@ -4,8 +4,8 @@ const squares = document.querySelectorAll('.grid div');
 const displayCurrentPlayer = document.querySelector('#current-player');
 let currentPlayer = 1;
 
-let playerOneScore = 0;
-let playerTwoScore = 0;
+let playerOneScore = parseInt(localStorage.getItem("playeronehighscore")) || 0;
+let playerTwoScore = parseInt(localStorage.getItem("playertwohighscore")) || 0;
 let playerOneSpan = document.getElementById("playeronespan");
 let playerTwoSpan = document.getElementById("playertwospan");
 let playerOneTop = localStorage.getItem("playeronehighscore");

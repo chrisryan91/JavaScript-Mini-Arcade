@@ -288,7 +288,8 @@ canvas {
   }
 
   .games div { 
-    font-size: 100%
+    font-size: 100%;
+    height: 50vh;
   }
   .grid .nottaken {
     border: none;

@@ -187,7 +187,7 @@ There are many things which come to mind when considering what I would like to a
 
 ### Validator Testing
 
-- HTML
+#### HTML
 
 Here are four image links providing screenshots of the HTML validation for each of the five html documents.
 
@@ -198,7 +198,7 @@ Here are four image links providing screenshots of the HTML validation for each 
 
 <details>
 <summary>Click Game HTML Validation</summary>
-<img src="assets\images\readme_images\js_validation\clickgame_js_val.png" alt="Document Checking Completed. No errors or warnings to show." >
+<img src="assets\images\readme_images\html_validation\clickgame_html_val.png" alt="Document Checking Completed. No errors or warnings to show." >
 </details>
 
 <details>
@@ -216,7 +216,7 @@ Here are four image links providing screenshots of the HTML validation for each 
 <img src="assets\images\readme_images\html_validation\connect4_html_val.png" alt="Connect Four displayed on a desktop" >
 </details>
 
-- CSS 
+#### CSS 
 
 Here is a screenshot of the CSS Validation:
 
@@ -225,7 +225,7 @@ Here is a screenshot of the CSS Validation:
 <img src="assets\images\readme_images\css_val.png" alt="W3C CSS Validation results for Text Area (CSS Level 3 + SVG) - Congratulations! No errors found." >
 </details>
 
-- JavaScript 
+#### JavaScript 
 
 The four game HTML pages each have a separate JavaScript file. Here are screenshots of the results from JS validation from JSHint:
 

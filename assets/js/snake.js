@@ -1,6 +1,3 @@
-document.addEventListener('DOMContentLoaded', () => {
-
-
 // Variables for the canvas element we will create
 
 var blockSize = 20;
@@ -149,5 +146,3 @@ document.querySelector('.restart-btn').addEventListener('click', function(){
     window.location.reload();
     return false;
     });
-
-});

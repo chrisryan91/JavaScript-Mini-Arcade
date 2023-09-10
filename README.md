@@ -1,8 +1,6 @@
-# JavaScript Mini-Arcade!
+# My new game!
 
-This JavaScript mini-arcade is a simple website that contains four games for the user to choose from to play. It is aimed at at an individual or individuals of any age. It contains games where the user plays by himself, plays against the computer, and a game to test two players against each other. It aims to get users to return by storing the scores and data. 
 
-There are four games to choose from which could be either well-known, simple games like *Rock, Paper, Scissors*, or classic computer games like *Snake*. For two players, there is a version of *Connect Four* where a users can take turns to try beat each other before starting a new game. Finally, there is an electronic version of the arcade game whack-a-mole which is turned into a hand-eye co-ordination game called Speed Click Test.
 
 ![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
@@ -45,11 +43,8 @@ There are four games to choose from which could be either well-known, simple gam
 - Acknowledgements 
 
 ## Designers Goals
-- I wanted to to design and deploy a neat, simple and unfussy website which would be navigable for any user of any demographic.
-- I wanted to provide a small collection of simple games to users who want to challenge themselves once, twice or a few times. These games should be familiar to most people in one form or another. I wanted there to be little to no learning curve. 
-- I wanted to utilize code I have written with the help of tutorials that I have been using since I began my coding journey.
-- I wanted to colour and styling to be appealing and subtle with design to be unobtrusive. 
-- I wanted to give the user the option about what type of game and challenge they would like - against someone else, against the computer, or against themselves by trying to beat their previous score. I wanted variety.
+
+
 
 ## Design
 ### Colour Scheme
@@ -72,10 +67,6 @@ There are four games to choose from which could be either well-known, simple gam
 
 The website has a Homepage and four other pages each containing a game. 
 
-- A Homepage with a header and body element containing four div elements with four links.
-- Each link takes you to a separate html page dedicated to each game. 
-- Like the Homepage, the game pages contain the same header and body element containing the games. 
-
 ### Wireframes
 
 All designed with Balsamiq.
@@ -97,99 +88,23 @@ All designed with Balsamiq.
 
 ## Features and Functionality
 
-### Home Page
+### Game Page
 
-The home page of this website is fairly simple. It contains a header and body with four div elements organised into one parent div. For tablet and mobile viewing, the CSS "display: flex" and "flex: flex-wrap" style property allows the four div elements to collapse vertically. Each of the four div elements is a link to a separate html page. The header element contains a link on the left-hand side that links back to the home page.
+
 
 <details>
-<summary>Desktop Home Page Screenshot</summary>
+<summary>Page Screenshot</summary>
 <img src="assets/images/readme_images/Desktop_Screenshots/Homepage_Screenshot.png">
 </details>
 
 <details>
-<summary>Mobile Home Page Screenshot</summary>
+<summary>Page Screenshot</summary>
 <img src="assets/images/readme_images/Mobile_Screenshots/Homepage_Mobile_Screenshot.png">
-</details>
-
-### Speed Clicking Game Page
-
-The second html page is the *Speed Clicking Game*. The header element remains consistent throughout the website linking us directly to the Homepage. The body element has a h1 element that serves as a game title. This is followed by two div elements. The first div contains span elements containing a current score and a high score that updates itself. The game itself consists of nine div elements contained within a parent div each with a class of square and unique id of one to nine. Beneath the game, is a header with a timed countdown. Finally, a button will reset and game by reloading the page. For mobile devices, the text centres for the entire page - including the header - and the width of game takes up the entire screen. 
-
-<details>
-<summary>Desktop Speed Clicking Game Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Speed_Clicking_Game_Screenshot.png">
-</details>
-
-<details>
-<summary>Mobile Speed Clicking Game Screenshot</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Speed_Clicking_Game-Screenshot.png">
-</details>
-
-### Rock, Paper, Scissor Page
-
-The third html page is *Rock, Paper, Scissors*. The header carries over while the body contains two div elements and a button beneath them. The first div contains three div elements horizontally aligned showing the computers choice, the winner and the scoreboard with span elements. The second div contains the main body of the div. Aligned vertically, three div elements contains clickable images to choose you choice of rock, paper or scissors. At the bottom again is a button to reload the page. The horizontal alignment of the div elements collapses vertically for media queries for mobile and tablet viewing. The size of the elements slightly reduces also. 
-
-<details>
-<summary>Rock, Paper, Scissors Desktop Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Rock_Paper_Scissors_Screenshot.png">
-</details>
-
-<details>
-<summary> Rock, Paper, Scissors Mobile Screenshot</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Rock_Paper_Scissors_Mobile_Screenshot.png">
-</details>
-
-### Snake Page
-
-The third html page is the *Snake*. The body element is simply a h1 element containing the title of the game with a div and canvas element beneath it. The div element contains a high score and current score updated with a span element. The canvas tag has an id of board and is filled in with JavaScript. The script will fill it black and place the games parts. Beneath the canvas element is a button to reload the game and the page. For media queries, the canvas will fill to 100% of the width for mobile viewing and the text will align centrally. Despite it's responsiveness, the *Snake* game is currently redundant on mobile devices because it requires a keyboard to function.
-
-<details>
-<summary>Snake Desktop Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Snake_Screenshot.png">
-</details>
-
-<details>
-<summary>Snake Mobile Desktop</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Snake_Mobile_Screenshot.png">
-</details>
-
-### Connect Four Page
-
-*Connect Four* is the final html page. It contains a h1 element with a title and another beneath it with a span to update who the current player is. The game itself contains 49 div elements contained within a parent div. The game is styled in such a way that the first 42 div elements fit neatly with a border into the parent div making a six by seven grid. Nine div elements overflow the parent div element. Beneath the main game is a h1 element with two spans contained within to show the current scoreboard. Finally, there is a button to reload the game and the page. For smaller screen sizes, the text and content will align vertically.
-
-<details>
-<summary>Connect Four Desktop Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Connect_Four_Screenshot.png">
-</details>
-
-<details>
-<summary>Connect Four Mobile Screenshot</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Connect_Four_Mobile_Screenshot.png">
 </details>
 
 ### Features Left to Implement 
 
-There are many things which come to mind when considering what I would like to add to this project:
 
-- The *Snake* game will not function on tablets or mobile devices. The game requires a keyboard to function as the up, down, left and right keys on the keyboard are needed to start the game and control the snake towards it's food. The game will in future need on-screen up, down, left and right buttons - or else be calibrated to direct the snake with movement of the phone itself.
-
-- A fifth html page containing scoreboards. Rather than having the high score presented in a header element or a div element on the game page, I would like to have a sixth html page with score boards neatly arranged for each game.
-
-- The *Snake* game needs to be modified to increase the snakes speed incrementally to increase difficulty. 
-  
-- The restart game button should solely reload the game and the not entire DOM.
-
-- The *Speed Click Game* should have a start button. When the DOM loads the game begins immediately. This is frustrating causing a negative user experience.
-
-- After learning how to use the canvas element for the *Snake* game, I believe both the *Speed Click Game* and *Connect Four* would be better if they were developed using the canvas element. 
-  
-- *Rock, Paper, Scissors* should have a pause between you picking and the computers choice revealed. As in real-life, there should be a three second countdown of "one, two, three" before the winner is revealed.
-
-- I would like to make the game more immersive by adding sounds and music to some of the games. I would like to add more to the styling the make the game generally more appealing and interactive. I would like to add more simple animations and utilize the :hover CSS selector more often.
-
-- For mobile viewing, file types other than .jpeg or .png should be used as they greatly reduce the performance of the webpage.
-
-- Overall, the design of the website needs to be improved. 
 
 ## Testing
 
@@ -204,58 +119,9 @@ Here are four image links providing screenshots of the HTML validation for each 
 <img src="assets\images\readme_images\html_validation\html_index_val.png">
 </details>
 
-<details>
-<summary>Click Game HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\clickgame_html_val.png">
-</details>
-
-<details>
-<summary>Rock, Paper, Scissor HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\html_val_rockpaperscissor.png">
-</details>
-
-<details>
-<summary>Snake HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\html_snake_val.png">
-</details>
-
-<details>
-<summary>Connect Four HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\connect4_html_val.png">
-</details>
-
 #### CSS 
 
-Here is a screenshot of the CSS Validation:
-
-<details>
-<summary>CSS Validation</summary>
-<img src="assets\images\readme_images\css_val.png">
-</details>
-
 #### JavaScript 
-
-The four game HTML pages each have a separate JavaScript file. Here are screenshots of the results from JS validation from JSHint:
-
-<details>
-<summary>Click Game JavaScript Validation</summary>
-<img src="assets\images\readme_images\js_validation\clickgame_js_val.png">
-</details>
-
-<details>
-<summary>Rock, Paper, Scissors JavaScript Validation</summary>
-<img src="assets\images\readme_images\js_validation\js_rockpaperscissor_val.png">
-</details>
-
-<details>
-<summary>Snake JavaScript Validation</summary>
-<img src="assets\images\readme_images\js_validation\snake_js_val.png">
-</details>
-
-<details>
-<summary>Connect Four JavaScript Validation</summary>
-<img src="assets\images\readme_images\js_validation\connect4_js_val.png">
-</details>
 
 ### Accessibility
 
@@ -268,26 +134,6 @@ Here are screenshots of the performance of the desktop versions of the project:
 <img src="assets\images\readme_images\lighthouse images\home page lighthouse.png">
 </details>
 
-<details>
-<summary>Click Game Desktop Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\Click Game Lighthouse.png">
-</details>
-
-<details>
-<summary>Rock, Paper, Scissors Desktop Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\RockPaperScissor Lighthouse.png">
-</details>
-
-<details>
-<summary>Snake Desktop Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\snake performance.png">
-</details>
-
-<details>
-<summary>Connect Four Desktop Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\Connect Four lighthouse.png">
-</details>
-
 #### Mobile Lighthouse Score
 
 The performance scores are greatly reduced when viewed on a mobile. The images that sufficed for desktop viewing do not work for mobile viewing. 
@@ -295,26 +141,6 @@ The performance scores are greatly reduced when viewed on a mobile. The images t
 <details>
 <summary>Home Page Mobile Lighthouse Performance</summary>
 <img src="assets\images\readme_images\lighthouse images\home page mobile lighthouse.png">
-</details>
-
-<details>
-<summary>Click Game Mobile Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\Click Game Mobile performance.png">
-</details>
-
-<details>
-<summary>Rock, Paper, Scissors Mobile Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\Rockpaperscissor mobile lighthouse.png">
-</details>
-
-<details>
-<summary>Snake Mobile Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\snake mobile performance.png"" >
-</details>
-
-<details>
-<summary>Connect Four Mobile Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\snake mobile performance.png">
 </details>
 
 ### Game Testing
@@ -330,18 +156,7 @@ The website was consistently tested for responsiveness using Chrome Developer to
 
 ### Bugs
 
-- The *Snake* game contains two bugs. Firstly, when the snake crashes into the wall, it should be game over as soon as the snake hits the wall. Sometimes, it takes for part of the body - i.e the snake array - to go into the wall for the game to be over. Secondly, in the testing phase, the game would abruptly end for no discernible reason. More testing needs to be done to figure out the reason the game would abruptly produce a "game over" alert.
-
-- Once I deployed my project, the *Connect Four* body div element did not run properly. Locally, the 42 div elements sat neatly into the main parent div element. Once I ran it from GitHub pages, the div elements began to overflow the parent div. I fixed this by reducing the size of each of the square div elements. This however leaves a small gap on the right hand side of the grid between the smaller square elements and the main parent div.
-  
 ### Fixed bugs
-
-- The *Speed Click Game* contained a bug where the game will end but the "Click" image would continue to pop up on random div elements. Despite the timer counting down and score tallied, the "Click" image would not stop until the restart button is set. The problem was resolved with the correct placement of a clearInterval timer within the randomSquare function. This did not fix the problem until I also called the timerId as a global variable rather than within the moveMole function. 
-
-- *Connect Four* had a bug with the scoring and localStorage property I only noticed during testing. When the DOM loaded, the values in local storage will be added to span where the scores for player one and player two should be i.e update high score. Also, when the game finishes, the point is added to the local storage. The bug is that the current score did not increase incrementally for either player one or player two. This means the high score is updated from local storage however the previous score is replaced rather that been added to. The solution to fix this was using a parseInt function. When calling the variable, rather than valuing at 0 and expecting it to update, value it with parseInt and the local storage. 
-  
-- When I deployed my project, another bug was determined. The canvas element in the snake.html did not load. For this to be fixed, I needed to place the script tag into the head element.
-
 ## Technologies Used
  
 ### Languages
@@ -394,15 +209,8 @@ The brainstorming process that began in the lead up to starting my project, I wa
 ### Resourced Content and Media
 
 - W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
-- Stack Overflow.
-- The *Snake* game was taken from this tutorial which thought me how to use the canvas element. I integrated it into my own website: [How to code snake game in JavaScript](https://www.youtube.com/watch?v=baBq5GAL0_U).
-- I had written a very basic *Rock, Paper, Scissors* game but because I wanted to use images and the onClick function to determine the user choice, the localStorage function to to getItem and setItem to update the scores in the DOM, I used code from freeCodeCamp.com that used a Switch statement to determine the winner and calls three separate new functions - win(), lose(), draw() - which made it easier to update the local storage and the DOM with .innerHTML. At the end of rockpaperscissors.js I left my own code commented out. I used this tutorial: [JavaScript, HTML, CSS - Rock Paper Scissors Game](https://www.youtube.com/watch?v=jaVNP3nIAv0).
-- For the *Connect Four* and *Speed Click Game*, I used the methods from this video in developing the games: [Learn JavaScript by Building 7 Games ](https://www.youtube.com/watch?v=ec8vSKJuZTk&t=5246s).
-- For the *Connect Four*, I copied the list of winning arrays and used it's method of looping through the squares listening for a click so I could add a circular background image to small div. I also used the tutorials method of looping through the winning arrays to see if they equal to one chosen by either player one or player two. 
-- For the *Speed Click Game*, I used the setInterval function from the tutorial on Whack-A-Mole for my own code to make the image appear on a random div every minute  or so. 
 - I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
 - For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/). 
-- I used Creazilla to find PNG images for the *Rock, Paper, Scissors* game: [Creazilla](https://creazilla.com/nodes/36999-hands-are-showing-rock-paper-scissors-icons-clipart).
 - <a href="https://www.freepik.com/free-vector/flower-background-desktop-wallpaper-cute-vector_18247662.htm#query=pastel%20pattern&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik
 
 ## Acknowledgements

@@ -53,9 +53,40 @@ a {
   text-decoration: none;
 }
 
-footer {
-  margin-top: 10px;
-  height: 7.5%;
+.game-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+  gap: 10px;
+  margin: 20px auto;
+  max-width: 440px;
+}
+
+.card {
+  width: 100px;
+  height: 150px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  user-select: none;
+  transform: rotateY(180deg);
+  transition: transform 0.5s ease;
+}
+
+.card.flipped {
+  transform: rotateY(0deg);
+}
+
+.flipped {
+  background-image: url(images/2_of_hearts.png);
+}
+
+button#reset-button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
 }
 
 

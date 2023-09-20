@@ -40,4 +40,48 @@ function createGameBoard() {
     }
 }
 
+
+function flipCard() {
+    if (flippedCards.lenght === 2) return;
+    if (isFlipping || this === flippedCards[0]) return;
+
+    this.classList.toggle('flipped');
+    flippedCards.push(this);
+    if (flippedCards.length === 2) {
+        setTimeout(checkForMatch, 1000);
+    }
+}
+
+function checkForMatch() {
+    const [card1, card2] = flippedCards;
+
+    if (card1.dataset.value === card2.dataset.value) {
+        card1.removeEventListener('click', flipCard);
+        card2.removeEventListener('click', flipCard);
+        matchedPairs++;
+
+        if (matchedPairs === duplicatedCardValues.length / 2) {
+            alert('Congratulations! You won the game!');
+        }
+    } else {
+        card1.classList.remove('flipped');
+        card2.classList.remove('flipped');
+    }
+
+    flippedCards = [];
+    isFlipping = false;
+}
+
+function resetGame() {
+    const gameContainer = document.getElementById('game-container');
+    gameContainer.innerHTML = '';
+    cards = [];
+    flippedCards = [];
+    matchedPairs = 0;
+    createGameBoard();
+}
+
+const resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', resetGame);
+
 createGameBoard();

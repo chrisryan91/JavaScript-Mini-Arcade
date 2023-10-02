@@ -11,9 +11,12 @@
     <header>
         <h1><a href="index.html">Memory Game! <i class="fa-solid fa-dice" style="color: #000000;"></i></a></h1>
     </header>
-    <div class="game-container" id="game-container">
+    <div class="grid-container" id="grid-container">
     </div>
-    <button id="reset-button">Reset Game</button>
+    <p>Score: <span class="score"></span></p>
+    <div class="actions">
+        <button onclick="restart()">Restart</button>
+    </div>
     <script src="game.js"></script>
 </body>
 </html>

@@ -1,8 +1,10 @@
 const gridContainer = document.querySelector(".grid-container");
 let cards = [];
-let firstCard, secondCard;
+let firstCard
+let secondCard;
 let lockBoard = false;
 let score = 0;
+let highscore = 0;
 
 document.querySelector(".score").textContent = score;
 

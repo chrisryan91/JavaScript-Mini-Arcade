@@ -1,80 +1,132 @@
-const cardValues = [
-    { id: '0', value: "assets/images/deck_of_cards/2_of_hearts.png" },
-    { id: '1', value: "assets/images/deck_of_cards/3_of_hearts.png" },
-    { id: '2', value: "assets/images/deck_of_cards/4_of_hearts.png" },
-    { id: '3', value: "assets/images/deck_of_cards/5_of_hearts.png" },
-    { id: '4', value: "assets/images/deck_of_cards/6_of_hearts.png" },
-    { id: '5', value: "assets/images/deck_of_cards/7_of_hearts.png" },
-    { id: '6', value: "assets/images/deck_of_cards/8_of_hearts.png" },
-    { id: '7', value: "assets/images/deck_of_cards/9_of_hearts.png" },
-];
-const duplicatedCardValues = [...cardValues, ...cardValues];
+const gridContainer = document.querySelector(".grid-container");
 let cards = [];
-let flippedCards = [];
-let matchedPairs = 0;
-let isFlipping = false;
-function shuffle(array) {
-    for (let i = array.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [array[i], array[j]] = [array[j], array[i]];
+let firstCard, secondCard;
+let lockBoard = false;
+let score = 0;
+
+document.querySelector(".score").textContent = score;
+
+const data = [
+    {
+        "image": "assets/images/deck_of_cards/2_of_hearts.png",
+        "name": "two"
+    },
+    {
+        "image": "assets/images/deck_of_cards/3_of_hearts.png",
+        "name": "three"
+    },
+    {
+        "image": "assets/images/deck_of_cards/4_of_hearts.png",
+        "name": "four"
+    },
+    {
+        "image": "assets/images/deck_of_cards/5_of_hearts.png",
+        "name": "five"
+    },
+    {
+        "image": "assets/images/deck_of_cards/6_of_hearts.png",
+        "name": "six"
+    },
+    {
+        "image": "assets/images/deck_of_cards/7_of_hearts.png",
+        "name": "seven"
+    },
+    {
+        "image": "assets/images/deck_of_cards/8_of_hearts.png",
+        "name": "eight"
+    },
+    {
+        "image": "assets/images/deck_of_cards/9_of_hearts.png",
+        "name": "nine"
     }
-}
-function createGameBoard() {
-    const gameContainer = document.getElementById('game-container');
-    shuffle(duplicatedCardValues);
-    for (const cardValueObj of duplicatedCardValues) {
-        const card = document.createElement('game-container');
-        card.className = 'card';
-        card.dataset.value = cardValueObj.id;
-        card.style.backgroundImage = `url(${cardValueObj.value})`;
-        gameContainer.appendChild(card);
-        cards.push(card);
-        card.addEventListener('click', flipCard);
-    }
+]
+
+
+cards = [...data, ...data];
+
+shuffleCards();
+generateCards();
+
+function shuffleCards() {
+  let currentIndex = cards.length,
+    randomIndex,
+    temporaryValue;
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+    temporaryValue = cards[currentIndex];
+    cards[currentIndex] = cards[randomIndex];
+    cards[randomIndex] = temporaryValue;
+  }
 }
 
+function generateCards() {
+  for (let card of cards) {
+    const cardElement = document.createElement("div");
+    cardElement.classList.add("card");
+    cardElement.setAttribute("data-name", card.name);
+    cardElement.innerHTML = `
+      <div class="front">
+        <img class="front-image" src=${card.image} />
+      </div>
+      <div class="back"></div>
+    `;
+    gridContainer.appendChild(cardElement);
+    cardElement.addEventListener("click", flipCard);
+  }
+}
 
 function flipCard() {
-    if (flippedCards.lenght === 2) return;
-    if (isFlipping || this === flippedCards[0]) return;
+  if (lockBoard) return;
+  if (this === firstCard) return;
 
-    this.classList.toggle('flipped');
-    flippedCards.push(this);
-    if (flippedCards.length === 2) {
-        setTimeout(checkForMatch, 1000);
-    }
+  this.classList.add("flipped");
+
+  if (!firstCard) {
+    firstCard = this;
+    return;
+  }
+
+  secondCard = this;
+  score++;
+  document.querySelector(".score").textContent = score;
+  lockBoard = true;
+
+  checkForMatch();
 }
 
 function checkForMatch() {
-    const [card1, card2] = flippedCards;
+  let isMatch = firstCard.dataset.name === secondCard.dataset.name;
 
-    if (card1.dataset.value === card2.dataset.value) {
-        card1.removeEventListener('click', flipCard);
-        card2.removeEventListener('click', flipCard);
-        matchedPairs++;
-
-        if (matchedPairs === duplicatedCardValues.length / 2) {
-            alert('Congratulations! You won the game!');
-        }
-    } else {
-        card1.classList.remove('flipped');
-        card2.classList.remove('flipped');
-    }
-
-    flippedCards = [];
-    isFlipping = false;
+  isMatch ? disableCards() : unflipCards();
 }
 
-function resetGame() {
-    const gameContainer = document.getElementById('game-container');
-    gameContainer.innerHTML = '';
-    cards = [];
-    flippedCards = [];
-    matchedPairs = 0;
-    createGameBoard();
+function disableCards() {
+  firstCard.removeEventListener("click", flipCard);
+  secondCard.removeEventListener("click", flipCard);
+
+  resetBoard();
 }
 
-const resetButton = document.getElementById('reset-button');
-resetButton.addEventListener('click', resetGame);
+function unflipCards() {
+  setTimeout(() => {
+    firstCard.classList.remove("flipped");
+    secondCard.classList.remove("flipped");
+    resetBoard();
+  }, 1000);
+}
 
-createGameBoard();
+function resetBoard() {
+  firstCard = null;
+  secondCard = null;
+  lockBoard = false;
+}
+
+function restart() {
+  resetBoard();
+  shuffleCards();
+  score = 0;
+  document.querySelector(".score").textContent = score;
+  gridContainer.innerHTML = "";
+  generateCards();
+}

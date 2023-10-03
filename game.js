@@ -38,6 +38,10 @@ const data = [
     {
         "image": "assets/images/deck_of_cards/9_of_hearts.png",
         "name": "nine"
+    },
+    {
+        "image": "assets/images/deck_of_cards/10_of_hearts.png",
+        "name": "ten"
     }
 ]
 

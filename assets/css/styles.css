@@ -117,6 +117,16 @@ backface-visibility: hidden;
 transform: rotateY(180deg);
 }
 
+.division {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.division div {
+  width: 25vw;
+}
+
 /* media queries for laptop screens */
 
 /* media queries for tablet screens */

@@ -5,8 +5,7 @@ let secondCard;
 let lockBoard = false;
 let score = 0;
 let highscore = 0;
-
-document.querySelector(".score").textContent = score;
+let attempts = 0;
 
 const data = [
     {
@@ -83,28 +82,29 @@ function generateCards() {
 }
 
 function flipCard() {
-  if (lockBoard) return;
-  if (this === firstCard) return;
+    if (lockBoard) return;
+    if (this === firstCard) return;
 
-  this.classList.add("flipped");
+    this.classList.add("flipped");
 
-  if (!firstCard) {
-    firstCard = this;
-    return;
-  }
+    if (!firstCard) {
+        firstCard = this;
+        return;
+        }
 
-  secondCard = this;
-  score++;
-  document.querySelector(".score").textContent = score;
-  lockBoard = true;
+    secondCard = this;
+    score++;
+    document.querySelector(".attempts").innerHTML = score;
+    lockBoard = true;
 
-  checkForMatch();
+    checkForMatch();
 }
 
 function checkForMatch() {
-  let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-
-  isMatch ? disableCards() : unflipCards();
+    attempts++;
+    document.querySelector(".attempts").textContent = attempts;
+    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+    isMatch ? disableCards() : unflipCards();
 }
 
 function disableCards() {
@@ -135,4 +135,13 @@ function restart() {
   document.querySelector(".score").textContent = score;
   gridContainer.innerHTML = "";
   generateCards();
+}
+
+function startTimer() {
+    let timerElement = document.querySelector(".timer");
+    let time = 0;
+    setInterval(() => {
+        time++;
+        timerElement.textContent = time;
+    }, 1000); // Update the timer every 1000 milliseconds (1 second)
 }

@@ -81,7 +81,8 @@ a {
   transform: rotateY(180deg);
 }
 
-button#reset-button {
+button {
+  width: 100px;
   padding: 10px 20px;
   font-size: 18px;
   background-color: #333;
@@ -124,7 +125,7 @@ transform: rotateY(180deg);
 }
 
 .division div {
-  width: 25vw;
+  width: 33vw;
 }
 
 /* media queries for laptop screens */

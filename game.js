@@ -1,56 +1,55 @@
 const gridContainer = document.querySelector(".grid-container");
-let cards = [];
-let firstCard
-let secondCard;
-let lockBoard = false;
-let score = 0;
-let highscore = 0;
-let attempts = 0;
+const attemptsElement = document.querySelector(".attempts");
+const timerElement = document.querySelector(".timer");
 
 const data = [
-    {
-        "image": "assets/images/deck_of_cards/2_of_hearts.png",
-        "name": "two"
-    },
-    {
-        "image": "assets/images/deck_of_cards/3_of_hearts.png",
-        "name": "three"
-    },
-    {
-        "image": "assets/images/deck_of_cards/4_of_hearts.png",
-        "name": "four"
-    },
-    {
-        "image": "assets/images/deck_of_cards/5_of_hearts.png",
-        "name": "five"
-    },
-    {
-        "image": "assets/images/deck_of_cards/6_of_hearts.png",
-        "name": "six"
-    },
-    {
-        "image": "assets/images/deck_of_cards/7_of_hearts.png",
-        "name": "seven"
-    },
-    {
-        "image": "assets/images/deck_of_cards/8_of_hearts.png",
-        "name": "eight"
-    },
-    {
-        "image": "assets/images/deck_of_cards/9_of_hearts.png",
-        "name": "nine"
-    },
-    {
-        "image": "assets/images/deck_of_cards/10_of_hearts.png",
-        "name": "ten"
-    }
+  {
+      "image": "assets/images/deck_of_cards/2_of_hearts.png",
+      "name": "two"
+  },
+  {
+      "image": "assets/images/deck_of_cards/3_of_hearts.png",
+      "name": "three"
+  },
+  {
+      "image": "assets/images/deck_of_cards/4_of_hearts.png",
+      "name": "four"
+  },
+  {
+      "image": "assets/images/deck_of_cards/5_of_hearts.png",
+      "name": "five"
+  },
+  {
+      "image": "assets/images/deck_of_cards/6_of_hearts.png",
+      "name": "six"
+  },
+  {
+      "image": "assets/images/deck_of_cards/7_of_hearts.png",
+      "name": "seven"
+  },
+  {
+      "image": "assets/images/deck_of_cards/8_of_hearts.png",
+      "name": "eight"
+  },
+  {
+      "image": "assets/images/deck_of_cards/9_of_hearts.png",
+      "name": "nine"
+  },
+  {
+      "image": "assets/images/deck_of_cards/10_of_hearts.png",
+      "name": "ten"
+  }
 ]
 
-
-cards = [...data, ...data];
-
-shuffleCards();
-generateCards();
+let cards = [...data, ...data];
+let firstCard = null;
+let secondCard = null;
+let lockBoard = false;
+let score = 0;
+let attempts = 0;
+let timer = 0;
+let timeStarted = false;
+let pairs = 0;
 
 function shuffleCards() {
   let currentIndex = cards.length,
@@ -82,21 +81,19 @@ function generateCards() {
 }
 
 function flipCard() {
+    if (!timeStarted) {
+      startTimer();
+      timeStarted = true;
+    }
     if (lockBoard) return;
     if (this === firstCard) return;
-
     this.classList.add("flipped");
-
     if (!firstCard) {
         firstCard = this;
         return;
         }
-
     secondCard = this;
-    score++;
-    document.querySelector(".attempts").innerHTML = score;
     lockBoard = true;
-
     checkForMatch();
 }
 
@@ -104,13 +101,26 @@ function checkForMatch() {
     attempts++;
     document.querySelector(".attempts").textContent = attempts;
     let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-    isMatch ? disableCards() : unflipCards();
+    if (isMatch) {
+      disableCards();
+      pairs++;
+      console.log(pairs);
+      if (pairs === 9) {
+        // Display an alert when the game is completed
+        alert("Congratulations! You've completed the game!");
+      };
+    } else {
+      unflipCards();
+    };
+  };
+
+if (pairs === data.lenght) {
+  alert("Congratulations! You have completed the game!");
 }
 
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
-
   resetBoard();
 }
 
@@ -132,7 +142,8 @@ function restart() {
   resetBoard();
   shuffleCards();
   score = 0;
-  document.querySelector(".score").textContent = score;
+  document.querySelector(".attempts").textContent = attempts;
+  attempts = 0;
   gridContainer.innerHTML = "";
   generateCards();
 }
@@ -143,5 +154,9 @@ function startTimer() {
     setInterval(() => {
         time++;
         timerElement.textContent = time;
-    }, 1000); // Update the timer every 1000 milliseconds (1 second)
+    }, 1000);
 }
+
+shuffleCards();
+generateCards();
+

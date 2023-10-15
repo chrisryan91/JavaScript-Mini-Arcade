@@ -45,10 +45,11 @@ let cards = [...data, ...data];
 let firstCard = null;
 let secondCard = null;
 let lockBoard = false;
-let score = 0;
 let attempts = 0;
-let timer = 0;
+let time = 0;
+let timerInterval;
 let timeStarted = false;
+let timeRunning = false;
 let pairs = 0;
 
 function shuffleCards() {
@@ -82,8 +83,8 @@ function generateCards() {
 
 function flipCard() {
     if (!timeStarted) {
-      startTimer();
       timeStarted = true;
+      startTimer();
     }
     if (lockBoard) return;
     if (this === firstCard) return;
@@ -107,7 +108,9 @@ function checkForMatch() {
       console.log(pairs);
       if (pairs === 9) {
         // Display an alert when the game is completed
+        stopTimer();
         alert("Congratulations! You've completed the game!");
+        timeStarted = false;
       };
     } else {
       unflipCards();
@@ -138,23 +141,33 @@ function resetBoard() {
   lockBoard = false;
 }
 
+function startTimer() {
+  if (!timeRunning) {
+      timerInterval = setInterval(() => {
+          time++;
+          timerElement.textContent = time;
+      }, 1000);
+  timeRunning = true;
+    }
+};
+
+function stopTimer() {
+  clearInterval(timerInterval);
+  time = 0;
+  timerElement.textContent = time;
+  timeRunning = false;
+}
+
 function restart() {
   resetBoard();
   shuffleCards();
-  score = 0;
   document.querySelector(".attempts").textContent = attempts;
   attempts = 0;
+
+  stopTimer();
+
   gridContainer.innerHTML = "";
   generateCards();
-}
-
-function startTimer() {
-    let timerElement = document.querySelector(".timer");
-    let time = 0;
-    setInterval(() => {
-        time++;
-        timerElement.textContent = time;
-    }, 1000);
 }
 
 shuffleCards();

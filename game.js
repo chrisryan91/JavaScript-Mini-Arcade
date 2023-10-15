@@ -156,13 +156,13 @@ function stopTimer() {
   time = 0;
   timerElement.textContent = time;
   timeRunning = false;
+  attempts = 0;
+  document.querySelector(".attempts").textContent = attempts;
 }
 
 function restart() {
   resetBoard();
   shuffleCards();
-  document.querySelector(".attempts").textContent = attempts;
-  attempts = 0;
 
   stopTimer();
 

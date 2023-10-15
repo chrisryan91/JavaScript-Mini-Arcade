@@ -7,11 +7,11 @@ body {
   margin: 0 auto;
   background-color: white;
   height: 100vh;
-  width: 100vw;
+  width: 100%;
 }
 
 header {
-  text-align: left;
+  text-align: center;
   padding-left: 20px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -69,7 +69,6 @@ a {
   position: relative;
   transform-style: preserve-3d;
   transition: all 0.5s ease-in-out;
-
 }
 
 .front-image {
@@ -128,28 +127,58 @@ transform: rotateY(180deg);
   width: 33vw;
 }
 
-/* media queries for laptop screens */
-
 /* media queries for tablet screens */
 
-@media only screen and (max-width: 750px) {
-
-header{
-  text-align: center;
+@media only screen and (max-width: 950px) {
+  .grid-container {
+    display: grid;
+    justify-content: center;
+    grid-gap: 16px;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(6, calc(80px / 2 * 3));
+  }
+  
+  .card {
+    height: calc(80px / 2 * 3);
+    width: 80px;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+  }
 }
 
-}
 
 /* media queries for smallest size screens */
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 580px) {
+    .grid-container {
+      display: grid;
+      justify-content: center;
+      grid-gap: 16px;
+      grid-template-columns: repeat(3, 50px);
+      grid-template-rows: repeat(6, calc(50px / 2 * 3));
+    }
+    
+    .card {
+      height: calc(50px / 2 * 3);
+      width: 50px;
+      border-radius: 10px;
+      background-color: white;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: all 0.5s ease-in-out;
+    }
 
-  h2 {
-    font-size: 150%;
-  }
-
-  p {
-    font-size: 100%;
-  }
+    .division {
+      display: inline;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    
+    .division div {
+      width: 100vw;
+    }
 
 }

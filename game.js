@@ -1,6 +1,9 @@
 const gridContainer = document.querySelector(".grid-container");
 const attemptsElement = document.querySelector(".attempts");
 const timerElement = document.querySelector(".timer");
+const highScoreElement = document.querySelector(".highscore");
+
+const highScoreKey = "memoryGameHighScore";
 
 const data = [
   {
@@ -38,6 +41,18 @@ const data = [
   {
       "image": "assets/images/deck_of_cards/10_of_hearts.png",
       "name": "ten"
+  },
+  {
+    "image": "assets/images/deck_of_cards/jack_of_hearts.png",
+    "name": "jack"
+  },
+  {
+    "image": "assets/images/deck_of_cards/queen_of_hearts.png",
+    "name": "queen"
+  },
+  {
+    "image": "assets/images/deck_of_cards/king_of_hearts.png",
+    "name": "king"
   }
 ]
 
@@ -51,6 +66,29 @@ let timerInterval;
 let timeStarted = false;
 let timeRunning = false;
 let pairs = 0;
+let highScore = getHighScore() || Infinity;
+
+function updateHighScore(attempts) {
+  if (attempts < highScore) {
+    highScore = attempts;
+    localStorage.setItem(highScoreKey, highScore);
+  }
+}
+
+function getHighScore() {
+  const highScoreStr = localStorage.getItem(highScoreKey);
+  return highScoreStr ? parseInt(highScoreStr) : null;
+}
+
+function setHighScoreOnLoad() {
+  const storedHighScore = getHighScore();
+  if (storedHighScore !== null) {
+    highScore = storedHighScore;
+    highScoreElement.textContent = `High Score: ${highScore} attempts`;
+  }
+}
+
+window.addEventListener("load", setHighScoreOnLoad);
 
 function shuffleCards() {
   let currentIndex = cards.length,
@@ -99,26 +137,24 @@ function flipCard() {
 }
 
 function checkForMatch() {
-    attempts++;
-    document.querySelector(".attempts").textContent = attempts;
-    let isMatch = firstCard.dataset.name === secondCard.dataset.name;
-    if (isMatch) {
-      disableCards();
-      pairs++;
-      console.log(pairs);
-      if (pairs === 9) {
-        // Display an alert when the game is completed
-        stopTimer();
-        alert("Congratulations! You've completed the game!");
-        timeStarted = false;
-      };
-    } else {
-      unflipCards();
-    };
-  };
+  attempts++;
+  document.querySelector(".attempts").textContent = attempts;
+  let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+  if (isMatch) {
+    disableCards();
+    pairs++;
+    if (pairs === 12) {
+      stopTimer();
+      alert("Congratulations! You've completed the game!");
+      timeStarted = false;
 
-if (pairs === data.lenght) {
-  alert("Congratulations! You have completed the game!");
+      updateHighScore(attempts);
+
+      highScoreElement.textContent = `High Score: ${highScore} attempts`;
+    }
+  } else {
+    unflipCards();
+  }
 }
 
 function disableCards() {
@@ -172,4 +208,4 @@ function restart() {
 
 shuffleCards();
 generateCards();
-
+setHighScoreOnLoad();

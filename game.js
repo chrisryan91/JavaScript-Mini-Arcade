@@ -1,9 +1,9 @@
 const gridContainer = document.querySelector(".grid-container");
 const attemptsElement = document.querySelector(".attempts");
 const timerElement = document.querySelector(".timer");
-const highScoreElement = document.querySelector(".highscore");
+const lowestElement = document.querySelector(".lowest");
 
-const highScoreKey = "memoryGameHighScore";
+let lowest = parseInt(localStorage.getItem("lowest")) || 0;
 
 const data = [
   {
@@ -66,29 +66,6 @@ let timerInterval;
 let timeStarted = false;
 let timeRunning = false;
 let pairs = 0;
-let highScore = getHighScore() || Infinity;
-
-function updateHighScore(attempts) {
-  if (attempts < highScore) {
-    highScore = attempts;
-    localStorage.setItem(highScoreKey, highScore);
-  }
-}
-
-function getHighScore() {
-  const highScoreStr = localStorage.getItem(highScoreKey);
-  return highScoreStr ? parseInt(highScoreStr) : null;
-}
-
-function setHighScoreOnLoad() {
-  const storedHighScore = getHighScore();
-  if (storedHighScore !== null) {
-    highScore = storedHighScore;
-    highScoreElement.textContent = `High Score: ${highScore} attempts`;
-  }
-}
-
-window.addEventListener("load", setHighScoreOnLoad);
 
 function shuffleCards() {
   let currentIndex = cards.length,
@@ -144,13 +121,14 @@ function checkForMatch() {
     disableCards();
     pairs++;
     if (pairs === 12) {
+      if (attempts > lowest) { // Compare attempts with lowest
+        lowest = attempts;
+        localStorage.setItem("lowest", lowest); // Update lowest in local storage
+        updateLowest(); // Update the "lowest" class div
+      }
       stopTimer();
       alert("Congratulations! You've completed the game!");
       timeStarted = false;
-
-      updateHighScore(attempts);
-
-      highScoreElement.textContent = `High Score: ${highScore} attempts`;
     }
   } else {
     unflipCards();
@@ -206,6 +184,10 @@ function restart() {
   generateCards();
 }
 
+function updateLowest() {
+  lowestElement.textContent = lowest;
+}
+
 shuffleCards();
 generateCards();
-setHighScoreOnLoad();
+updateLowest();

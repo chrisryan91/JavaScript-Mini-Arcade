@@ -11,8 +11,17 @@
     <header>
         <h1><a href="index.html">Memory Game! <i class="fa-solid fa-dice" style="color: #000000;"></i></a></h1>
     </header>
-    <div class="grid-container" id="grid-container">
-    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+          <h2>Select Difficulty</h2>
+          <button id="easyBtn">Easy</button>
+          <button id="mediumBtn">Medium</button>
+          <button id="difficultBtn">Difficult</button>
+        </div>
+      </div>
+    <div class="grid-container easy"></div>
+    <div class="grid-container medium"></div>
+    <div class="grid-container difficult"></div>
     <div class="division">
         <div>
             <p>Attempts: <span class="attempts"></span></p>

@@ -40,21 +40,25 @@ const data = [
   },
   {
       "image": "assets/images/deck_of_cards/10_of_hearts.png",
-      "name": "ten"
-  }// ,
-  //{
-  //  "image": "assets/images/deck_of_cards/jack_of_hearts.png",
- //   "name": "jack"
- // },
-  //{
-  //  "image": "assets/images/deck_of_cards/queen_of_hearts.png",
-  //  "name": "queen"
-  //},
-  //{
-  //  "image": "assets/images/deck_of_cards/king_of_hearts.png",
-  //  "name": "king"
-//}
+      "name": "ten",
+  },
+  {
+      "image": "assets/images/deck_of_cards/jack_of_hearts.png",
+      "name": "jack"
+  },
+  {
+      "image": "assets/images/deck_of_cards/queen_of_hearts.png",
+      "name": "queen"
+  },
+  {
+      "image": "assets/images/deck_of_cards/king_of_hearts.png",
+      "name": "king"
+  }
 ]
+
+const easyCards = data.slice(0, 6); // 6 cards for easy
+const mediumCards = data.slice(0, 9); // 9 cards for medium
+const difficultCards = data.slice(0, 12); // 12 cards for difficult
 
 let cards = [...data, ...data];
 let firstCard = null;
@@ -66,6 +70,32 @@ let timerInterval;
 let timeStarted = false;
 let timeRunning = false;
 let pairs = 0;
+
+const modal = document.getElementById("myModal");
+
+
+function openModal() {
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  modal.style.display = "none";
+}
+
+easyBtn.addEventListener("click", function () {
+  startGame("easy");
+  closeModal();
+});
+
+mediumBtn.addEventListener("click", function () {
+  startGame("medium");
+  closeModal();
+});
+
+difficultBtn.addEventListener("click", function () {
+  startGame("difficult");
+  closeModal();
+});
 
 function shuffleCards() {
   let currentIndex = cards.length,
@@ -174,12 +204,25 @@ function stopTimer() {
   document.querySelector(".attempts").textContent = attempts;
 }
 
-function restart() {
+function startGame(difficulty) {
+  console.log(`Starting the game with difficulty: ${difficulty}`);
   resetBoard();
-  shuffleCards();
   stopTimer();
   pairs = 0;
   gridContainer.innerHTML = "";
+
+  let selectedCards = [];
+
+  if (difficulty === "easy") {
+    selectedCards = easyCards;
+  } else if (difficulty === "medium") {
+    selectedCards = mediumCards;
+  } else if (difficulty === "difficult") {
+    selectedCards = difficultCards;
+  }
+
+  cards = [...selectedCards, ...selectedCards];
+  shuffleCards();
   generateCards();
 }
 
@@ -187,6 +230,5 @@ function updateLowest() {
   lowestElement.textContent = lowest;
 }
 
-shuffleCards();
-generateCards();
 updateLowest();
+openModal();

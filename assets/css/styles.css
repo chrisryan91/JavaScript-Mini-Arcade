@@ -53,12 +53,53 @@ a {
   text-decoration: none;
 }
 
-.grid-container {
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+}
+
+.grid-container.easy {
+  display: grid;
+  justify-content: center;
+  grid-gap: 16px;
+  grid-template-columns: repeat(6, 140px);
+  grid-template-rows: repeat(2, calc(140px / 2 * 3));
+}
+
+.grid-container.medium {
   display: grid;
   justify-content: center;
   grid-gap: 16px;
   grid-template-columns: repeat(6, 140px);
   grid-template-rows: repeat(3, calc(140px / 2 * 3));
+}
+
+.grid-container.difficult {
+  display: grid;
+  justify-content: center;
+  grid-gap: 16px;
+  grid-template-columns: repeat(6, 140px);
+  grid-template-rows: repeat(4, calc(140px / 2 * 3));
 }
 
 .card {

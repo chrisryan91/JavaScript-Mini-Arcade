@@ -58,7 +58,7 @@ a {
   justify-content: center;
   grid-gap: 16px;
   grid-template-columns: repeat(6, 140px);
-  grid-template-rows: repeat(4, calc(140px / 2 * 3));
+  grid-template-rows: repeat(3, calc(140px / 2 * 3));
 }
 
 .card {
@@ -124,7 +124,7 @@ transform: rotateY(180deg);
 }
 
 .division div {
-  width: 33vw;
+  width: 32vw;
 }
 
 /* media queries for tablet screens */

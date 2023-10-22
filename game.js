@@ -41,19 +41,19 @@ const data = [
   {
       "image": "assets/images/deck_of_cards/10_of_hearts.png",
       "name": "ten"
-  },
-  {
-    "image": "assets/images/deck_of_cards/jack_of_hearts.png",
-    "name": "jack"
-  },
-  {
-    "image": "assets/images/deck_of_cards/queen_of_hearts.png",
-    "name": "queen"
-  },
-  {
-    "image": "assets/images/deck_of_cards/king_of_hearts.png",
-    "name": "king"
-  }
+  }// ,
+  //{
+  //  "image": "assets/images/deck_of_cards/jack_of_hearts.png",
+ //   "name": "jack"
+ // },
+  //{
+  //  "image": "assets/images/deck_of_cards/queen_of_hearts.png",
+  //  "name": "queen"
+  //},
+  //{
+  //  "image": "assets/images/deck_of_cards/king_of_hearts.png",
+  //  "name": "king"
+//}
 ]
 
 let cards = [...data, ...data];
@@ -120,8 +120,8 @@ function checkForMatch() {
   if (isMatch) {
     disableCards();
     pairs++;
-    if (pairs === 12) {
-      if (attempts > lowest) { // Compare attempts with lowest
+    if (pairs === 9) {
+      if (attempts < lowest) { // Compare attempts with lowest
         lowest = attempts;
         localStorage.setItem("lowest", lowest); // Update lowest in local storage
         updateLowest(); // Update the "lowest" class div
@@ -177,9 +177,8 @@ function stopTimer() {
 function restart() {
   resetBoard();
   shuffleCards();
-
   stopTimer();
-
+  pairs = 0;
   gridContainer.innerHTML = "";
   generateCards();
 }

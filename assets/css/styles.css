@@ -78,30 +78,13 @@ button {
   padding: 10px 20px;
 }
 
-.grid-container.easy {
+.grid-container {
   display: grid;
   justify-content: center;
   grid-gap: 16px;
   grid-template-columns: repeat(6, 140px);
   grid-template-rows: repeat(2, calc(140px / 2 * 3));
 }
-
-.grid-container.medium {
-  display: grid;
-  justify-content: center;
-  grid-gap: 16px;
-  grid-template-columns: repeat(6, 140px);
-  grid-template-rows: repeat(3, calc(140px / 2 * 3));
-}
-
-.grid-container.difficult {
-  display: grid;
-  justify-content: center;
-  grid-gap: 16px;
-  grid-template-columns: repeat(6, 140px);
-  grid-template-rows: repeat(4, calc(140px / 2 * 3));
-}
-
 .card {
   height: calc(140px / 2 * 3);
   width: 140px;
@@ -176,7 +159,7 @@ transform: rotateY(180deg);
     justify-content: center;
     grid-gap: 16px;
     grid-template-columns: repeat(4, 80px);
-    grid-template-rows: repeat(6, calc(80px / 2 * 3));
+    grid-template-rows: repeat(3, calc(80px / 2 * 3));
   }
   
   .card {
@@ -187,6 +170,10 @@ transform: rotateY(180deg);
     position: relative;
     transform-style: preserve-3d;
     transition: all 0.5s ease-in-out;
+  }
+
+  p {
+    font-size: 120%;
   }
 }
 
@@ -199,7 +186,7 @@ transform: rotateY(180deg);
       justify-content: center;
       grid-gap: 16px;
       grid-template-columns: repeat(4, 50px);
-      grid-template-rows: repeat(6, calc(50px / 2 * 3));
+      grid-template-rows: repeat(3, calc(50px / 2 * 3));
     }
     
     .card {
@@ -220,6 +207,10 @@ transform: rotateY(180deg);
     
     .division div {
       width: 100vw;
+    }
+
+    p {
+      font-size: 100%;
     }
 
 }

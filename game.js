@@ -2,8 +2,7 @@ const gridContainer = document.querySelector(".grid-container");
 const attemptsElement = document.querySelector(".attempts");
 const timerElement = document.querySelector(".timer");
 const lowestElement = document.querySelector(".lowest");
-
-let lowest = parseInt(localStorage.getItem("lowest")) || 0;
+const modal = document.getElementById("myModal");
 
 const data = [
   {
@@ -70,32 +69,41 @@ let timerInterval;
 let timeStarted = false;
 let timeRunning = false;
 let pairs = 0;
+let pairsToMatch = 0;
+let currentDifficulty = "";
 
-const modal = document.getElementById("myModal");
+let easyLowest = parseInt(localStorage.getItem("easyLowest")) || "No attempts!";
+let mediumLowest = parseInt(localStorage.getItem("mediumLowest")) || "No attempts!";
+let difficultLowest = parseInt(localStorage.getItem("difficultLowest")) || "No attempts!";
 
+easyBtn.addEventListener("click", function () {
+  startGame("easy");
+  currentDifficulty = "easy";
+  closeModal();
+  updateLowest(currentDifficulty);
+});
+
+mediumBtn.addEventListener("click", function () {
+  startGame("medium");
+  currentDifficulty = "medium";
+  closeModal();
+  updateLowest(currentDifficulty);
+});
+
+difficultBtn.addEventListener("click", function () {
+  startGame("difficult");
+  currentDifficulty = "difficult";
+  closeModal();
+  updateLowest(currentDifficulty);
+});
 
 function openModal() {
-  modal.style.display = "block";
+  modal.style.display = "";
 }
 
 function closeModal() {
   modal.style.display = "none";
 }
-
-easyBtn.addEventListener("click", function () {
-  startGame("easy");
-  closeModal();
-});
-
-mediumBtn.addEventListener("click", function () {
-  startGame("medium");
-  closeModal();
-});
-
-difficultBtn.addEventListener("click", function () {
-  startGame("difficult");
-  closeModal();
-});
 
 function shuffleCards() {
   let currentIndex = cards.length,
@@ -143,18 +151,38 @@ function flipCard() {
     checkForMatch();
 }
 
+function updateLowestScore(currentDifficulty) {
+  console.log(currentDifficulty)
+  console.log(attempts, low)
+  const storageKey = `${currentDifficulty}Lowest`;
+  const storedScore = parseInt(localStorage.getItem(storageKey)) || Infinity;
+  console.log(storedScore)
+
+  if (attempts < storedScore) {
+    console.log("e")
+    localStorage.setItem(storageKey, attempts);
+    updateLowest(attempts);
+  }
+}
+
 function checkForMatch() {
   attempts++;
-  document.querySelector(".attempts").textContent = attempts;
-  let isMatch = firstCard.dataset.name === secondCard.dataset.name;
+  attemptsElement.textContent = attempts;
+  const isMatch = firstCard.dataset.name === secondCard.dataset.name;
+
   if (isMatch) {
     disableCards();
     pairs++;
-    if (pairs === 9) {
-      if (attempts < lowest) { // Compare attempts with lowest
-        lowest = attempts;
-        localStorage.setItem("lowest", lowest); // Update lowest in local storage
-        updateLowest(); // Update the "lowest" class div
+
+    if (pairs === pairsToMatch) {
+      console.log("a", attempts, low);
+      if (typeof low === "string"){
+        low = 100;
+      }
+      console.log("a", attempts, low)
+      if (attempts < low) {
+        console.log("b");
+        updateLowestScore(currentDifficulty);
       }
       stopTimer();
       alert("Congratulations! You've completed the game!");
@@ -210,25 +238,37 @@ function startGame(difficulty) {
   stopTimer();
   pairs = 0;
   gridContainer.innerHTML = "";
+  currentDifficulty = difficulty;
 
   let selectedCards = [];
 
-  if (difficulty === "easy") {
+  if (currentDifficulty === "easy") {
     selectedCards = easyCards;
-  } else if (difficulty === "medium") {
+    pairsToMatch = easyCards.length;
+    low = easyLowest;
+    updateLowest(low);
+  } else if (currentDifficulty === "medium") {
     selectedCards = mediumCards;
-  } else if (difficulty === "difficult") {
+    pairsToMatch = mediumCards.length;
+    low = mediumLowest;
+    updateLowest(low);
+  } else if (currentDifficulty === "difficult") {
     selectedCards = difficultCards;
+    pairsToMatch = difficultCards.length;
+    low = difficultLowest;
+    updateLowest(low);
   }
 
   cards = [...selectedCards, ...selectedCards];
   shuffleCards();
   generateCards();
+  openModal();
 }
 
-function updateLowest() {
-  lowestElement.textContent = lowest;
+function updateLowest(currentDifficulty) {
+  const storageKey = `${currentDifficulty}Lowest`;
+  const storedScore = parseInt(localStorage.getItem(storageKey)) || "No attempts yet!";
+  lowestElement.textContent = storedScore;
 }
 
-updateLowest();
 openModal();

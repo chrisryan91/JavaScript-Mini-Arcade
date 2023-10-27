@@ -1,8 +1,6 @@
-# My new game!
+# Memory Game!
 
-
-
-![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
+![Am I Responsiveness Image]()
 
 ## Table of Contents
 - Designer Goals
@@ -53,9 +51,7 @@
 
 ![Pastel Colour Palette](assets/images/readme_images/colourpalette.png)
 
- - The colour scheme was always going to be a pastel palette. For me, pastel colours are calming. They have less contrast and brightness so what they lack in vibrance they make up for in playfulness. They are versatile and visually appealing. 
- - Pastel colours have a retro aesthetic that was common in arcades in the middle of last century. I used them here to try to recreate that arcade vibe. Pastel colours have also become trendy again in the recent decade so they are current and modern. 
- - The pastel palette is generally soothing on the eyes - and this should be effective for a website like JavaScript Mini-Arcade where the games are fairly rudimentary in design. The colour scheme needed to be unobtrusive to allow for a greater emphasis of the content. 
+ - The colour scheme was always going to be a pastel palette. For me, pastel colours are calming. They have less contrast and brightness so what they lack in vibrance they make up for in playfulness. They are versatile and visually appealing.
 
 ### Fonts
 
@@ -65,46 +61,34 @@
 
 ### Layout 
 
-The website has a Homepage and four other pages each containing a game. 
+The website has a single page containing the memory game.
 
 ### Wireframes
 
 All designed with Balsamiq.
 
 <details>
-<summary>Homepage Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Homepage%20Wireframe.png">
-</details>
-
-<details>
 <summary>Game Page Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Game%20Page%20Wireframe.png">
-</details>
-
-<details>
-<summary>Mobile Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/Mobile%20Wireframe.png">
+<img src="">
 </details>
 
 ## Features and Functionality
 
 ### Game Page
 
-
-
 <details>
-<summary>Page Screenshot</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/Homepage_Screenshot.png">
+<summary>Game Page Screenshot Desktop</summary>
+<img src="">
 </details>
 
 <details>
-<summary>Page Screenshot</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/Homepage_Mobile_Screenshot.png">
+<summary>Game Page Screenshot Mobile</summary>
+<img src="">
 </details>
 
 ### Features Left to Implement 
 
-
+For anyone with an understanding of HTML and CSS the game will be easy to cheat with because the card numbers are easily available to view with Dev Tools.
 
 ## Testing
 
@@ -115,8 +99,8 @@ All designed with Balsamiq.
 Here are four image links providing screenshots of the HTML validation for each of the five html documents.
 
 <details>
-<summary>Home Page HTML Validation</summary>
-<img src="assets\images\readme_images\html_validation\html_index_val.png">
+<summary>Game Page HTML Validation</summary>
+<img src="">
 </details>
 
 #### CSS 
@@ -130,8 +114,8 @@ Here are four image links providing screenshots of the HTML validation for each 
 Here are screenshots of the performance of the desktop versions of the project:
   
 <details>
-<summary>Home Page Desktop Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\home page lighthouse.png">
+<summary>Game Page Desktop Lighthouse Performance</summary>
+<img src="">
 </details>
 
 #### Mobile Lighthouse Score
@@ -140,23 +124,19 @@ The performance scores are greatly reduced when viewed on a mobile. The images t
 
 <details>
 <summary>Home Page Mobile Lighthouse Performance</summary>
-<img src="assets\images\readme_images\lighthouse images\home page mobile lighthouse.png">
+<img src="">
 </details>
 
 ### Game Testing
 
-The games were tested by myself, friends and family. The bugs noticed were noticed by them. Also, the features left the implement section was contributed to by other people than myself. 
 ### Browser Testing
 
-The website was tested on Google Chrome, Microsoft Edge and Safari on desktop and mobile.
-
-### Device Testing 
-
-The website was consistently tested for responsiveness using Chrome Developer tools. Once deployed, it was again tested as a Desktop, iPad, iPhone and a host of Samsung Galaxy varieties to test again. There were a few issues with responsiveness but it remains functioning above 300px width.
+### Device Testing
 
 ### Bugs
 
 ### Fixed bugs
+
 ## Technologies Used
  
 ### Languages
@@ -200,11 +180,14 @@ The repository to this website is here: https://github.com/chrisryan91/JavaScrip
 - Open Terminal, and change the current working directory to the desired location of the cloned repository.
 - Type 'git clone' and then paste the URL copied from GitHub earlier. 
 - Type 'Enter' to create a local clone.
+- 
 ## Credits
 
 ### Content
 
-The brainstorming process that began in the lead up to starting my project, I was spending time watching tutorials on how to make quizzes and games with JavaScript. I was considering somehow utilizing Google Charts for my project. I generally understood the process involved in some of the tutorials - like *Connect Four*. While in other tutorials - like a Pong game - I was left confused. Despite this, I learned quite a lot watching these tutorials especially regarding canvas elements, JavaScript switch elements, the setInterval and clearInterval functions, localStorage functions and more. I decided to integrate some of the code I had written while watching tutorials into a website that offered multiple games. This way code I had written would not go to waste and I could present it alongside my own code.
+I needed to make a game from scratch. I wanted to challenge myself and use the skills I had already learned on the course to build something from the ground up. I didn't want to make something too unique or abstract because if I did run into trouble - which I did - then I could find solutions. I wanted to utilize some of the things I have learned like local storage functions and template literals. Ultimately however I wanted to make something uncomplicated and user-friendly. 
+
+A Memory Game became my choice because it is familiar to everyone including myself yet was challenging enough to pique my interest. I had a few ideas on how to go about but as I built it from the ground-up there was many challenges in the form of bugs which I have mentioned above. I wanted too to be able to expand on the game with difficulty levels.
 
 ### Resourced Content and Media
 
@@ -215,4 +198,3 @@ The brainstorming process that began in the lead up to starting my project, I wa
 
 ## Acknowledgements
 
-I would like to thank Antonio, my mentor, for his support and also the entire Slack community especially the #peer-code-review channel. 

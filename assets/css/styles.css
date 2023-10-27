@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;1,600&display=swap');
 
-/* Global Styles */
+/* Game Page Styles */
 
 body {
   text-align: center;
@@ -51,6 +51,8 @@ a {
   text-decoration: none;
 }
 
+/* Modal Styles */
+
 .modal {
   display: none;
   position: fixed;
@@ -72,6 +74,8 @@ a {
   text-align: center;
   border: 2px solid black;
 }
+
+/* Game Grid Styles */
 
 .grid-container {
   padding-top: 20px;
@@ -99,23 +103,6 @@ a {
 
 .card.flipped {
   transform: rotateY(180deg);
-}
-
-button {
-  text-align: center;
-  width: 100px;
-  padding: 10px 20px;
-  margin: 10px;
-  font-size: 18px;
-  border: none;
-  cursor: pointer;
-  background-image: url("../images/pattern2.png");
-  border: 2px solid black;
-}
-
-.modal-button {
-  background-image: none;
-  background-color: white;
 }
 
 .front, .back {
@@ -153,6 +140,25 @@ transform: rotateY(180deg);
 
 .division div {
   width: 32vw;
+}
+
+/* Button Styles */
+
+button {
+  text-align: center;
+  width: 100px;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  background-image: url("../images/pattern2.png");
+  border: 2px solid black;
+}
+
+.modal-button {
+  background-image: none;
+  background-color: white;
 }
 
 /* media queries for tablet screens */

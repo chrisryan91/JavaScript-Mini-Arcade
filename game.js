@@ -1,10 +1,13 @@
+// Selecting DOM elements
 const gridContainer = document.querySelector(".grid-container");
 const attemptsElement = document.querySelector(".attempts");
 const timerElement = document.querySelector(".timer");
 const lowestElement = document.querySelector(".lowest");
 const modal = document.getElementById("myModal");
 
+// Define an array of card data
 const data = [
+  //Each object contains an image source and a name for the card
   {
       "image": "assets/images/deck_of_cards/2_of_hearts.png",
       "name": "two"
@@ -39,7 +42,7 @@ const data = [
   },
   {
       "image": "assets/images/deck_of_cards/10_of_hearts.png",
-      "name": "ten",
+      "name": "ten"
   },
   {
       "image": "assets/images/deck_of_cards/jack_of_hearts.png",
@@ -55,10 +58,12 @@ const data = [
   }
 ];
 
-const easyCards = data.slice(0, 6); // 6 cards for easy
-const mediumCards = data.slice(0, 9); // 9 cards for medium
-const difficultCards = data.slice(0, 12); // 12 cards for difficult
+// Create array of cards for different difficulty levels
+const easyGame = data.slice(0, 6); // 6 cards for easy
+const mediumGame = data.slice(0, 9); // 9 cards for medium
+const difficultGame = data.slice(0, 12); // 12 cards for difficult
 
+// Initialize game variables
 let cards = [...data, ...data];
 let firstCard = null;
 let secondCard = null;
@@ -73,10 +78,12 @@ let pairsToMatch = 0;
 let currentDifficulty = "";
 let low;
 
-let easyLowest = parseInt(localStorage.getItem("easyLowest")) || "No attempts!";
-let mediumLowest = parseInt(localStorage.getItem("mediumLowest")) || "No attempts!";
-let difficultLowest = parseInt(localStorage.getItem("difficultLowest")) || "No attempts!";
+// Get lowest scores from localStorage or set to a default value
+easyLowest = parseInt(localStorage.getItem("easyLowest")) || "No attempts!";
+mediumLowest = parseInt(localStorage.getItem("mediumLowest")) || "No attempts!";
+difficultLowest = parseInt(localStorage.getItem("difficultLowest")) || "None yet!";
 
+// Event listeners for difficulty selection buttons
 easyBtn.addEventListener("click", function () {
   startGame("easy");
   currentDifficulty = "easy";
@@ -98,18 +105,21 @@ difficultBtn.addEventListener("click", function () {
   updateLowest(currentDifficulty);
 });
 
+// Function to open the modal
 function openModal() {
   modal.style.display = "";
 }
 
+// Function to close the modal
 function closeModal() {
   modal.style.display = "none";
 }
 
+// Function to shuffle the cards randomly
 function shuffleCards() {
-  let currentIndex = cards.length,
-    randomIndex,
-    temporaryValue;
+  let currentIndex = cards.length;
+    let randomIndex;
+    let temporaryValue;
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
@@ -119,6 +129,7 @@ function shuffleCards() {
   }
 }
 
+// Function to generate the game cards
 function generateCards() {
   for (let card of cards) {
     const cardElement = document.createElement("div");
@@ -135,23 +146,30 @@ function generateCards() {
   }
 }
 
+// Function to handle card flipping when clicked
 function flipCard() {
+  // Start the timer
     if (!timeStarted) {
       timeStarted = true;
       startTimer();
     }
+    // If the board is locked, do nothing
     if (lockBoard) return;
+    // If the same card is clicked twice, do nothing
     if (this === firstCard) return;
     this.classList.add("flipped");
+    // If no card is flipped, set this as the first card
     if (!firstCard) {
         firstCard = this;
         return;
         }
+    // Otherwise, set this as the second card and check for a match
     secondCard = this;
     lockBoard = true;
     checkForMatch();
 }
 
+// Function to update the lowest score in localStorage
 function updateLowestScore(currentDifficulty) {
   const storageKey = `${currentDifficulty}Lowest`;
   const storedScore = parseInt(localStorage.getItem(storageKey)) || Infinity;
@@ -162,6 +180,7 @@ function updateLowestScore(currentDifficulty) {
   }
 }
 
+// Function to check if the two flipped cards match
 function checkForMatch() {
   attempts++;
   attemptsElement.textContent = attempts;
@@ -172,6 +191,7 @@ function checkForMatch() {
     pairs++;
 
     if (pairs === pairsToMatch) {
+      // If "low" is a string, then check if the player's attempts are lower
       if (typeof low === "string"){
         low = 100;
       }
@@ -188,12 +208,14 @@ function checkForMatch() {
   }
 }
 
+// Function to disable matching cards
 function disableCards() {
   firstCard.removeEventListener("click", flipCard);
   secondCard.removeEventListener("click", flipCard);
   resetBoard();
 }
 
+// Function to unflip non-matching cards after a short delay
 function unflipCards() {
   setTimeout(() => {
     firstCard.classList.remove("flipped");
@@ -202,12 +224,14 @@ function unflipCards() {
   }, 1000);
 }
 
+// Function to reset the first and second cards and unlock the board
 function resetBoard() {
   firstCard = null;
   secondCard = null;
   lockBoard = false;
 }
 
+// Function to start the game timer
 function startTimer() {
   if (!timeRunning) {
       timerInterval = setInterval(() => {
@@ -218,6 +242,7 @@ function startTimer() {
     }
 }
 
+// Function to stop the game timer
 function stopTimer() {
   clearInterval(timerInterval);
   time = 0;
@@ -227,8 +252,8 @@ function stopTimer() {
   document.querySelector(".attempts").textContent = attempts;
 }
 
+// Function to start the game with the selected difficulty
 function startGame(difficulty) {
-  console.log(`Starting the game with difficulty: ${difficulty}`);
   resetBoard();
   stopTimer();
   pairs = 0;
@@ -238,18 +263,18 @@ function startGame(difficulty) {
   let selectedCards = [];
 
   if (currentDifficulty === "easy") {
-    selectedCards = easyCards;
-    pairsToMatch = easyCards.length;
+    selectedCards = easyGame;
+    pairsToMatch = easyGame.length;
     low = easyLowest;
     updateLowest(low);
   } else if (currentDifficulty === "medium") {
-    selectedCards = mediumCards;
-    pairsToMatch = mediumCards.length;
+    selectedCards = mediumGame;
+    pairsToMatch = mediumGame.length;
     low = mediumLowest;
     updateLowest(low);
   } else if (currentDifficulty === "difficult") {
-    selectedCards = difficultCards;
-    pairsToMatch = difficultCards.length;
+    selectedCards = difficultGame;
+    pairsToMatch = difficultGame.length;
     low = difficultLowest;
     updateLowest(low);
   }
@@ -260,9 +285,10 @@ function startGame(difficulty) {
   openModal();
 }
 
+// Function to update the lowestElement in the HTML
 function updateLowest(currentDifficulty) {
   const storageKey = `${currentDifficulty}Lowest`;
-  const storedScore = parseInt(localStorage.getItem(storageKey)) || "No attempts yet!";
+  const storedScore = parseInt(localStorage.getItem(storageKey)) || "None yet!";
   lowestElement.textContent = storedScore;
 }
 

@@ -53,7 +53,7 @@ const data = [
       "image": "assets/images/deck_of_cards/king_of_hearts.png",
       "name": "king"
   }
-]
+];
 
 const easyCards = data.slice(0, 6); // 6 cards for easy
 const mediumCards = data.slice(0, 9); // 9 cards for medium
@@ -71,6 +71,7 @@ let timeRunning = false;
 let pairs = 0;
 let pairsToMatch = 0;
 let currentDifficulty = "";
+let low;
 
 let easyLowest = parseInt(localStorage.getItem("easyLowest")) || "No attempts!";
 let mediumLowest = parseInt(localStorage.getItem("mediumLowest")) || "No attempts!";
@@ -152,14 +153,10 @@ function flipCard() {
 }
 
 function updateLowestScore(currentDifficulty) {
-  console.log(currentDifficulty)
-  console.log(attempts, low)
   const storageKey = `${currentDifficulty}Lowest`;
   const storedScore = parseInt(localStorage.getItem(storageKey)) || Infinity;
-  console.log(storedScore)
 
   if (attempts < storedScore) {
-    console.log("e")
     localStorage.setItem(storageKey, attempts);
     updateLowest(attempts);
   }
@@ -175,18 +172,16 @@ function checkForMatch() {
     pairs++;
 
     if (pairs === pairsToMatch) {
-      console.log("a", attempts, low);
       if (typeof low === "string"){
         low = 100;
       }
-      console.log("a", attempts, low)
       if (attempts < low) {
-        console.log("b");
         updateLowestScore(currentDifficulty);
       }
       stopTimer();
       alert("Congratulations! You've completed the game!");
       timeStarted = false;
+      updateLowest(currentDifficulty);
     }
   } else {
     unflipCards();
@@ -221,7 +216,7 @@ function startTimer() {
       }, 1000);
   timeRunning = true;
     }
-};
+}
 
 function stopTimer() {
   clearInterval(timerInterval);

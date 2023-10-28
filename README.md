@@ -1,6 +1,6 @@
 # Memory Game!
 
-![Am I Responsiveness Image]()
+![Am I Responsiveness Image](amiresponsive.png)
 
 ## Table of Contents
 - Designer Goals
@@ -45,14 +45,6 @@
 
 
 ## Design
-### Colour Scheme
-
- - Colour palette from [Pastel Colour Palette](https://www.color-hex.com/color-palette/5361)
-
-![Pastel Colour Palette](assets/images/readme_images/colourpalette.png)
-
- - The colour scheme was always going to be a pastel palette. For me, pastel colours are calming. They have less contrast and brightness so what they lack in vibrance they make up for in playfulness. They are versatile and visually appealing.
-
 ### Fonts
 
 - Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. 
@@ -68,8 +60,13 @@ The website has a single page containing the memory game.
 All designed with Balsamiq.
 
 <details>
-<summary>Game Page Wireframe</summary>
-<img src="">
+<summary>Desktop Game Page Wireframe</summary>
+<img src="assets\images\readme_images\wireframes\desktop wireframe.png">
+</details>
+
+<details>
+<summary>Mobile Game Page Wireframe</summary>
+<img src="assets\images\readme_images\wireframes\mobile wireframe.png">
 </details>
 
 ## Features and Functionality
@@ -78,12 +75,12 @@ All designed with Balsamiq.
 
 <details>
 <summary>Game Page Screenshot Desktop</summary>
-<img src="">
+<img src="assets\images\readme_images\Desktop_Screenshots\desktop gamepage.png">
 </details>
 
 <details>
 <summary>Game Page Screenshot Mobile</summary>
-<img src="">
+<img src="assets\images\readme_images\wireframes\mobile wireframe.png">
 </details>
 
 ### Features Left to Implement 
@@ -96,16 +93,30 @@ For anyone with an understanding of HTML and CSS the game will be easy to cheat 
 
 #### HTML
 
-Here are four image links providing screenshots of the HTML validation for each of the five html documents.
+Here is an image link providing a screenshot of the HTML validation for the webpage.
 
 <details>
 <summary>Game Page HTML Validation</summary>
-<img src="">
+<img src="![HTML Validation Image](<assets/images/validation/html validation.png>)">
 </details>
 
 #### CSS 
 
-#### JavaScript 
+Here is an image link providing a screenshot of the CSS validation for the webpage.
+
+<details>
+<summary>Game Page CSS Validation</summary>
+<img src="![CSS Validation Image](<assets\images\validation\css validator.png>)">
+</details>
+
+#### JavaScript
+
+Here is an image link providing a screenshot of the JavaScript validation for the webpage.
+
+<details>
+<summary>Game Page JavaScript Validation</summary>
+<img src="![CSS Validation Image](<assets\images\jshint validation.png>)">
+</details>
 
 ### Accessibility
 

@@ -1,9 +1,14 @@
+/*jshint esversion: 6 */
+
 // Selecting DOM elements
 const gridContainer = document.querySelector(".grid-container");
 const attemptsElement = document.querySelector(".attempts");
 const timerElement = document.querySelector(".timer");
 const lowestElement = document.querySelector(".lowest");
 const modal = document.getElementById("myModal");
+const easyBtn = document.querySelector('#easyBtn');
+const mediumBtn = document.querySelector('#mediumBtn');
+const difficultBtn = document.querySelector('#difficultBtn');
 
 // Define an array of card data
 const data = [
@@ -77,6 +82,9 @@ let pairs = 0;
 let pairsToMatch = 0;
 let currentDifficulty = "";
 let low;
+let easyLowest;
+let mediumLowest;
+let difficultLowest;
 
 // Get lowest scores from localStorage or set to a default value
 easyLowest = parseInt(localStorage.getItem("easyLowest")) || "No attempts!";

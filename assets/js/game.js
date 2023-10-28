@@ -9,53 +9,53 @@ const modal = document.getElementById("myModal");
 const data = [
   //Each object contains an image source and a name for the card
   {
-      "image": "assets/images/deck_of_cards/2_of_hearts.png",
-      "name": "two"
+    image: "assets/images/deck_of_cards/2_of_hearts.png",
+    name: "two",
   },
   {
-      "image": "assets/images/deck_of_cards/3_of_hearts.png",
-      "name": "three"
+    image: "assets/images/deck_of_cards/3_of_hearts.png",
+    name: "three",
   },
   {
-      "image": "assets/images/deck_of_cards/4_of_hearts.png",
-      "name": "four"
+    image: "assets/images/deck_of_cards/4_of_hearts.png",
+    name: "four",
   },
   {
-      "image": "assets/images/deck_of_cards/5_of_hearts.png",
-      "name": "five"
+    image: "assets/images/deck_of_cards/5_of_hearts.png",
+    name: "five",
   },
   {
-      "image": "assets/images/deck_of_cards/6_of_hearts.png",
-      "name": "six"
+    image: "assets/images/deck_of_cards/6_of_hearts.png",
+    name: "six",
   },
   {
-      "image": "assets/images/deck_of_cards/7_of_hearts.png",
-      "name": "seven"
+    image: "assets/images/deck_of_cards/7_of_hearts.png",
+    name: "seven",
   },
   {
-      "image": "assets/images/deck_of_cards/8_of_hearts.png",
-      "name": "eight"
+    image: "assets/images/deck_of_cards/8_of_hearts.png",
+    name: "eight",
   },
   {
-      "image": "assets/images/deck_of_cards/9_of_hearts.png",
-      "name": "nine"
+    image: "assets/images/deck_of_cards/9_of_hearts.png",
+    name: "nine",
   },
   {
-      "image": "assets/images/deck_of_cards/10_of_hearts.png",
-      "name": "ten"
+    image: "assets/images/deck_of_cards/10_of_hearts.png",
+    name: "ten",
   },
   {
-      "image": "assets/images/deck_of_cards/jack_of_hearts.png",
-      "name": "jack"
+    image: "assets/images/deck_of_cards/jack_of_hearts.png",
+    name: "jack",
   },
   {
-      "image": "assets/images/deck_of_cards/queen_of_hearts.png",
-      "name": "queen"
+    image: "assets/images/deck_of_cards/queen_of_hearts.png",
+    name: "queen",
   },
   {
-      "image": "assets/images/deck_of_cards/king_of_hearts.png",
-      "name": "king"
-  }
+    image: "assets/images/deck_of_cards/king_of_hearts.png",
+    name: "king",
+  },
 ];
 
 // Create array of cards for different difficulty levels
@@ -81,7 +81,8 @@ let low;
 // Get lowest scores from localStorage or set to a default value
 easyLowest = parseInt(localStorage.getItem("easyLowest")) || "No attempts!";
 mediumLowest = parseInt(localStorage.getItem("mediumLowest")) || "No attempts!";
-difficultLowest = parseInt(localStorage.getItem("difficultLowest")) || "None yet!";
+difficultLowest =
+  parseInt(localStorage.getItem("difficultLowest")) || "None yet!";
 
 // Event listeners for difficulty selection buttons
 easyBtn.addEventListener("click", function () {
@@ -118,8 +119,8 @@ function closeModal() {
 // Function to shuffle the cards randomly
 function shuffleCards() {
   let currentIndex = cards.length;
-    let randomIndex;
-    let temporaryValue;
+  let randomIndex;
+  let temporaryValue;
   while (currentIndex !== 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
     currentIndex -= 1;
@@ -149,24 +150,24 @@ function generateCards() {
 // Function to handle card flipping when clicked
 function flipCard() {
   // Start the timer
-    if (!timeStarted) {
-      timeStarted = true;
-      startTimer();
-    }
-    // If the board is locked, do nothing
-    if (lockBoard) return;
-    // If the same card is clicked twice, do nothing
-    if (this === firstCard) return;
-    this.classList.add("flipped");
-    // If no card is flipped, set this as the first card
-    if (!firstCard) {
-        firstCard = this;
-        return;
-        }
-    // Otherwise, set this as the second card and check for a match
-    secondCard = this;
-    lockBoard = true;
-    checkForMatch();
+  if (!timeStarted) {
+    timeStarted = true;
+    startTimer();
+  }
+  // If the board is locked, do nothing
+  if (lockBoard) return;
+  // If the same card is clicked twice, do nothing
+  if (this === firstCard) return;
+  this.classList.add("flipped");
+  // If no card is flipped, set this as the first card
+  if (!firstCard) {
+    firstCard = this;
+    return;
+  }
+  // Otherwise, set this as the second card and check for a match
+  secondCard = this;
+  lockBoard = true;
+  checkForMatch();
 }
 
 // Function to update the lowest score in localStorage
@@ -192,14 +193,14 @@ function checkForMatch() {
 
     if (pairs === pairsToMatch) {
       // If "low" is a string, then check if the player's attempts are lower
-      if (typeof low === "string"){
+      if (typeof low === "string") {
         low = 100;
       }
       if (attempts < low) {
         updateLowestScore(currentDifficulty);
       }
       stopTimer();
-      alert("Congratulations! You've completed the game!");
+      setTimeout(function() { alert("Congratulations! You've completed the game!"); }, 1000);
       timeStarted = false;
       updateLowest(currentDifficulty);
     }
@@ -234,12 +235,12 @@ function resetBoard() {
 // Function to start the game timer
 function startTimer() {
   if (!timeRunning) {
-      timerInterval = setInterval(() => {
-          time++;
-          timerElement.textContent = time;
-      }, 1000);
-  timeRunning = true;
-    }
+    timerInterval = setInterval(() => {
+      time++;
+      timerElement.textContent = time;
+    }, 1000);
+    timeRunning = true;
+  }
 }
 
 // Function to stop the game timer

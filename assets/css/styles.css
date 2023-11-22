@@ -94,6 +94,7 @@ a {
   position: relative;
   transform-style: preserve-3d;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .front-image {
@@ -146,14 +147,15 @@ transform: rotateY(180deg);
 
 button {
   text-align: center;
+  font-weight: bold;
   width: 100px;
   padding: 10px 20px;
   margin: 10px;
-  font-size: 18px;
   border: none;
   cursor: pointer;
   background-image: url("../images/pattern2.png");
   border: 2px solid black;
+  border-radius: 10px;
 }
 
 .modal-button {

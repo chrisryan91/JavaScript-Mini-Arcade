@@ -238,6 +238,7 @@ function resetBoard() {
   firstCard = null;
   secondCard = null;
   lockBoard = false;
+  timeStarted = false;
 }
 
 // Function to start the game timer
@@ -300,5 +301,11 @@ function updateLowest(currentDifficulty) {
   const storedScore = parseInt(localStorage.getItem(storageKey)) || "None yet!";
   lowestElement.textContent = storedScore;
 }
+
+document.getElementById('startButton').addEventListener('click', startTimer);
+
+document.getElementById('restartButton').addEventListener('click', function () {
+  startGame(); // You may want to pass the current difficulty to startGame
+});
 
 openModal();

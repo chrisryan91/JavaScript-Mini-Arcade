@@ -1,6 +1,6 @@
 # Memory Game!
 
-![Am I Responsiveness Image](amiresponsive.png)
+![Am I Responsiveness Image](assets/readme_images/amiresponsive.png)
 
 ## Table of Contents
 - Designer Goals
@@ -37,18 +37,18 @@
 
 ## Designers Goals
 
+This webpage is a familiar card matching game that will test a players memory. The goal is to match all the cards with the fewest attempts possible. The game itself is a grid of cards which forms a board. Each section of a grid contains a card lying face-down. By clicking on each card with the cursor the card will flip. The objective is to find all matching pairs by flipping two at a time. If the two cards match they will remain face-up, if not they will flip back down. The game can be restarted at any stage.
 
+The game comes with three difficulty levels. When the website loads, a modal is generated to choose difficulty levels. Upon choosing the board is generated corresponding the with difficulty chosen. While the game is timed, the goal of the game is to match all the cards with the lowest amount of attempts. This value is stored in local storage and is accessed when the game loads. The goal is to beat this number.
 
 ## Design
 ### Fonts
 
-- Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. 
-- I found Josefin Sans to be elegant and versatile so it suited this project. It is easy to read so it makes a smooth reading experience. It is distinctive without being cartoonish.
-- Sans Serif serves as a back-up if there is no access to [Google Fonts](https://fonts.google.com/).
+- Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. I found Josefin Sans to be elegant and versatile so it suited this project. It is easy to read so it makes a smooth reading experience. It is distinctive without being cartoonish. Sans Serif serves as a back-up if there is no access to [Google Fonts](https://fonts.google.com/).
 
 ### Layout 
 
-The website has a single page containing the memory game.
+The website with a header and body element. The body element features a grid of divs to represent each card. Each card has a "front" and "back" div. The game board is generated through JavaScript with event listeners attached to each card. Beneath the game board is another div containing divisions for the timer, number of attempts and stored number of attempts. Upon loading, the player is met with a modal to determine difficulty. The design is responsive and scales for smaller devices. 
 
 ### Wireframes
 
@@ -56,12 +56,12 @@ All designed with Balsamiq.
 
 <details>
 <summary>Desktop Game Page Wireframe</summary>
-<img src="assets\images\readme_images\wireframes\desktop wireframe.png">
+<img src="assets/images/readme_images/wireframes/desktopwireframe.png">
 </details>
 
 <details>
 <summary>Mobile Game Page Wireframe</summary>
-<img src="assets\images\readme_images\wireframes\mobile wireframe.png">
+<img src="assets/images/readme_images/wireframes/mobilewireframe.png">
 </details>
 
 ## Features and Functionality
@@ -70,17 +70,21 @@ All designed with Balsamiq.
 
 <details>
 <summary>Game Page Screenshot Desktop</summary>
-<img src="assets\images\readme_images\Desktop_Screenshots\desktop gamepage.png">
+<img src="assets/images/readme_images/Desktop_Screenshots/desktopscreenshot.png">
 </details>
 
 <details>
 <summary>Game Page Screenshot Mobile</summary>
-<img src="assets\images\readme_images\wireframes\mobile wireframe.png">
+<img src="assets/images/readme_images/Mobile_Screenshots/iPhone2screenshot.png">
 </details>
 
 ### Features Left to Implement 
 
-For anyone with an understanding of HTML and CSS the game will be easy to cheat with because the card numbers are easily available to view with Dev Tools.
+- For anyone with an understanding of HTML and CSS the game will be easy to cheat with because the card numbers are easily available to view with Dev Tools.
+
+- With more images added to the deck_of_cards directory the player could pick the suit of cards they wanted to play with - Hearts is the only option available for this game. 
+
+- A score board page with values stored in Local Storage. 
 
 ## Testing
 
@@ -92,7 +96,7 @@ Here is an image link providing a screenshot of the HTML validation for the webp
 
 <details>
 <summary>Game Page HTML Validation</summary>
-<img src="![HTML Validation Image](<assets/images/validation/html validation.png>)">
+<img src="assets/images/readme_images/validation/htmlvalidation.png">
 </details>
 
 #### CSS 
@@ -101,7 +105,7 @@ Here is an image link providing a screenshot of the CSS validation for the webpa
 
 <details>
 <summary>Game Page CSS Validation</summary>
-<img src="![CSS Validation Image](<assets\images\validation\css validator.png>)">
+<img src="assets/images/readme_images/validation/cssvalidation.png">
 </details>
 
 #### JavaScript
@@ -110,7 +114,7 @@ Here is an image link providing a screenshot of the JavaScript validation for th
 
 <details>
 <summary>Game Page JavaScript Validation</summary>
-<img src="![CSS Validation Image](<assets\images\jshint validation.png>)">
+<img src="assets/images/readme_images/validation/jshintvalidation.png">
 </details>
 
 ### Accessibility

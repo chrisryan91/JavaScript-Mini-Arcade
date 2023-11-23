@@ -194,9 +194,9 @@ function turnOver() {
 function check() {
   attempts++;
   attemptsElement.textContent = attempts;
-  const isMatch = choiceOne.id === choiceTwo.id;
+  const match = choiceOne.id === choiceTwo.id;
 
-  if (isMatch) {
+  if (match) {
     halt();
     pairs++;
 

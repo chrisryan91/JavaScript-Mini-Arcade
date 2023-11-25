@@ -5,7 +5,7 @@ Welcome to the Memory Card Game, a simple but challenging game for players of al
 ![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
 ## Table of Contents
-- Designer Goals
+- [Designer Goals](https://github.com/chrisryan91/Memory-Game#designers-goals)
 - Design
   - Colour Scheme
   - Fonts
@@ -249,8 +249,6 @@ The repository to this website is here: https://github.com/chrisryan91/JavaScrip
 I needed to make a game from scratch. I wanted to challenge myself and use the skills I had already learned on the course to build something from the ground up. I didn't want to make something too unique or abstract because if I did run into trouble - which I did - then I could find solutions. I wanted to utilize some of the things I have learned like local storage functions and template literals. Ultimately however I wanted to make something uncomplicated and user-friendly. 
 
 A Memory Game became my choice because it is familiar to everyone including myself yet was challenging enough to pique my interest. I had a few ideas on how to go about but as I built it from the ground-up there was many challenges in the form of bugs which I have mentioned above. I wanted too to be able to expand on the game with difficulty levels.
-
-The major issue I ran into
 
 ### Resourced Content and Media
 

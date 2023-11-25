@@ -6,16 +6,16 @@ Welcome to the Memory Card Game, a simple but challenging game for players of al
 
 ## Table of Contents
 - [Designer Goals](https://github.com/chrisryan91/Memory-Game#designers-goals)
-- Design
+- [Design](https://github.com/chrisryan91/Memory-Game#design)
   - Colour Scheme
   - Fonts
   - Layout
   - Wireframes
-- Features
+- [Features and Functionality](https://github.com/chrisryan91/Memory-Game#features-and-functionality)
   - Header
   - Homepage
   - Features To Be Explored/Implemented
-- Testing
+- [Testing](https://github.com/chrisryan91/Memory-Game#testing)
   - Validator Testing
     - HTML
     - CSS
@@ -26,16 +26,16 @@ Welcome to the Memory Card Game, a simple but challenging game for players of al
   - Bugs
     - Fixed Bugs
     - Unfixed Bugs
-- Used Technologies
+- [Technology Used](https://github.com/chrisryan91/Memory-Game#technologies-used)
   - Languages
   - Frameworks, libraries, programs used
-- Deployment
-- Cloning
-- Credits
+- [Deployment](https://github.com/chrisryan91/Memory-Game#deployment)
+- [Cloning](https://github.com/chrisryan91/Memory-Game#cloning)
+- [Credits](https://github.com/chrisryan91/Memory-Game#credits)
   - Content
   - Media
   - Resources Used
-- Acknowledgements 
+- [Acknowledgements](https://github.com/chrisryan91/Memory-Game#acknowledgements)
 
 ## Designers Goals
 
@@ -84,11 +84,13 @@ All designed with Balsamiq.
 
 - For anyone with an understanding of HTML and CSS the game will be easy to cheat with because the card numbers are easily available to view with Dev Tools.
 
-- With more images added to the deck_of_cards directory the player could pick the suit of cards they wanted to play with - Hearts is the only option available for this game. 
+- With more images added to the deck_of_cards directory the player could pick the suit of cards they wanted to play with - Hearts is the only option available for this game. It is true also for the design of the cards - with multiple designs in the directory users could choose whichever cards they would like.
 
-- A score board page with values stored in Local Storage.
+- With more decks of cards, the difficulty of the game could be increased. With a whole deck rather than suit, there could potentially be a massive board onscreen with 104 cards to pick 52 matches.
 
-- I do not think Lowest Number of Attempts is the greatest was to determine a "high" score. In the case for this game, a "high" score is actually a lower score. I do not think upon reflection that storing the lowest value for attempts is the best way to keep track of a users progress in the game. The timer function needs to be integrated into the "high" score somehow but I'm uncertain how best that could be achieved. Some along the lines of: x attempts in y seconds may be best to determine a high score.
+- I do not think Lowest Number of Attempts is the greatest was to determine a "high" score. In the case for this game, a "high" score is actually a lower score. I do not think that storing the lowest value for attempts is the best way to keep track of a users progress in the game. The timer function needs to be integrated into the "high" score. Some along the lines of: x attempts in y seconds may be best to determine a high score.
+
+- With a proper scoring system, a leader board could be generated to determine whose score is best. This would mean developing the website so users could potentially log-in with a username and password.
 
 ## Testing
 
@@ -252,15 +254,24 @@ A Memory Game became my choice because it is familiar to everyone including myse
 
 ### Resourced Content and Media
 
-- W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
-- I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
-- For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/). 
-- <a href="https://www.freepik.com/free-vector/flower-background-desktop-wallpaper-cute-vector_18247662.htm#query=pastel%20pattern&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik
+W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
+  
+I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
+  
+W3C schools article on local storage function: [W3 Local Storage (https://www.w3schools.com/jsref/prop_win_localstorage.asp)]
 
-## Acknowledgements
+For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
+
+<a href="https://www.freepik.com/free-vector/flower-background-desktop-wallpaper-cute-vector_18247662.htm#query=pastel%20pattern&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik.
+
+StackOverFlow was referenced constantly especially these links which provided me a method to inject HTML and CSS with JavaScript:
+-- ["Memory game not flipping properly"](https://stackoverflow.com/questions/70922279/memory-game-cards-not-flipping-properly)
+-- ["Memory Card Game "if else" statement not working"](https://stackoverflow.com/questions/63421928/memory-card-game-if-else-statement-not-working-javascript)
+-- ["why is my memory game not working? i can't flip the cards or make the game start"](https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start)
 
 - W3 schools for constant reference. Specifically for the Fisher-Yates shuffle: https://www.w3schools.com/js/js_array_sort.asp
 
+## Acknowledgements
 - 
 
 - 

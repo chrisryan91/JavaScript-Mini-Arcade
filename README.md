@@ -243,7 +243,7 @@ The repository to this website is here: https://github.com/chrisryan91/JavaScrip
 - Open Terminal, and change the current working directory to the desired location of the cloned repository.
 - Type 'git clone' and then paste the URL copied from GitHub earlier. 
 - Type 'Enter' to create a local clone.
-- 
+  
 ## Credits
 
 ### Content
@@ -254,22 +254,22 @@ A Memory Game became my choice because it is familiar to everyone including myse
 
 ### Resourced Content and Media
 
-W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
+1. W3Schools constantly offered me solutions, definitions and runnable examples when I needed information or ran into a problem. 
   
-I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
+2. I used these two tutorials to learn how to used localStorage with JavaScript: [Storing Objects with Local Storage in JavaScript](https://www.youtube.com/watch?v=AUOzvFzdIk4) and [An Introduction to Local Storage with JavaScript](https://www.youtube.com/watch?v=T9GWHFDcELQ&t=672s).
   
-W3C schools article on local storage function: [W3 Local Storage (https://www.w3schools.com/jsref/prop_win_localstorage.asp)]
+3. W3C schools article on local storage function: [W3 Local Storage](https://www.w3schools.com/jsref/prop_win_localstorage.asp)
 
-For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
+4. For writing this readme.md I used this explainer: [Markdown Cheat Sheet](https://www.markdownguide.org/cheat-sheet/).
 
-<a href="https://www.freepik.com/free-vector/flower-background-desktop-wallpaper-cute-vector_18247662.htm#query=pastel%20pattern&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik.
+5. <a href="https://www.freepik.com/free-vector/flower-background-desktop-wallpaper-cute-vector_18247662.htm#query=pastel%20pattern&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik.
 
-StackOverFlow was referenced constantly especially these links which provided me a method to inject HTML and CSS with JavaScript:
--- ["Memory game not flipping properly"](https://stackoverflow.com/questions/70922279/memory-game-cards-not-flipping-properly)
--- ["Memory Card Game "if else" statement not working"](https://stackoverflow.com/questions/63421928/memory-card-game-if-else-statement-not-working-javascript)
--- ["why is my memory game not working? i can't flip the cards or make the game start"](https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start)
+6. StackOverFlow was referenced constantly especially these links which provided me a method to inject HTML and CSS with JavaScript:
+* ["Memory game not flipping properly"](https://stackoverflow.com/questions/70922279/memory-game-cards-not-flipping-properly)
+* ["Memory Card Game "if else" statement not working"](https://stackoverflow.com/questions/63421928/memory-card-game-if-else-statement-not-working-javascript)
+* ["why is my memory game not working? i can't flip the cards or make the game start"](https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start)
 
-- W3 schools for constant reference. Specifically for the Fisher-Yates shuffle: https://www.w3schools.com/js/js_array_sort.asp
+7. W3 schools for constant reference. Specifically for the Fisher-Yates shuffle: https://www.w3schools.com/js/js_array_sort.asp
 
 ## Acknowledgements
 - 

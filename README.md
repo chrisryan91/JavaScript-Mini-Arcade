@@ -1,6 +1,6 @@
 # Memory Game!
 
-Welcome to the Memory Card Game, a simple but challenging for players of all ages and abilities. This game is designed to test the players short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simply game of flipping cards, racing against the clock and trying to get the lowest number of attempts.
+Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the players short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simply game of flipping cards, racing against the clock and trying to get the lowest number of attempts.
 
 ![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
@@ -187,7 +187,16 @@ There are no known bugs.
 
 - I consulted Reddit and StackOverflow was shown a method to get the card to flip back correctly. It involved injecting html and CSS styling into the index.html with JavaScript using template literals. Links are in the acknowledgement section below.
 
-- Using this method also made it handier for me to let the user choose their own difficulty level. By only generating the board after the users choice was inputted, it allowed me to keep the entire game on one html page.
+- Using this method also made it handier for me to let the user choose their own difficulty level. By only generating the board after the users choice was inputted, it allowed me to keep the entire game on one html page. 
+
+#### Bugs when updating local storage
+
+- I struggled for a while to update the Index.html with the Lowest Score from the Local Storage. This was because a "high score" for the game was actually the lowest score. I needed to compare the score for the current game with the value in local storage - but I wasn't sure what to do if there was no value in local storage, or the value was a string. I came up with this solution:
+
+
+`const storedScore = parseInt(localStorage.getItem(storageKey)) || Infinity;`
+
+- I declared the storeScore variable to be either the value in Local Storage but if that value was a string it would return as infinity. As all all of the scores for my game would be less than infinity practically speaking, I used this method. It will work unless someone played my game and their attempt value was greater than infinity.
 
 ## Technologies Used
  
@@ -251,4 +260,10 @@ The major issue I ran into
 - <a href="https://www.freepik.com/free-vector/flower-background-desktop-wallpaper-cute-vector_18247662.htm#query=pastel%20pattern&position=3&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik
 
 ## Acknowledgements
+
+- W3 schools for constant reference. Specifically for the Fisher-Yates shuffle: https://www.w3schools.com/js/js_array_sort.asp
+
+- 
+
+- 
 

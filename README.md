@@ -168,7 +168,7 @@ On desktop, the game was tested on Chrome, Mozilla Firefox and Opera. The game f
 Upon first deployment, I sent the game to friends and family who use different devices. I noticed no issues when I played the game on Chrome and Opera on my phone. I noticed no issues when I played the game on different browsers on my windows computer. The game was also played on IOS and Mac laptops. No issues were reported.
 
 <details>
-<summary>Am I responsive></summary>
+<summary>Am I responsive?</summary>
 <img src="assets/images/readme_images/amiresponsive.png">
 </details>
 
@@ -232,11 +232,11 @@ The site was deployed using GitHub pages. The steps to deploy using GitHub are:
 - Once selected, click 'Save'.
 - Deployment will then be confirmed by a message confirming this followed by a link
 
-The live link to my own project - JavaScript Mini-Arcade - is here: https://chrisryan91.github.io/JavaScript-Mini-Arcade/
+The live link to my own project is here: https://chrisryan91.github.io/Memory-Game/
 
 ## Cloning
 
-The repository to this website is here: https://github.com/chrisryan91/JavaScript-Mini-Arcade. To clone: 
+The repository to this website is here: https://github.com/chrisryan91/Memory-Game. To clone: 
 
 - Under 'Code', choose a preferred cloning option from HTTPS, SSH or GitHub CLI. 
 - Copy the link provided.

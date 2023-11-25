@@ -74,6 +74,7 @@ let low;
 let easyLowest;
 let mediumLowest;
 let difficultLowest;
+let gameStarted;
 
 // Selecting DOM elements
 const gridContainer = document.querySelector(".game-board");
@@ -298,9 +299,6 @@ function updateLowest(currentDifficulty) {
     const storedScore = parseInt(localStorage.getItem(storageKey)) || "None yet!";
     lowestElement.textContent = storedScore;
 };
-
-// Add event listeners to call functions to start timer or reset game
-document.getElementById('startButton').addEventListener('click', startTimer);
 
 document.getElementById('restartButton').addEventListener('click', function () {
 startGame();

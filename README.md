@@ -1,6 +1,6 @@
 # Memory Game!
 
-Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the players short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simple game of flipping cards, racing against the clock and trying to get the lowest number of attempts.
+Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the players short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simple game of flipping cards, racing against the clock and trying to get the lowest number of attempts. A live link is here: https://chrisryan91.github.io/Memory-Game/
 
 ![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
@@ -39,18 +39,56 @@ Welcome to the Memory Card Game, a simple but challenging game for players of al
 
 ## Designers Goals
 
-This webpage is a familiar card matching game that will test a players memory. The goal is to match all the cards with the fewest attempts possible. The game itself is a grid of cards which forms a board. Each section of a grid contains a card lying face-down. By clicking on each card with the cursor the card will flip. The objective is to find all matching pairs by flipping two at a time. If the two cards match they will remain face-up, if not they will flip back down. The game can be restarted at any stage.
+This webpage is a familiar card matching game that will test a players memory. The goal is to match all the cards with the fewest attempts possible. The game itself is a grid of cards which forms a board. Each section of a grid contains a card lying face-down. By clicking on each card with the cursor the card will flip. 
+
+The objective is to find all matching pairs by flipping two at a time. If the two cards match they will remain face-up, if not they will flip back down. The game can be restarted at any stage. If restart is clicked, a modal appears to question if the player is certain they want to restart.
 
 The game comes with three difficulty levels. When the website loads, a modal is generated to choose difficulty levels. Upon choosing the board is generated corresponding the with difficulty chosen. While the game is timed, the goal of the game is to match all the cards with the lowest amount of attempts. This value is stored in local storage and is accessed when the game loads. The goal is to beat this number.
 
 ## Design
 ### Fonts
 
-Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. I found Josefin Sans to be elegant and versatile so it suited this project. It is easy to read so it makes a smooth reading experience. It is distinctive without being cartoonish. Sans Serif serves as a back-up if there is no access to [Google Fonts](https://fonts.google.com/).
+Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. I found Josefin Sans to be elegant and versatile so it suited this project. Sans Serif serves as a back-up if there is no access to [Google Fonts](https://fonts.google.com/).
 
 ### Layout 
 
-The website with a header and body element. The body element features a grid of divs to represent each card. Each card has a "front" and "back" div. The game board is generated through JavaScript with event listeners attached to each card. Beneath the game board is another div containing divisions for the timer, number of attempts and stored number of attempts. Upon loading, the player is met with a modal to determine difficulty. The design is responsive and scales for smaller devices. 
+#### File Structure
+
+- index.html: The main HTML file containing the structure of the webpage.
+
+- assets/css/styles.css: The stylesheet file for styling the webpage.
+
+- assets/js/game.js: The JavaScript file responsible for the game logic.
+
+#### Head Section
+
+#### Body Section
+
+##### Header
+
+- The header displays the title of the game as a clickable link to the homepage
+
+- The header includes an icon (dice) using Font Awesome
+
+##### Modals
+
+- The first modal provides an option to select the game difficulty.
+
+- The second modal confirms user action with Yes or No options.
+
+##### Game Board
+
+- The dealCards() function generates and renders memory game cards within body of index.html. A div element is generated for each card. The number of cards generated depends on the difficulty level.
+  
+- Two nested div elements representing the front and the back of the card are placed within each card div element.
+  
+##### Division Section
+
+This contains three sections for information from the game:
+
+1. Attempts
+2. Lowest Number of Attempts
+3. Timer
 
 ### Wireframes
 

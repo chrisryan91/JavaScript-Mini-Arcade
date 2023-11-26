@@ -82,9 +82,12 @@ const attemptsElement = document.querySelector(".attempts");
 const timerElement = document.querySelector(".timer");
 const lowestElement = document.querySelector(".lowest");
 const modal = document.querySelector("#myModal");
+const modal2 = document.querySelector("#myModal2")
 const easyBtn = document.querySelector('#easyBtn');
 const mediumBtn = document.querySelector('#mediumBtn');
 const difficultBtn = document.querySelector('#difficultBtn');
+const yesBtn = document.querySelector('#yesBtn');
+const noBtn = document.querySelector('#noBtn');
 
 // Event listeners for difficulty selection buttons
 easyBtn.addEventListener("click", function () {
@@ -108,6 +111,14 @@ difficultBtn.addEventListener("click", function () {
     updateLowest(currentDifficulty);
 });
 
+yesBtn.addEventListener("click", function() {
+    openModal();
+});
+
+noBtn.addEventListener("click", function() {
+    closeModal2();
+});
+
 // Get lowest scores from localStorage or set to a default value
 easyLowest = parseInt(localStorage.getItem("easyLowest")) || "No attempts!";
 mediumLowest = parseInt(localStorage.getItem("mediumLowest")) || "No attempts!";
@@ -117,11 +128,20 @@ parseInt(localStorage.getItem("difficultLowest")) || "None yet!";
 // Function to open the modal
 function openModal() {
     modal.style.display = "";
+    modal2.style.display = "none";
+};
+
+function openModal2() {
+    modal2.style.display = "";
 };
 
 // Function to close the modal
 function closeModal() {
     modal.style.display = "none";
+};
+
+function closeModal2() {
+    modal2.style.display = "none";
 };
 
 // Function to shuffle the cards randomly using Fisher-Yates shuffle
@@ -301,7 +321,7 @@ function updateLowest(currentDifficulty) {
 };
 
 document.getElementById('restartButton').addEventListener('click', function () {
-startGame();
+    openModal2();
 });
 
 // Opens the Modal to choose difficulty level and start game

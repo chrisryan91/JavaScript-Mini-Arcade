@@ -54,6 +54,7 @@ a {
 /* Modal Styles */
 
 .modal {
+  z-index: 1000;
   display: none;
   position: fixed;
   top: 0;

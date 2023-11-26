@@ -2,51 +2,51 @@
 const deck = [
     //Each object contains an image source and a name for the card
     {
-    image: "assets/images/deck_of_cards/2_of_hearts.png",
+    image: "assets/images/deck_of_cards/2_of_hearts.webp",
     name: "two",
     },
     {
-    image: "assets/images/deck_of_cards/3_of_hearts.png",
+    image: "assets/images/deck_of_cards/3_of_hearts.webp",
     name: "three",
     },
     {
-    image: "assets/images/deck_of_cards/4_of_hearts.png",
+    image: "assets/images/deck_of_cards/4_of_hearts.webp",
     name: "four",
     },
     {
-    image: "assets/images/deck_of_cards/5_of_hearts.png",
+    image: "assets/images/deck_of_cards/5_of_hearts.webp",
     name: "five",
     },
     {
-    image: "assets/images/deck_of_cards/6_of_hearts.png",
+    image: "assets/images/deck_of_cards/6_of_hearts.webp",
     name: "six",
     },
     {
-    image: "assets/images/deck_of_cards/7_of_hearts.png",
+    image: "assets/images/deck_of_cards/7_of_hearts.webp",
     name: "seven",
     },
     {
-    image: "assets/images/deck_of_cards/8_of_hearts.png",
+    image: "assets/images/deck_of_cards/8_of_hearts.webp",
     name: "eight",
     },
     {
-    image: "assets/images/deck_of_cards/9_of_hearts.png",
+    image: "assets/images/deck_of_cards/9_of_hearts.webp",
     name: "nine",
     },
     {
-    image: "assets/images/deck_of_cards/10_of_hearts.png",
+    image: "assets/images/deck_of_cards/10_of_hearts.webp",
     name: "ten",
     },
     {
-    image: "assets/images/deck_of_cards/jack_of_hearts.png",
+    image: "assets/images/deck_of_cards/jack_of_hearts.webp",
     name: "jack",
     },
     {
-    image: "assets/images/deck_of_cards/queen_of_hearts.png",
+    image: "assets/images/deck_of_cards/queen_of_hearts.webp",
     name: "queen",
     },
     {
-    image: "assets/images/deck_of_cards/king_of_hearts.png",
+    image: "assets/images/deck_of_cards/king_of_hearts.webp",
     name: "king",
     },
 ];

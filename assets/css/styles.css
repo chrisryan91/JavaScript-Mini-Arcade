@@ -68,7 +68,7 @@ a {
 }
 
 .modal-content {
-  background-image: url("../images/pattern2.png");
+  background-image: url("../images/pattern2.webp");
   background-size: cover;
   padding: 20px;
   border-radius: 10px;
@@ -124,7 +124,7 @@ align-items: center;
 }
 
 .card .back {
-background-image: url("../images/deck_of_cards/red.png");
+background-image: url("../images/deck_of_cards/red.webp");
 background-position: center center;
 background-size: cover;
 backface-visibility: hidden;
@@ -154,7 +154,7 @@ button {
   margin: 10px;
   border: none;
   cursor: pointer;
-  background-image: url("../images/pattern2.png");
+  background-image: url("../images/pattern2.webp");
   border: 2px solid black;
   border-radius: 10px;
 }

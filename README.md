@@ -150,7 +150,7 @@ The performance scores are greatly reduced when viewed on a mobile. The images t
 
 <details>
 <summary>Home Page Mobile Lighthouse Performance</summary>
-<img src="assets/images/readme_images/lighthouse images/lighthousemobilescore.png">
+<img src="assets\images\readme_images\lighthouse images\lighthousemobilescore.png">
 </details>
 
 ### Game Testing

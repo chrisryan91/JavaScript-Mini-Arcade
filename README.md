@@ -72,12 +72,22 @@ All designed with Balsamiq.
 
 <details>
 <summary>Game Page Screenshot Desktop</summary>
-<img src="assets/images/readme_images/Desktop_Screenshots/desktopscreenshot.png">
+<img src="assets/images/readme_images/Desktop_Screenshots/desktop_screenshot.png">
 </details>
 
 <details>
 <summary>Game Page Screenshot Mobile</summary>
-<img src="assets/images/readme_images/Mobile_Screenshots/iPhone2screenshot.png">
+<img src="assets/images/readme_images/Mobile_Screenshots/iPhone12Pro_screenshot.png">
+</details>
+
+<details>
+<summary>Modal One Screenshot</summary>
+<img src="assets/images/readme_images/Modal_Screenshots/modal1_screenshot.png">
+</details>
+
+<details>
+<summary>Modal Two Screenshot</summary>
+<img src="assets/images/readme_images/Modal_Screenshots/modal2_screenshot.png">
 </details>
 
 ### Features Left to Implement 

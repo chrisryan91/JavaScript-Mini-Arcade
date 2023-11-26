@@ -1,56 +1,56 @@
 // Define an array of card deck
 const deck = [
-//Each object contains an image source and a name for the card
-{
-image: "assets/images/deck_of_cards/2_of_hearts.png",
-name: "two",
-},
-{
-image: "assets/images/deck_of_cards/3_of_hearts.png",
-name: "three",
-},
-{
-image: "assets/images/deck_of_cards/4_of_hearts.png",
-name: "four",
-},
-{
-image: "assets/images/deck_of_cards/5_of_hearts.png",
-name: "five",
-},
-{
-image: "assets/images/deck_of_cards/6_of_hearts.png",
-name: "six",
-},
-{
-image: "assets/images/deck_of_cards/7_of_hearts.png",
-name: "seven",
-},
-{
-image: "assets/images/deck_of_cards/8_of_hearts.png",
-name: "eight",
-},
-{
-image: "assets/images/deck_of_cards/9_of_hearts.png",
-name: "nine",
-},
-{
-image: "assets/images/deck_of_cards/10_of_hearts.png",
-name: "ten",
-},
-{
-image: "assets/images/deck_of_cards/jack_of_hearts.png",
-name: "jack",
-},
-{
-image: "assets/images/deck_of_cards/queen_of_hearts.png",
-name: "queen",
-},
-{
-image: "assets/images/deck_of_cards/king_of_hearts.png",
-name: "king",
-},
+    //Each object contains an image source and a name for the card
+    {
+    image: "assets/images/deck_of_cards/2_of_hearts.png",
+    name: "two",
+    },
+    {
+    image: "assets/images/deck_of_cards/3_of_hearts.png",
+    name: "three",
+    },
+    {
+    image: "assets/images/deck_of_cards/4_of_hearts.png",
+    name: "four",
+    },
+    {
+    image: "assets/images/deck_of_cards/5_of_hearts.png",
+    name: "five",
+    },
+    {
+    image: "assets/images/deck_of_cards/6_of_hearts.png",
+    name: "six",
+    },
+    {
+    image: "assets/images/deck_of_cards/7_of_hearts.png",
+    name: "seven",
+    },
+    {
+    image: "assets/images/deck_of_cards/8_of_hearts.png",
+    name: "eight",
+    },
+    {
+    image: "assets/images/deck_of_cards/9_of_hearts.png",
+    name: "nine",
+    },
+    {
+    image: "assets/images/deck_of_cards/10_of_hearts.png",
+    name: "ten",
+    },
+    {
+    image: "assets/images/deck_of_cards/jack_of_hearts.png",
+    name: "jack",
+    },
+    {
+    image: "assets/images/deck_of_cards/queen_of_hearts.png",
+    name: "queen",
+    },
+    {
+    image: "assets/images/deck_of_cards/king_of_hearts.png",
+    name: "king",
+    },
 ];
-
+    
 // Create array of cards for different difficulty levels
 const easyGame = deck.slice(0, 6); // 6 cards for easy
 const mediumGame = deck.slice(0, 9); // 9 cards for medium
@@ -74,7 +74,7 @@ let low;
 let easyLowest;
 let mediumLowest;
 let difficultLowest;
-let gameStarted;
+let storageKey;
 
 // Selecting DOM elements
 const gridContainer = document.querySelector(".game-board");
@@ -82,7 +82,7 @@ const attemptsElement = document.querySelector(".attempts");
 const timerElement = document.querySelector(".timer");
 const lowestElement = document.querySelector(".lowest");
 const modal = document.querySelector("#myModal");
-const modal2 = document.querySelector("#myModal2")
+const modal2 = document.querySelector("#myModal2");
 const easyBtn = document.querySelector('#easyBtn');
 const mediumBtn = document.querySelector('#mediumBtn');
 const difficultBtn = document.querySelector('#difficultBtn');
@@ -129,20 +129,20 @@ parseInt(localStorage.getItem("difficultLowest")) || "None yet!";
 function openModal() {
     modal.style.display = "";
     modal2.style.display = "none";
-};
+}
 
 function openModal2() {
     modal2.style.display = "";
-};
+}
 
 // Function to close the modal
 function closeModal() {
     modal.style.display = "none";
-};
+}
 
 function closeModal2() {
     modal2.style.display = "none";
-};
+}
 
 // Function to shuffle the cards randomly using Fisher-Yates shuffle
 function shuffle() {
@@ -156,7 +156,7 @@ function shuffle() {
         cards[currentIndex] = cards[randomIndex];
         cards[randomIndex] = temporaryValue;
     }
-};
+}
 
 // Function to deal the game cards
 function dealCards() {
@@ -171,7 +171,7 @@ function dealCards() {
         // Set the HTML of the card element with front and back elements
         cardDiv.innerHTML = `
             <div class="front">
-              <img class="front-card" src=${card.image} />
+                <img class="front-card" src=${card.image} />
             </div>
             <div class="back"></div>
             `;
@@ -180,7 +180,7 @@ function dealCards() {
         // Add event listener to turn the card over
         cardDiv.addEventListener("click", turnOver);
     }
-};
+}
 
 // Function to handle card flipping when clicked
 function turnOver() {
@@ -203,7 +203,7 @@ function turnOver() {
     choiceTwo = this;
     pauseGame = true;
     check();
-};
+}
 
 // Function to check if the two flipped cards match
 function check() {
@@ -233,16 +233,18 @@ function check() {
         } else {
             reTurn();
     }
-};
+}
 
 // Function to return non-matching cards after a short delay
 function reTurn() {
+
+    
     setTimeout(() => {
         choiceOne.classList.remove("flipped");
         choiceTwo.classList.remove("flipped");
         reset();
     }, 1000);
-};
+}
 
 // Function to reset the first and second cards and unlock the board
 function reset() {
@@ -250,7 +252,7 @@ function reset() {
     choiceTwo = null;
     pauseGame = false;
     timeStarted = false;
-};
+}
 
 // Function to start the game timer
 function startTimer() {
@@ -261,7 +263,7 @@ function startTimer() {
         }, 1000);
         timeRunning = true;
     }
-};
+}
 
 // Function to stop the game timer
 function stopTimer() {
@@ -270,7 +272,7 @@ function stopTimer() {
     timerElement.textContent = time;
     timeRunning = false;
     attempts = 0;
-};
+}
 
 // Function to start the game with the selected difficulty
 function startGame(difficulty) {
@@ -301,24 +303,23 @@ function startGame(difficulty) {
     shuffle();
     dealCards();
     openModal();
-};
+    }
 
 // Function to update the lowest score in localStorage
 function updateLowestScore(currentDifficulty) {
-  const storageKey = `${currentDifficulty}Lowest`;
-  const storedScore = parseInt(localStorage.getItem(storageKey)) || Infinity;
-  if (attempts < storedScore) {
-      localStorage.setItem(storageKey, attempts);
-      updateLowest(attempts);
-  }
-};
+    const storageKey = `${currentDifficulty}Lowest`;
+    const storedScore = parseInt(localStorage.getItem(storageKey)) || Infinity;
+    if (attempts < storedScore) {
+        localStorage.setItem(storageKey, attempts);
+        updateLowest(attempts);
+    }
+}
 
 // Function to update the lowestElement in the HTML
 function updateLowest(currentDifficulty) {
-    const storageKey = `${currentDifficulty}Lowest`;
-    const storedScore = parseInt(localStorage.getItem(storageKey)) || "None yet!";
+    let storedScore = parseInt(localStorage.getItem(storageKey)) || "None yet!";
     lowestElement.textContent = storedScore;
-};
+}
 
 document.getElementById('restartButton').addEventListener('click', function () {
     openModal2();

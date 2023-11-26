@@ -1,6 +1,6 @@
 # Memory Game!
 
-Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the players short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simply game of flipping cards, racing against the clock and trying to get the lowest number of attempts.
+Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the players short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simple game of flipping cards, racing against the clock and trying to get the lowest number of attempts.
 
 ![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
@@ -14,7 +14,7 @@ Welcome to the Memory Card Game, a simple but challenging game for players of al
 - [Features and Functionality](https://github.com/chrisryan91/Memory-Game#features-and-functionality)
   - Header
   - Homepage
-  - Features To Be Explored/Implemented
+  - Features to be implemented
 - [Testing](https://github.com/chrisryan91/Memory-Game#testing)
   - Validator Testing
     - HTML
@@ -46,7 +46,7 @@ The game comes with three difficulty levels. When the website loads, a modal is 
 ## Design
 ### Fonts
 
-- Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. I found Josefin Sans to be elegant and versatile so it suited this project. It is easy to read so it makes a smooth reading experience. It is distinctive without being cartoonish. Sans Serif serves as a back-up if there is no access to [Google Fonts](https://fonts.google.com/).
+Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. I found Josefin Sans to be elegant and versatile so it suited this project. It is easy to read so it makes a smooth reading experience. It is distinctive without being cartoonish. Sans Serif serves as a back-up if there is no access to [Google Fonts](https://fonts.google.com/).
 
 ### Layout 
 
@@ -92,15 +92,15 @@ All designed with Balsamiq.
 
 ### Features Left to Implement 
 
-- For anyone with an understanding of HTML and CSS the game will be easy to cheat with because the card numbers are easily available to view with Dev Tools.
+1. For anyone with an understanding of HTML and CSS the game will be easy to cheat with because the card numbers are easily available to view with Dev Tools.
 
-- With more images added to the deck_of_cards directory the player could pick the suit of cards they wanted to play with - Hearts is the only option available for this game. It is true also for the design of the cards - with multiple designs in the directory users could choose whichever cards they would like.
+2. With more images added to the deck_of_cards directory the player could pick the suit of cards they wanted to play with - Hearts is the only option available for this game. It is true also for the design of the cards - with multiple designs in the directory users could choose whichever cards they would like.
 
-- With more decks of cards, the difficulty of the game could be increased. With a whole deck rather than suit, there could potentially be a massive board onscreen with 104 cards to pick 52 matches.
+3. With more decks of cards, the difficulty of the game could be increased. With a whole deck rather than suit, there could potentially be a massive board onscreen with 104 cards to pick 52 matches.
 
-- I do not think Lowest Number of Attempts is the greatest was to determine a "high" score. In the case for this game, a "high" score is actually a lower score. I do not think that storing the lowest value for attempts is the best way to keep track of a users progress in the game. The timer function needs to be integrated into the "high" score. Some along the lines of: x attempts in y seconds may be best to determine a high score.
+4. I do not think Lowest Number of Attempts is the greatest was to determine a "high" score. In the case for this game, a "high" score is actually a lower score. I do not think that storing the lowest value for attempts is the best way to keep track of a users progress in the game. The timer function needs to be integrated into the "high" score. Some along the lines of: x attempts in y seconds may be best to determine a high score.
 
-- With a proper scoring system, a leader board could be generated to determine whose score is best. This would mean developing the website so users could potentially log-in with a username and password.
+5. With a proper scoring system, a leader board could be generated to determine whose score is best. This would mean developing the website so users could potentially log-in with a username and password.
 
 ## Testing
 
@@ -190,25 +190,31 @@ There are no known bugs.
 
 #### Issue with card flipping back
 
-- The first bug I ran into stumped me for a while. When designing the game first, before I considered using JavaScript to generate the board, I had the grid for the cards in index.html. I had all the functionality working but when card would flip back over, after being clicked, it would not show the back of the card. Instead it showed the front of the card flipped. Like this:
+The first bug I ran into stumped me for a while. When designing the game first, before I considered using JavaScript to generate the board, I had the grid for the cards in index.html. I had all the functionality working but when card would flip back over, after being clicked, it would not show the back of the card. Instead it showed the front of the card flipped. Like this:
 
 <details>
 <summary>Card flipped</summary>
 <img src="assets/images/readme_images/flipped.png">
 </details>
 
-- I consulted Reddit and StackOverflow was shown a method to get the card to flip back correctly. It involved injecting html and CSS styling into the index.html with JavaScript using template literals. Links are in the acknowledgement section below.
+I consulted Reddit and StackOverflow was shown a method to get the card to flip back correctly. It involved injecting html and CSS styling into the index.html with JavaScript using template literals. Links are in the acknowledgement section below.
 
-- Using this method also made it handier for me to let the user choose their own difficulty level. By only generating the board after the users choice was inputted, it allowed me to keep the entire game on one html page. 
+Using this method also made it handier for me to let the user choose their own difficulty level. By only generating the board after the users choice was inputted, it allowed me to keep the entire game on one html page. 
 
 #### Bugs when updating local storage
 
-- I struggled for a while to update the Index.html with the Lowest Score from the Local Storage. This was because a "high score" for the game was actually the lowest score. I needed to compare the score for the current game with the value in local storage - but I wasn't sure what to do if there was no value in local storage, or the value was a string. I came up with this solution:
+I struggled for a while to update the Index.html with the Lowest Score from the Local Storage. This was because a "high score" for the game was actually the lowest score. I needed to compare the score for the current game with the value in local storage but I wasn't sure what to do if there was no value in local storage, or the value was a string. I came up with this solution:
 
 
 `const storedScore = parseInt(localStorage.getItem(storageKey)) || Infinity;`
 
-- I declared the storeScore variable to be either the value in Local Storage but if that value was a string it would return as infinity. As all all of the scores for my game would be less than infinity practically speaking, I used this method. It will work unless someone played my game and their attempt value was greater than infinity.
+I declared the storeScore variable to be either the value in Local Storage but if that value was a string it would return as infinity. As all all of the scores for my game would be less than infinity practically speaking, I used this method. It will work unless someone played my game and their attempt value was greater than infinity.
+
+#### Second Modal appearing beneath deck of cards
+
+When I decided to implement a second modal when the "restart" button was clicked I wanted to use the same CSS styling as the first modal. This would reduce the amount of code I had to write. I subsequently implemented the function to call a new modal when I clicked restart. However, the modal did not appear on top of all the other content and the deck of cards appeared above it. 
+
+I searched Google on a solution and I learned about the z-index to specify stack order of elements on a page. I set CSS styling for the models to 1000. This solved my problem. 
 
 ## Technologies Used
  
@@ -228,8 +234,6 @@ There are no known bugs.
 - [Google Fonts](https://fonts.google.com/) was used to import and alter fonts on the website. 
 - [W3C](https://www.w3.org) was used for HTML and CSS validation.
 - [JSHint](https://jshint.com/) was used for JavaScript validation.
-- [Colour-Hex](https://www.color-hex.com/) was used to get a colour palette.
-- [Creazilla](https://creazilla.com/) for PNG Clip Art used for *Rock, Paper, Scissor* game. 
   
 ## Deployment 
 
@@ -279,7 +283,7 @@ A Memory Game became my choice because it is familiar to everyone including myse
 * ["Memory Card Game "if else" statement not working"](https://stackoverflow.com/questions/63421928/memory-card-game-if-else-statement-not-working-javascript)
 * ["why is my memory game not working? i can't flip the cards or make the game start"](https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start)
 
-7. W3 schools for constant reference. Specifically for the Fisher-Yates shuffle: https://www.w3schools.com/js/js_array_sort.asp
+1. W3 schools for the Fisher-Yates shuffle and CSS z-index Property - https://www.w3schools.com/js/js_array_sort.asp and https://www.w3schools.com/cssref/pr_pos_z-index.php.
 
 ## Acknowledgements
 - 

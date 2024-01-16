@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 // Define an array of card deck
 const deck = [
     //Each object contains an image source and a name for the card
@@ -237,8 +239,6 @@ function check() {
 
 // Function to return non-matching cards after a short delay
 function reTurn() {
-
-    
     setTimeout(() => {
         choiceOne.classList.remove("flipped");
         choiceTwo.classList.remove("flipped");

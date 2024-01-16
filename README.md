@@ -1,56 +1,97 @@
 # Memory Game!
 
-Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the players short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simple game of flipping cards, racing against the clock and trying to get the lowest number of attempts. A live link is here: https://chrisryan91.github.io/Memory-Game/
+Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the player's short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simple game of flipping cards, racing against the clock and trying to get the lowest number of attempts. A live link is here: https://chrisryan91.github.io/Memory-Game/
 
 ![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
 ## Table of Contents
-- [Designer Goals](https://github.com/chrisryan91/Memory-Game#designers-goals)
-- [Design](https://github.com/chrisryan91/Memory-Game#design)
-  - Colour Scheme
-  - Fonts
-  - Layout
-  - Wireframes
-- [Features and Functionality](https://github.com/chrisryan91/Memory-Game#features-and-functionality)
-  - Header
-  - Homepage
-  - Features to be implemented
-- [Testing](https://github.com/chrisryan91/Memory-Game#testing)
-  - Validator Testing
-    - HTML
-    - CSS
-    - JavaScript
-    - Accessibility
-  - Browser Testing
-  - Device Testing
-  - Bugs
-    - Fixed Bugs
-    - Unfixed Bugs
-- [Technology Used](https://github.com/chrisryan91/Memory-Game#technologies-used)
-  - Languages
-  - Frameworks, libraries, programs used
-- [Deployment](https://github.com/chrisryan91/Memory-Game#deployment)
-- [Cloning](https://github.com/chrisryan91/Memory-Game#cloning)
-- [Credits](https://github.com/chrisryan91/Memory-Game#credits)
-  - Content
-  - Media
-  - Resources Used
-- [Acknowledgements](https://github.com/chrisryan91/Memory-Game#acknowledgements)
+- [Memory Game!](#memory-game)
+  - [Table of Contents](#table-of-contents)
+  - [Designers Goals](#designers-goals)
+  - [User Stories](#user-stories)
+  - [Design](#design)
+    - [Fonts](#fonts)
+    - [Wireframes](#wireframes)
+    - [Layout](#layout)
+      - [File Structure](#file-structure)
+      - [Body](#body)
+        - [Header](#header)
+        - [Modals](#modals)
+        - [Game Board](#game-board)
+        - [Division Section](#division-section)
+  - [Features and Functionality](#features-and-functionality)
+    - [Game Page](#game-page)
+    - [Features Left to Implement](#features-left-to-implement)
+  - [Testing](#testing)
+    - [Validator Testing](#validator-testing)
+      - [HTML](#html)
+      - [CSS](#css)
+      - [JavaScript](#javascript)
+    - [Accessibility](#accessibility)
+      - [Desktop Lighthouse Score](#desktop-lighthouse-score)
+      - [Mobile Lighthouse Score](#mobile-lighthouse-score)
+    - [Game Testing](#game-testing)
+    - [Browser Testing](#browser-testing)
+    - [Device Testing](#device-testing)
+    - [Bugs](#bugs)
+    - [Fixed bugs](#fixed-bugs)
+      - [Issue with card flipping back](#issue-with-card-flipping-back)
+      - [Bugs when updating local storage](#bugs-when-updating-local-storage)
+      - [Second Modal appearing beneath deck of cards](#second-modal-appearing-beneath-deck-of-cards)
+  - [Technologies Used](#technologies-used)
+    - [Languages](#languages)
+    - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
+  - [Deployment](#deployment)
+  - [Cloning](#cloning)
+  - [Credits](#credits)
+    - [Content](#content)
+    - [Resourced Content and Media](#resourced-content-and-media)
+  - [Acknowledgements](#acknowledgements)
 
 ## Designers Goals
 
-This webpage is a familiar card matching game that will test a players memory. The goal is to match all the cards with the fewest attempts possible. The game itself is a grid of cards which forms a board. Each section of a grid contains a card lying face-down. By clicking on each card with the cursor the card will flip. 
+This webpage is a familiar card matching game that will test a player's memory. The goal is to match all the cards with the fewest attempts possible. The game itself is a grid of cards which forms a board. Each section of a grid contains a card lying face-down. By clicking on each card with the cursor the card will flip. 
 
 The objective is to find all matching pairs by flipping two at a time. If the two cards match they will remain face-up, if not they will flip back down. The game can be restarted at any stage. If restart is clicked, a modal appears to question if the player is certain they want to restart.
 
 The game comes with three difficulty levels. When the website loads, a modal is generated to choose difficulty levels. Upon choosing the board is generated corresponding the with difficulty chosen. While the game is timed, the goal of the game is to match all the cards with the lowest amount of attempts. This value is stored in local storage and is accessed when the game loads. The goal is to beat this number.
+
+## User Stories
+
+- First Time User:
+
+-- I want to know how to play the game.
+-- I want to be able to choose an easy setting. 
+-- I want to be able to test my memory skills.
+-- I want my score to be shown and saved
+
+- Returning User:
+
+-- I want to be able to increase difficulty.
+-- I want to be able to continually challenge myself.
+-- I want to be able to see my previous high score.
+-- I want to be able to beat my highscore.
 
 ## Design
 ### Fonts
 
 Imported from Google Fonts, Josefin Sans is the font used throughout the entire website. It has been weighted differently according to whether it is used as a header, title or paragraph. The website has minimal text and so the website needed an elegant, easy to read font. I found Josefin Sans to be elegant and versatile so it suited this project. Sans Serif serves as a back-up if there is no access to [Google Fonts](https://fonts.google.com/).
 
-### Layout 
+### Wireframes
+
+All designed with Balsamiq.
+
+<details>
+<summary>Desktop Game Page Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/desktopwireframe.png">
+</details>
+
+<details>
+<summary>Mobile Game Page Wireframe</summary>
+<img src="assets/images/readme_images/wireframes/mobilewireframe.png">
+</details>
+
+### Layout
 
 #### File Structure
 
@@ -60,9 +101,7 @@ Imported from Google Fonts, Josefin Sans is the font used throughout the entire 
 
 - assets/js/game.js: The JavaScript file responsible for the game logic.
 
-#### Head Section
-
-#### Body Section
+#### Body
 
 ##### Header
 
@@ -81,6 +120,8 @@ Imported from Google Fonts, Josefin Sans is the font used throughout the entire 
 - The dealCards() function generates and renders memory game cards within body of index.html. A div element is generated for each card. The number of cards generated depends on the difficulty level.
   
 - Two nested div elements representing the front and the back of the card are placed within each card div element.
+
+- A restart button appears under the board.
   
 ##### Division Section
 
@@ -89,20 +130,6 @@ This contains three sections for information from the game:
 1. Attempts
 2. Lowest Number of Attempts
 3. Timer
-
-### Wireframes
-
-All designed with Balsamiq.
-
-<details>
-<summary>Desktop Game Page Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/desktopwireframe.png">
-</details>
-
-<details>
-<summary>Mobile Game Page Wireframe</summary>
-<img src="assets/images/readme_images/wireframes/mobilewireframe.png">
-</details>
 
 ## Features and Functionality
 
@@ -184,7 +211,7 @@ The site scores 100% for accessibility on Mobile and Desktop devices.
 
 #### Mobile Lighthouse Score
 
-The performance scores are greatly reduced when viewed on a mobile. The images that sufficed for desktop viewing do not work for mobile viewing. 
+The performance scores are greatly reduced when viewed on a mobile. The images that sufficed for desktop viewing do not work for mobile viewing.
 
 <details>
 <summary>Home Page Mobile Lighthouse Performance</summary>
@@ -204,8 +231,8 @@ The game was testing by myself and friends to ensure it functions correctly. Som
 - For each two cards flipped, indicating one attempt, the attempts score increases by one.
 - The lowest attempt is correctly added from Local Storage - if no value is found, the text reads, "No Attempts!".
 - The local storage property correctly updates with the lowest value for attempts for the specific difficulty.
-- When restart is clicked, at any stage during the game, the board resets and the modal appears again.
-- The start button also starts the the timer.
+- When restart is clicked, at any stage during the game, a modal appears to confirm the restart.
+- The board then resets and the modal appears again.
 
 ### Browser Testing
 
@@ -324,7 +351,8 @@ A Memory Game became my choice because it is familiar to everyone including myse
 1. W3 schools for the Fisher-Yates shuffle and CSS z-index Property - https://www.w3schools.com/js/js_array_sort.asp and https://www.w3schools.com/cssref/pr_pos_z-index.php.
 
 ## Acknowledgements
-- 
 
-- 
+- My tutor Antonio
+
+- The CodeInstitute Slack Channel
 

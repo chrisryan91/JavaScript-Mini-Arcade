@@ -9,6 +9,8 @@ Welcome to the Memory Card Game, a simple but challenging game for players of al
   - [Table of Contents](#table-of-contents)
   - [Designers Goals](#designers-goals)
   - [User Stories](#user-stories)
+    - [First Time User:](#first-time-user)
+    - [Returning User:](#returning-user)
   - [Design](#design)
     - [Fonts](#fonts)
     - [Wireframes](#wireframes)
@@ -58,19 +60,19 @@ The game comes with three difficulty levels. When the website loads, a modal is 
 
 ## User Stories
 
-- First Time User:
+### First Time User:
 
--- I want to know how to play the game.
--- I want to be able to choose an easy setting. 
--- I want to be able to test my memory skills.
--- I want my score to be shown and saved
+- I want to know how to play the game.
+- I want to be able to choose an easy setting. 
+- I want to be able to test my memory skills.
+- I want my score to be shown and saved
 
-- Returning User:
+### Returning User:
 
--- I want to be able to increase difficulty.
--- I want to be able to continually challenge myself.
--- I want to be able to see my previous high score.
--- I want to be able to beat my highscore.
+- I want to be able to increase difficulty.
+- I want to be able to continually challenge myself.
+- I want to be able to see my previous high score.
+- I want to be able to beat my high score.
 
 ## Design
 ### Fonts

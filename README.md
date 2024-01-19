@@ -357,4 +357,3 @@ A Memory Game became my choice because it is familiar to everyone including myse
 - My tutor Antonio
 
 - The CodeInstitute Slack Channel
-

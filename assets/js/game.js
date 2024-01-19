@@ -317,9 +317,10 @@ function updateLowestScore(currentDifficulty) {
 
 // Function to update the lowestElement in the HTML
 function updateLowest(currentDifficulty) {
-    let storedScore = parseInt(localStorage.getItem(storageKey)) || "None yet!";
+    const storageKey = `${currentDifficulty}Lowest`;
+    const storedScore = parseInt(localStorage.getItem(storageKey)) || "None yet!";
     lowestElement.textContent = storedScore;
-}
+  }
 
 document.getElementById('restartButton').addEventListener('click', function () {
     openModal2();

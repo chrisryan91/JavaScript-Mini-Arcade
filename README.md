@@ -1,6 +1,8 @@
 # Memory Game!
 
-Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the player's short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simple game of flipping cards, racing against the clock and trying to get the lowest number of attempts. A live link is here: https://chrisryan91.github.io/Memory-Game/
+Welcome to the Memory Card Game, a simple but challenging game for players of all ages and abilities. This game is designed to test the player's short-term memory skills. The game offers different difficulty levels, allowing you to tailor the challenge to your preference. Whether you're a casual player looking for a quick brain exercise or a memory master seeking a new challenge, the Memory Card Game is a simple game of flipping cards, racing against the clock and trying to get the lowest number of attempts. 
+
+A live link is here: https://chrisryan91.github.io/Memory-Game/
 
 ![Am I Responsiveness Image](assets/images/readme_images/amiresponsive.png)
 
@@ -48,7 +50,7 @@ Welcome to the Memory Card Game, a simple but challenging game for players of al
   - [Credits](#credits)
     - [Content](#content)
     - [Resourced Content and Media](#resourced-content-and-media)
-  - [Acknowledgements](#acknowledgements)
+  - [Acknowldgements](#acknowldgements)
 
 ## Designers Goals
 
@@ -264,7 +266,7 @@ The first bug I ran into stumped me for a while. When designing the game first, 
 <img src="assets/images/readme_images/flipped.png">
 </details>
 
-I consulted Reddit and StackOverflow was shown a method to get the card to flip back correctly. It involved injecting html and CSS styling into the index.html with JavaScript using template literals. Links are in the acknowledgement section below.
+I consulted Reddit and StackOverflow was shown a method to get the card to flip back correctly. It involved injecting html and CSS styling into the index.html with JavaScript using template literals. Links are in the acknowledgment section below.
 
 Using this method also made it handier for me to let the user choose their own difficulty level. By only generating the board after the users choice was inputted, it allowed me to keep the entire game on one html page. 
 
@@ -331,7 +333,7 @@ The repository to this website is here: https://github.com/chrisryan91/Memory-Ga
 
 I needed to make a game from scratch. I wanted to challenge myself and use the skills I had already learned on the course to build something from the ground up. I didn't want to make something too unique or abstract because if I did run into trouble - which I did - then I could find solutions. I wanted to utilize some of the things I have learned like local storage functions and template literals. Ultimately however I wanted to make something uncomplicated and user-friendly. 
 
-A Memory Game became my choice because it is familiar to everyone including myself yet was challenging enough to pique my interest. I had a few ideas on how to go about but as I built it from the ground-up there was many challenges in the form of bugs which I have mentioned above. I wanted too to be able to expand on the game with difficulty levels.
+A Memory Game became my choice because it is familiar to everyone yet was challenging enough to pique my interest. I had a few ideas on how to go about but as I built it from the ground-up there were many challenges in the form of bugs which I have mentioned above. I wanted too to be able to expand on the game with difficulty levels.
 
 ### Resourced Content and Media
 
@@ -352,7 +354,7 @@ A Memory Game became my choice because it is familiar to everyone including myse
 
 1. W3 schools for the Fisher-Yates shuffle and CSS z-index Property - https://www.w3schools.com/js/js_array_sort.asp and https://www.w3schools.com/cssref/pr_pos_z-index.php.
 
-## Acknowledgements
+## Acknowldgements
 
 - My tutor Antonio
 

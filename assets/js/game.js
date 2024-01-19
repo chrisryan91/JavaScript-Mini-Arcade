@@ -76,7 +76,6 @@ let low;
 let easyLowest;
 let mediumLowest;
 let difficultLowest;
-let storageKey;
 
 // Selecting DOM elements
 const gridContainer = document.querySelector(".game-board");
